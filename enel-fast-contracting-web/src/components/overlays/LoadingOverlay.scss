@@ -1,0 +1,31 @@
+.LoadingOverlay {
+    width: 100%;
+
+    .overlay{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 0;
+        z-index: 499;
+        overflow: hidden;
+        background-color: #fff;
+        opacity: 0;
+        transition: opacity 0.5s linear;
+        will-change: opacity; 
+
+        &.show {
+            height: 100%;
+            opacity: 1;
+        }
+        
+        .spinner {
+            top: calc(50% + 40px);
+            width: 55px;
+        }
+        
+        .path {
+            stroke-width: 4px;
+            stroke: black;
+        }
+    }
+}

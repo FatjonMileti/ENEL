@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="ro" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <title>PPC | Login</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link type="text/css" href="css/icons.css" rel="stylesheet" />
+    <link type="text/css" href="css/global.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper login-page view-login-form">
+        <div class="table">
+            <div class="table-cell">
+                {{#if errors}}
+                <form class="login-form error-anim" method="POST" autocomplete="off">
+                    {{else}}
+                    <form class="login-form" method="POST" autocomplete="off">
+                        {{/if}} {{#each errors}}
+                        <div class="error-msg">{{this.message}}</div>
+                        {{/each}}
+                        <div id="user-error" class="error-msg hidden">Incorrect username or password</div>
+                        <fieldset>
+                            <div class="box-logo">
+                                <img src="img/ppc_logo_white.png" alt="" />
+                            </div>
+                            <h3>PPC Easy Dashboard</h3>
+
+                            <input id="marca-input" type="text" name="username" placeholder="Marca" autocomplete="new-password" />
+                            <input id="password-input" class="" type="password" name="password" placeholder="Parola" autocomplete="new-password" />
+                            <div id="recaptcha-input"></div>
+                            <input id="pin-input" class="hidden" type="text" name="pin" placeholder="Pin" />
+                            <div id="login-btn" class="button blue hidden">Login</div>
+                            <button id="confirm-btn" class="button blue hidden">Confirm</button>
+                        </fieldset>
+                    </form>
+                    <div class="copy">
+                        <img src="img/fullscreendigital-logo.svg" alt="" />
+                        <p>Designed &amp; Engineered by Fullscreen Digital</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- end wrapper -->
+    <div class="portrait">
+        <div class="table">
+            <div class="table-cell">
+                <i class="icon-screen-rotation"></i>
+                <p>Please turn your device
+                    <br />to landscape</p>
+            </div>
+        </div>
+    </div>
+    <!-- end portrait -->
+    <script src="{{absoluteUrl}}/assets/js/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <script type="text/javascript">
+        var token = null;
+        var loginClicked = false;
+
+        var onloadCallback = function() {
+            $('#login-btn').removeClass('hidden');
+            grecaptcha.render('recaptcha-input', {
+                sitekey: '{{CAPTCHA_SITE_KEY}}',
+                callback: function (result) {
+                    token = result;
+                },
+            });
+        };
+
+        $('#login-btn').click(function() {
+            if (token && token.length && !loginClicked) {
+                loginClicked = true;
+                var marca = $('#marca-input').val();
+                $.post({
+                    url: "{{absoluteUrl}}/recaptcha",
+                    data: {
+                        token: token,
+                        marca: marca,
+                    },
+                    success: function(data) {
+                        $('#login-btn').addClass('hidden');
+                        $('#user-error').addClass('hidden');
+                        $('#confirm-btn').removeClass('hidden');
+                        $('#pin-input').removeClass('hidden');
+                    },
+                    error: function(data) {
+                        if (data.responseJSON && data.responseJSON.message == 'USER_NOT_FOUND') {
+                            $('#user-error').removeClass('hidden');
+                            grecaptcha.reset();
+                            token = null;
+                            loginClicked = false;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

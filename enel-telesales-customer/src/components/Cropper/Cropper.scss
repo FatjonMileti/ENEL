@@ -1,0 +1,52 @@
+.Cropper {
+    .zoom {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        line-height: 32px;
+        right: 10px;
+        z-index: 99;
+        background: #00c24a;
+        border-radius: 50%;
+        cursor: pointer;
+        color: #fff;
+        text-align: center;
+
+        &.zoom-in {
+            top: 10px;
+        }
+
+        &.zoom-out {
+            top: 50px;
+        }
+
+        &:hover {
+            background-color: #289d59;
+        }
+    }
+
+    #pictureContainer {
+        max-width: 600px;
+        margin-bottom: 30px;
+        padding-bottom: 25px;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    .rc-slider {
+        width: calc(100% - 36px) !important;
+        margin-left: 18px !important;
+
+        .rc-slider-handle {
+            border-color: #00c24a !important;
+            -webkit-touch-callout: none;
+            -webkit-text-size-adjust: none;
+            -webkit-user-select: none;
+        }
+    }
+}

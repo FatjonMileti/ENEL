@@ -1,0 +1,46 @@
+.ReminderAlertModal {
+    width: 700px !important;
+
+    & ~ div {
+        background-color: #21232c !important;
+    }
+
+    &.z-index-2000 {
+        z-index: 2050 !important;
+        & ~ div {
+            z-index: 2040 !important;
+        }
+    }
+
+    .modal-overlay {
+        padding: 5rem;
+        text-align: center;
+
+        .ion-md-close {
+            position: absolute;
+            top: 8px;
+            right: 20px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .title {
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+
+        .description {
+            width: 100%;
+            padding-right: 30px;
+            margin-bottom: 3rem;
+            text-align: left;
+            font-size: 16px;
+            max-height: 300px;
+            overflow: scroll;
+
+            &.center {
+                text-align: center;
+            }
+        }
+    }
+}

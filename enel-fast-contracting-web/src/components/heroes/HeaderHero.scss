@@ -1,0 +1,241 @@
+.FixedBg {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 105px;
+    padding-left: 120px;
+    color: #fff;
+    z-index: 500;
+
+    .small-title {
+        height: 0;
+        font-size: 26px;
+        font-weight: 300;
+        letter-spacing: .6px;
+        line-height: 105px;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity 0.2s linear;
+        will-change: opacity;
+
+        &.show {
+            height: auto;
+            opacity: 1;
+        }
+    }
+}
+
+
+
+.HeaderHeroLogo {
+    img {
+        position: fixed;
+        z-index: 550;
+        height: 70px;
+        margin-left: 5px;
+        margin-top: 22px;
+    }
+}
+
+.HeaderHero {
+    position: relative;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    //background-position: right !important;
+    width: 100%;
+    z-index: 510;
+    color: #fff;
+
+    --ppc-blue-color: #163FE8;
+    --ppc-light-blue: #7DA7FF;
+    --ppc-black-color: #000;
+
+    .blue-black-header {
+        --ppc-liniar-gradient-1: linear-gradient(180deg, var(--ppc-light-blue) 0%, var(--ppc-blue-color) 0%, var(--ppc-black-color) 1%);
+        --ppc-liniar-gradient-2: linear-gradient(180deg, var(--ppc-light-blue) 0%, var(--ppc-blue-color) 0%, var(--ppc-black-color) 7%);
+        --ppc-liniar-gradient-3: linear-gradient(180deg, var(--ppc-light-blue) -7%, var(--ppc-blue-color) 5%, var(--ppc-black-color) 20%);
+        --ppc-liniar-gradient-4: linear-gradient(180deg, var(--ppc-light-blue) -10%, var(--ppc-blue-color) 9%, var(--ppc-black-color) 27%);
+        --ppc-liniar-gradient-5: linear-gradient(180deg, var(--ppc-light-blue) -10%, var(--ppc-blue-color) 11%, var(--ppc-black-color) 34%);
+        --ppc-liniar-gradient-6: linear-gradient(180deg, var(--ppc-light-blue) -11%, var(--ppc-blue-color) 14%, var(--ppc-black-color) 41%);
+        --ppc-liniar-gradient-7: linear-gradient(180deg, var(--ppc-light-blue) -12%, var(--ppc-blue-color) 17%, var(--ppc-black-color) 48%);
+        --ppc-liniar-gradient-8: linear-gradient(180deg, var(--ppc-light-blue) -12%, var(--ppc-blue-color) 23%, var(--ppc-black-color) 55%);
+        --ppc-liniar-gradient-9: linear-gradient(180deg, var(--ppc-light-blue) -10%, var(--ppc-blue-color) 30%, var(--ppc-black-color) 62%);
+        --ppc-liniar-gradient-10: linear-gradient(180deg, var(--ppc-light-blue) -15%, var(--ppc-blue-color) 37%, var(--ppc-black-color) 68%);
+        --ppc-liniar-gradient-11: linear-gradient(180deg, var(--ppc-light-blue) -20%, var(--ppc-blue-color) 44%, var(--ppc-black-color) 74%);
+        --ppc-liniar-gradient-12: linear-gradient(180deg, var(--ppc-light-blue) -25%, var(--ppc-blue-color) 51%, var(--ppc-black-color) 83%);
+        --ppc-liniar-gradient-13: linear-gradient(180deg, var(--ppc-light-blue) -30%, var(--ppc-blue-color) 58%, var(--ppc-black-color) 90%);
+        --ppc-liniar-gradient-14: linear-gradient(180deg, var(--ppc-light-blue) -35%, var(--ppc-blue-color) 65%, var(--ppc-black-color) 97%);
+        --ppc-liniar-gradient-15: linear-gradient(180deg, var(--ppc-light-blue) -40%, var(--ppc-blue-color) 72%, var(--ppc-black-color) 104%);
+    
+    }
+    
+    
+    .gradient-header {
+        display: table-cell;
+        width: 24rem;
+        height: 20rem;
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        gap: 1rem;
+        flex-shrink: 0;
+    }
+    
+    
+    .gradient-header1 {
+        background: var(--ppc-liniar-gradient-1);
+    }
+    
+    .gradient-header2 {
+        background: var(--ppc-liniar-gradient-2);
+    }
+    
+    .gradient-header3 {
+        background: var(--ppc-liniar-gradient-3);
+    }
+    
+    .gradient-header4 {
+        background: var(--ppc-liniar-gradient-4);
+    }
+    
+    .gradient-header5 {
+        background: var(--ppc-liniar-gradient-5);
+    }
+    
+    .gradient-header6 {
+        background: var(--ppc-liniar-gradient-6);
+    }
+    
+    .gradient-header7 {
+        background: var(--ppc-liniar-gradient-7);
+    }
+    
+    .gradient-header8 {
+        background: var(--ppc-liniar-gradient-8);
+    }
+    
+    .gradient-header9 {
+        background: var(--ppc-liniar-gradient-9);
+    }
+    
+    .gradient-header10 {
+        background: var(--ppc-liniar-gradient-10);
+    }
+    
+    .gradient-header11 {
+        background: var(--ppc-liniar-gradient-11);
+    }
+    
+    .gradient12 {
+        background: var(--ppc-liniar-gradient-12);
+    }
+    
+    .gradient13 {
+        background: var(--ppc-liniar-gradient-13);
+    }
+    
+    .gradient14 {
+        background: var(--ppc-liniar-gradient-14);
+    }
+    
+    .gradient15 {
+        background: var(--ppc-liniar-gradient-15);
+    }
+    
+    @media screen and (max-height: 900px) and (max-width: 414px) {
+        .gradient-header {
+            height: 30rem;
+            width: 5rem;
+    
+        }
+    }
+    
+    @media screen and (max-width: 400px) and (max-height: 900px) {
+        .gradient-header {
+            width: 4rem;
+            height: 23rem;
+        }
+    }
+    
+    @media screen and (max-width: 430px) and (max-height: 950px) {
+        .gradient-header {
+            width: 5rem;
+            height: 30rem;
+        }
+    }
+    
+    @media screen and (max-width: 375px) and (max-height: 670px) {
+        .gradient-header {
+            width: 4rem;
+            height: 27rem;
+        }
+    }
+    
+    
+    
+    
+    /*For Big TV's (HD Screens)*/
+    @media screen and (min-width: 1280px) {
+    
+        .gradient-header {
+            width: 24rem;
+        }
+    }
+    
+    /*For Projectors or Higher Resolution Screens (Full HD)*/
+    @media screen and (min-width: 2294px) {
+    
+        .gradient-header {
+            width: 33rem;
+        }
+    }
+    
+    /*For 4K Displays (Ultra HD)*/
+    @media screen and (min-width: 3840px) {
+    
+        .gradient-header {
+            width: 40rem;
+        }
+    }
+
+    //padding-top: 500px;
+    //transform: translateY(-500px);
+    //margin-bottom: -500px;
+
+    span.icon-menu {
+        position: fixed;
+        top: 32px;
+        right: 30px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 22px;
+    }
+
+    .content {
+        position: relative;
+        text-align: left;
+        color: #ffffff;
+        z-index: 10;
+        height: 100%;
+
+        .title {
+            padding: 120px 0 127px 120px;
+            font-size: 60px;
+            font-weight: 300;
+            letter-spacing: -1px;
+            .subtitle {
+                font-size: 20px;
+                margin-top: 2.5rem;
+            }
+        }
+
+        .description {
+            margin-top: 2.5rem;
+            width: 48rem;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.2rem;
+        }
+    }
+}

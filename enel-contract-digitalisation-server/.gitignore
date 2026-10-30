@@ -1,0 +1,76 @@
+# IDE - VSCode
+*.code-workspace
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# OS X
+.DS_Store
+
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# node
+node_modules
+package-lock.json
+yarn-error.log
+
+# Others
+lib/
+data/
+uploads/
+sms/
+log/
+logs/
+!src/services/logs
+temp_image.png
+.~lock.*
+.DS_Store
+
+agent-importer/agenti.xls
+agent-importer/agenti.sql
+agent-importer/agenti.json
+
+pm2start.adi.json
+
+.cache/
+
+public/index.js
+public/index.map
+public/style.css
+public/index.css
+
+public/v2/*
+
+.idea/$PRODUCT_WORKSPACE_FILE$
+.idea/.gitignore
+.idea/enel-contract-digitalisation-server.iml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+dockerfile
+entrypoint.sh
+
+prod--.env
+.parcel-cache
+variante_pret_syncing
+
+#Node nvmrc
+.nvmrc
+certs
+
+docker/
+docker-compose.yml
+Dockerfile
+
+docs/
+.zed

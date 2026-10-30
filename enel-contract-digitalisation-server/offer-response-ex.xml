@@ -1,0 +1,41 @@
+<soap:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soap:Header/>
+   <soap:Body>
+      <OfertaResponse xmlns="urn:cros:ws:fsd:types">
+         <WSResponse xmlns="">
+            <status>OK</status>
+            <message xsi:nil="true"/>
+         </WSResponse>
+         <id_cros xmlns="">3489723</id_cros>
+         <WSDocuments xmlns=""/>
+      </OfertaResponse>
+   </soap:Body>
+</soap:Envelope>
+
+<soap:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soap:Header/>
+   <soap:Body>
+      <OfertaResponse xmlns="urn:cros:ws:fsd:types">
+         <WSResponse xmlns="">
+            <status>OK</status>
+            <message xsi:nil="true"/>
+         </WSResponse>
+         <id_cros xmlns="">3489735</id_cros>
+         <WSDocuments xmlns=""/>
+      </OfertaResponse>
+   </soap:Body>
+</soap:Envelope>
+
+<soap:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soap:Header/>
+   <soap:Body>
+      <OfertaResponse xmlns="urn:cros:ws:fsd:types">
+         <WSResponse xmlns="">
+            <status>NOK</status>
+            <message>Perechea ID_fsd = 1234 Serviciu = GAZ a mai fost transmisa</message>
+         </WSResponse>
+         <id_cros xsi:nil="true" xmlns=""/>
+         <WSDocuments xmlns=""/>
+      </OfertaResponse>
+   </soap:Body>
+</soap:Envelope>

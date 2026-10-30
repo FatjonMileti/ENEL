@@ -1,0 +1,71 @@
+.CardSelection {
+    .round-button-text {
+        display: block;
+        width: 100%;
+        padding: 50px;
+        padding-top: 120px;
+        background-color: #fcfcfc;
+        border: 1px dashed rgba(0, 0, 0, 0.2);
+        text-align: center;
+        text-decoration: none;
+        color: #111;
+
+        &:hover {
+            text-decoration: none;
+
+            span.button {
+                background-color: #289d59;
+            }
+
+            p {
+                color: #111;
+            }
+        }
+
+        p {
+            margin-top: 30px;
+        }
+
+        span.button {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background-color: #55be5a;
+            margin-bottom: 18px;
+            align-items: center;
+            justify-content: center;
+            display: inline-flex;
+            transition: all 0.2s;
+            cursor: pointer;
+
+            img {
+                width: 60%;
+            }
+        }
+    }
+
+    .container.main-area {
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 120px;
+        opacity: 1;
+    }
+
+    #input-upload {
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+        width: 1px;
+        height: 1px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .CardSelection {
+        .container.main-area {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+}

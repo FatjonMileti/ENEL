@@ -1,0 +1,209 @@
+.Button {
+    padding: 13px 19px;
+    min-width: 120px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    border-width: 2px;
+    line-height: 1.4;
+    font-size: 11px;
+    cursor: pointer;
+    outline: none !important;
+    box-shadow: none !important;
+    border-style: solid;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &.btn-full-width {
+        width: 100%;
+        min-width: unset;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &.btn-has-icon {
+        font-size: 15px;
+        line-height: 0;
+    }
+
+    &.btn-disabled {
+        opacity: 0.3;
+        pointer-events: none;
+    }
+
+    &.btn-primary {
+        color: #fff;
+        background-color: #000000;
+        border-color: #000000;
+
+        &:hover {
+            background-color: transparent;
+            color: #000000;
+            border-color: #000000;
+        }
+
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active {
+            background-color: #fff;
+            border-color: #000;
+            color: #000;
+        }
+
+        &:disabled,
+        &:disabled:hover {
+            background-color: #fff;
+            border-color: #000;
+        }
+    }
+
+    &.btn-secondary {
+        color: #fff;
+        background-color: #000;
+        border-color: #000;
+
+        &:hover {
+            background-color: transparent;
+            color: #000;
+            border-color: #000;
+        }
+
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #000;
+            border-color: #000;
+        }
+
+        &:disabled,
+        &:disabled:hover {
+            background-color: #000;
+            border-color: #000;
+        }
+    }
+
+    &.btn-outlined {
+        background-color: transparent;
+        color: #000000;
+        border-radius: 4px;
+        border: 1px solid #555c5f;
+
+        &:hover {
+            color: #fff;
+            background-color: #555c5f;
+        }
+    }
+
+    &.btn-info {
+        color: #fff;
+        background-color: #0555fa;
+        border-color: #0555fa;
+
+        &:hover {
+            background-color: transparent;
+            color: #0555fa;
+            border-color: #0555fa;
+        }
+
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active {
+            background-color: rgba(5, 85, 250, 0.2);
+            color: #0555fa;
+            border-color: #0555fa;
+        }
+
+        &:disabled,
+        &:disabled:hover {
+            background-color: #0555fa;
+            border-color: #0555fa;
+        }
+    }
+
+    &.btn-primary-outline {
+        background-color: transparent;
+        border-color: #ff0f64;
+        color: #ff0f64;
+
+        &:hover {
+            background-color: #ff0f64;
+            color: white;
+            border-color: #ff0f64;
+        }
+
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active {
+            background-color: rgba(255, 15, 100, 0.8);
+            color: white;
+            border-color: #ff0f64;
+        }
+    }
+
+    &.btn-secondary-outline {
+        background-color: transparent;
+        border-color: #000000;
+        color: #000000;
+
+        &:hover {
+            background-color: #000000;
+            color: white;
+            border-color: #000000;
+        }
+
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled):active {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            border-color: #000000;
+        }
+    }
+
+    &.btn-light-outline {
+        background-color: transparent;
+        border-color: #fff;
+        color: #fff;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-color: #fff;
+        }
+
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled):active {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-color: #fff;
+        }
+    }
+
+    &.btn-primary-underline {
+        background-color: transparent;
+        border-color: transparent;
+        color: #4285f4;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &.btn-secondary-underline {
+        background-color: transparent;
+        border-color: transparent;
+        color: #000;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &.btn-light-underline {
+        background-color: transparent;
+        border-color: transparent;
+        color: #fff;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

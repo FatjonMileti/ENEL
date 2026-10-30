@@ -1,0 +1,674 @@
+@media only screen and (max-width: 992px) {
+	.HeaderHero .content .title {
+		width: 60%;
+		margin: 0 auto;
+		font-size: 50px !important;
+	}
+
+	.HeaderHeroLogo img {
+		position: absolute !important;
+	}
+
+	.FixedBg {
+		height: 60px !important;
+
+		.small-title {
+			line-height: 60px !important;
+			font-size: 12px !important;
+			text-transform: uppercase !important;
+			font-weight: 700 !important;
+		}
+	}
+
+	.ProgressBar {
+		position: absolute !important;
+	}
+
+	.show-tablet {
+	    display: block !important;
+	}
+
+	.hide-tablet {
+		display: none !important;
+	}
+
+	.rc-slider-handle {
+		width: 30px !important;
+		height: 30px !important;
+		margin-top: -14px !important;
+		margin-left: -18px !important;
+		z-index: 100 !important;
+	}
+
+	.PlanDetails {
+		.superheader {
+			font-size: 60px !important;
+		}
+
+		p.eyebrow {
+			margin-top: 68px !important;
+		}
+	}
+
+	.PlanList {
+		.card-header {
+			position: relative !important;
+			flex-direction: row !important;
+			width: 100% !important;
+		}
+
+		.card-body {
+			padding: 2rem 2.25rem 2.45rem !important;
+		}
+
+		.card-serv {
+			.oferta-div {
+				border-bottom: none;
+			}
+
+			&.cards-3 {
+				.card-body {
+					min-height: unset !important;
+				}
+			}
+
+			&.cards-4 {
+				.card-header {
+					display: flex;
+					flex-direction: unset;
+					flex-wrap: wrap;
+					border-bottom: none;
+
+					.oferta-div {
+						flex: 1 0 50%;
+
+						&:first-child,
+						&:nth-child(2) {
+							border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+						}
+
+						&:nth-child(2) {
+							border-right: none !important;
+						}
+					}
+				}
+				.card-body {
+					min-height: unset !important;
+				}
+			}
+		}
+
+		.oferta-div {
+			border-right: 2px solid rgba(255, 255, 255, 0.4) !important;
+
+			&:last-child {
+				border-right: none !important;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.btn {
+		min-width: 130px !important;
+	}
+
+	.container {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+
+		&.main-area {
+			padding-top: 30px;
+			padding-bottom: 40px;
+		}
+	}
+
+	.custom-checkbox .custom-control-label,
+	.custom-radio .custom-control-label {
+		margin-top: 5px !important;
+
+		&::before {
+			top: 6px;
+			width: 2rem;
+			height: 2rem;
+		}
+
+		&::after {
+			top: 6px;
+			width: 2rem;
+			height: 2rem;
+		}
+	}
+
+	.custom-checkbox.custom-control,
+	.custom-radio.custom-control {
+		padding-left: 3rem;
+	}
+
+	.btn-full-mobile {
+		width: 100% !important;
+	}
+
+	.show-mobile {
+	    display: block !important;
+	}
+
+	.hide-mobile {
+		display: none !important;
+	}
+
+	.page-description {
+		font-size: 15px;
+		padding-top: 10px;
+
+		.container.main-area {
+			padding-bottom: 10px;
+		}
+	}
+
+	form .mb-3, form .my-3 {
+		margin-bottom: 20px !important;
+	}
+
+	.offset-top {
+		margin-top: 40px;
+	}
+
+	.tooltip-container {
+		position: unset;
+
+		.tooltip-message {
+			width: calc(100% - 30px);
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	.container.main-area.doc-interaction {
+		padding-top: 0;
+		margin-top: 0;
+	}
+
+	.custom-autocomplete {
+		.item {
+			font-size: 17px;
+		}
+	}
+
+	#pictureContainer {
+		p {
+			font-size: 12px;
+		}
+	}
+
+	.ImagesOverlay {
+		.DocPage {
+			max-width: 100% !important;
+		}
+	}
+
+	.HeaderHero {
+        background-repeat: round;
+		.content .title {
+			width: 70%;
+			font-size: 30px !important;
+			padding: 110px 0 87px 0 !important;
+		}
+	}
+
+	.HeaderHeroLogo img {
+		height: 22px !important;
+		margin-top: 18px !important;
+		margin-left: 15px !important;
+	}
+
+	.ModalOverlay {
+		.wrapper {
+			width: calc(100% - 30px) !important;
+			margin: 15px auto !important;
+		}
+
+		.close {
+			top: 15px !important;
+			right: 15px !important;
+		}
+	}
+
+	.ProgressBar {
+		.step {
+			margin-top: -15px !important;
+			margin-left: -15px;
+		}
+	}
+
+	.Loader {
+		top: 30% !important;
+	}
+
+	.PlanOptions {
+		.col-md-4.offset-md-1 img.home-illustration {
+			display: none;
+		}
+
+		.logo-header img {
+			height: 22px;
+			margin-top: 0px;
+			margin-left: 0px;
+		}
+
+		.first-page-autocomplete {
+			.custom-autocomplete {
+				span.input-wrapper i {
+					top: 14px !important;
+				}
+			}
+		}
+	}
+
+	.PlanList {
+		h1.header {
+			font-size: 30px !important;
+		}
+
+		.disclaimer {
+			font-size: 12px;
+		}
+
+		.card-header {
+			.oferta-div {
+				strong {
+					font-size: 30px;
+				}
+			}
+		}
+
+		.card-body {
+			padding: 20px !important;
+
+			.btn {
+				margin-bottom: 0;
+			}
+
+			.card-text {
+				font-size: 15px !important;
+			}
+
+			.card-title {
+				margin-top: 12px;
+				margin-bottom: 6px !important;
+			}
+		}
+
+		.card-set-wrapper {
+			padding: 0px;
+		}
+
+		.card-serv {
+			margin-left: 15px;
+			margin-right: 15px;
+
+			&:hover {
+				transform: scale(1) !important;
+				box-shadow: none !important;
+			}
+		}
+
+		.disclaimer {
+			padding: 0 15px;
+		}
+
+		.eyebrow {
+			font-size: 10px !important;
+		}
+	}
+
+	.PlanDetails {
+		.logo-header img {
+			height: 22px !important;
+		}
+
+		.top-header .row.title-bar {
+			padding: 0;
+
+			& > div {
+				padding: 0;
+			}
+		}
+
+		.superheader {
+			font-size: 40px !important;
+			letter-spacing: -2px;
+			line-height: 1;
+		}
+
+		p.eyebrow {
+			margin-top: 30px !important;
+			font-size: 10px !important;
+		}
+
+		span.eyebrow {
+			margin-bottom: 0 !important;
+			font-size: 10px !important;
+		}
+
+		span.unit {
+			font-size: 16px !important;
+			letter-spacing: .32px;
+			line-height: 1;
+		}
+
+		.card-bar {
+			padding: 35px 20px;
+
+			.intro {
+				font-size: 15px !important;
+			}
+		}
+
+		.card-body {
+			font-size: 15px;
+		}
+
+		.header--immersive {
+			height: 380px !important;
+		}
+
+		.plan-overview {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+			width: auto;
+			box-shadow: none !important;
+			margin-top: -129px;
+
+			.card-header {
+				flex-direction: unset;
+				flex-wrap: wrap;
+				border-bottom: none;
+
+				.oferta-div {
+					border-right: none;
+					flex: 1 0 41%;
+
+					&:nth-child(2n+1) {
+						border-right: 1px solid #ddd;
+					}
+
+					&:last-child {
+						border-right: none;
+					}
+				}
+			}
+		}
+
+		.oferta-div strong {
+			font-size: 40px !important;
+		    letter-spacing: -2px;
+		    line-height: 1;
+		}
+	}
+
+	.Agreement {
+		::-webkit-input-placeholder {
+		    font-size: 15px;
+		    line-height: 23px
+		}
+
+		::-moz-placeholder {
+		    font-size: 15px;
+		    line-height: 23px
+		}
+
+		:-ms-input-placeholder {
+		    font-size: 15px;
+		    line-height: 23px
+		}
+
+		::placeholder {
+		    font-size: 15px;
+		    line-height: 23px
+		}
+	}
+
+	.ClientInfoFound {
+		h3 {
+			margin-bottom: 30px !important;
+			padding-right: 65px;
+		    font-size: 30px !important;
+		}
+
+		.offset-top {
+			margin-top: 30px;
+		}
+
+		.col-md-6 {
+			padding: 0 !important;
+		}
+	}
+
+	.ClientInvoiceScan {
+		.client-autocomplete {
+			margin-bottom: 20px;
+		}
+	}
+
+	.DocList {
+		.documente-incarcate {
+			margin-top: 40px;
+
+			.spaced-top {
+				margin-top: 20px;
+			}
+
+			.document {
+				margin-bottom: 0;
+			}
+		}
+
+		.doc-image {
+			margin-right: 15px !important;
+		}
+
+		.doc-title {
+			font-size: 10px !important;
+		}
+	}
+
+	.ClientPlaceDocs {
+		.ConfirmOverlay {
+			.content {
+				position: absolute;
+				top: 35%;
+				transform: translateY(-50%);
+
+				.title {
+					text-align: left;
+					font-size: 24px !important;
+					span {
+						display: block;
+						width: 290px;
+						margin: auto;
+					}
+				}
+			}
+		}
+		.ModalOverlay .wrapper {
+			height: calc(100% - 30px);
+
+			&.middle {
+				top: 0;
+    			transform: unset;
+			}
+		}
+	}
+
+	.ClientInvoiceScan {
+		.ConfirmOverlay {
+			.content {
+				position: absolute;
+				top: 35%;
+				transform: translateY(-50%);
+
+				.title {
+					font-size: 24px !important;
+				}
+			}
+		}
+		.ModalOverlay .wrapper {
+			height: calc(100% - 30px);
+
+			&.middle {
+				top: 0;
+    			transform: unset;
+			}
+		}
+	}
+
+	.CNPValidation {
+		.ConfirmOverlay {
+			.content {
+				position: absolute;
+				top: 35%;
+				transform: translateY(-50%);
+			}
+		}
+		.ModalOverlay .wrapper {
+			height: calc(100% - 30px);
+
+			&.middle {
+				top: 0;
+    			transform: unset;
+			}
+		}
+	}
+
+	.ContractOptions {
+		.show-more {
+			margin-top: 0px !important;
+			margin-left: 15px;
+			margin-right: 15px;
+		}
+		.monthly-usage {
+			&.show {
+				height: 1285px !important;
+				margin-top: 20px;
+			}
+		}
+	}
+
+	.MarketingOptions {
+		.marketing-address {
+			margin-left: 3rem !important;
+		}
+	}
+
+	.ContractReview {
+		.spaced-top {
+			margin-top: 30px !important;
+		}
+
+		.card {
+			margin-bottom: 12px !important;
+			padding-bottom: 0 !important;
+
+			.card-text {
+                width: 100% !important;
+                margin-bottom: 8px !important;
+			}
+		}
+
+		.card-set {
+			margin-bottom: 135px !important;
+
+			.btn-download-all {
+				right: unset;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+
+		.agreement {
+			margin-left: 15px;
+			text-align: left !important;
+
+			.custom-checkbox .custom-control-label {
+				margin-left: 1rem !important;
+				font-size: 15px !important;
+			}
+		}
+	}
+
+	.Backoffice,
+	.ThankYou {
+		.logo-header img {
+			height: 22px;
+		}
+
+		h1.header {
+			font-size: 30px;
+		}
+
+		.intro.header {
+			font-size: 15px;
+		}
+
+		.smiley {
+			height: 120px;
+			margin-top: 40px !important;
+		}
+	}
+
+	.Scanner .framing {
+		display: none;
+	}
+
+	.ConfirmOverlay {
+		.content .title {
+			font-size: 30px !important;
+		}
+
+		.logo img {
+			height: 22px !important;
+			margin-top: 18px !important;
+			margin-left: 15px !important;
+		}
+
+		.content .description,
+		.content .buttons {
+			width: calc(100% - 40px) !important;
+			margin-left: 20px !important;
+			margin-right: 20px !important;
+		}
+
+		&.big .content .description {
+			padding: 0 1rem !important;
+		}
+
+		&.no-logo .content .title {
+			margin-top: 4rem !important;
+		}
+	}
+
+	.vertical-separator {
+		margin-bottom: 50px;
+	}
+
+	.hero-container {
+		padding: 0 !important;
+	}
+
+	.single-column {
+		width: 100% !important;
+	}
+
+	.plan-horizontal {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.plan-overview .oferta-div {
+		border-left: 0px;
+		border-bottom: 1px solid #ddd;
+	}
+}

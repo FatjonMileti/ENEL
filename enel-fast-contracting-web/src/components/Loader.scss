@@ -1,0 +1,22 @@
+.Loader {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	opacity: 0;
+	transform: scale(4);
+	z-index: -1;
+
+	&.show {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	.spinner {
+		width: 85px;
+		opacity: .95;
+	}
+
+	.path {
+		stroke-width: 3px;
+	}
+}

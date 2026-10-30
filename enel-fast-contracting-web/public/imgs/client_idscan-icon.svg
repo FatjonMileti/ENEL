@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.571 34.122">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <path id="client_idscan-icon" class="cls-1" d="M5.328,17.121V36.089H26.785a11.077,11.077,0,1,1,7.568.033H48.571V11.912A6.893,6.893,0,0,0,41.659,5H5v8.19H16.794V8.44" transform="translate(-3.5 -3.5)"/>
+</svg>

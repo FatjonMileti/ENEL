@@ -1,0 +1,1914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.example.com/1523980713535" xmlns:ns0="lt:cros:ws:fsd:types" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap12/" name="Untitled" targetNamespace="http://xmlns.example.com/1523980713535">
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="lt:cros:ws:fsd:types" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:complexType name="Account">
+                <xs:sequence>
+                    <xs:element name="cod_client" form="unqualified" nillable="true" type="ns0:string128" minOccurs="0"/>
+                    <xs:element name="nume_client" form="unqualified" nillable="true" type="ns0:string128" minOccurs="0"/>
+                    <xs:element name="dont_market" form="unqualified" nillable="true" type="ns0:string128" minOccurs="0"/>
+                    <xs:element name="dont_market_with_partner" form="unqualified" nillable="true" type="ns0:string128" minOccurs="0"/>
+                    <xs:element name="Supply" form="unqualified" type="ns0:Supplies" minOccurs="0" maxOccurs="20"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Artera">
+                <xs:sequence>
+                    <xs:element name="cod" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="prefix" form="unqualified" nillable="true" type="ns0:string15"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Artere">
+                <xs:sequence>
+                    <xs:element name="Artera" form="unqualified" type="ns0:Artera" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Banca">
+                <xs:sequence>
+                    <xs:element name="cod" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="denumire" form="unqualified" nillable="true" type="ns0:string64"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Banci">
+                <xs:sequence>
+                    <xs:element name="Banca" form="unqualified" type="ns0:Banca" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="CFEE">
+                <xs:sequence>
+                    <xs:element name="acord" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="mod_corespondenta" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="email" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="nr_telefon" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="mod_avans" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="iban" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="eneltel" form="unqualified" nillable="true" type="ns0:number10"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Canal">
+                <xs:sequence>
+                    <xs:element name="id" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="denumire" form="unqualified" nillable="true" type="ns0:string32"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Canale">
+                <xs:sequence>
+                    <xs:element name="Canal" form="unqualified" type="ns0:Canal" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Client">
+                <xs:sequence>
+                    <xs:element name="enelCustomerId" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="cnp_cui" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="nume_companie" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="name" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="surname" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="countryId" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="districtId" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="cityId" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="streetTypeId" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="streetId" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="streetNo" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="building" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="entrance" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="floor" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="apartment" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="idCardSeries" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="idCardNo" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="idCardIssuedOn" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="idCardExpiresOn" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="idCardIssuedBy" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="email" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="telefon" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="mobil" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="fax" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="cod_onrc" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="cod_caen" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="tip_companie" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="MobileValidated" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="MobileValidationDate" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="EmailValidated" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="EmailValidationDate" form="unqualified" nillable="true" type="xs:date"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ClientOferta">
+                <xs:sequence>
+                    <xs:element name="nume_companie" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="nume" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="prenume" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="cnp_cui" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="strada" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="localitate" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="tip_artera" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="nume_strada" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="cod_postal" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="nr_strada" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="bloc" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="scara" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="apartament" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="etaj" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="rest_adresa" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="mobil" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="telefon" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="fax" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="email" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="MobileValidated" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="MobileValidationDate" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="EmailValidated" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="EmailValidationDate" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="ci_numar" form="unqualified" nillable="true" type="ns0:string10"/>
+                    <xs:element name="ci_emis_de" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="ci_emis_la" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="ci_seria" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="cod_fiscal" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="cod_onrc" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="update_cros" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="transmitere_contract" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="tip_companie" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="cod_caen_companie" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="nume_contact" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="prenume_contact" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="rol_contact" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="cnp_contact" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="telefon_contact" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="email_contact" form="unqualified" nillable="true" type="ns0:string64"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Clienti">
+                <xs:sequence>
+                    <xs:element name="Client" form="unqualified" type="ns0:Client" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="CodCAEN">
+                <xs:sequence>
+                    <xs:element name="cod" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="denumire" form="unqualified" nillable="true" type="ns0:string256"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="CodPostal">
+                <xs:sequence>
+                    <xs:element name="strada" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="cod_postal" form="unqualified" nillable="true" type="ns0:string6"/>
+                    <xs:element name="nr_de_la" form="unqualified" nillable="true" type="ns0:number10"/>
+                    <xs:element name="nr_la" form="unqualified" nillable="true" type="ns0:number10"/>
+                    <xs:element name="par_impar" form="unqualified" nillable="true" type="ns0:string1"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="CoduriCAEN">
+                <xs:sequence>
+                    <xs:element name="CodCAEN" form="unqualified" type="ns0:CodCAEN" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="CoduriPostale">
+                <xs:sequence>
+                    <xs:element name="CodPostal" form="unqualified" type="ns0:CodPostal" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Concurs">
+                <xs:sequence>
+                    <xs:element name="id" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="acord_concurs" form="unqualified" nillable="true" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Concursuri">
+                <xs:sequence>
+                    <xs:element name="Concurs" form="unqualified" type="ns0:Concurs" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ConsumLoc">
+                <xs:sequence>
+                    <xs:element name="nlc" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="marime_masurata" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="consum_lunar" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="consum_anual" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="consum_01" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="consum_02" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="consum_03" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="consum_04" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="consum_05" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="consum_06" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="consum_07" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="consum_08" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="consum_09" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="consum_10" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="consum_11" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="consum_12" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ConsumuriLoc">
+                <xs:sequence>
+                    <xs:element name="ConsumLoc" form="unqualified" type="ns0:ConsumLoc" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Cont">
+                <xs:sequence>
+                    <xs:element name="banca" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="iban" form="unqualified" nillable="true" type="ns0:string32"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Conturi">
+                <xs:sequence>
+                    <xs:element name="Cont" form="unqualified" type="ns0:Cont" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Corespondenta">
+                <xs:sequence>
+                    <xs:element name="localitate" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="tip_artera" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="nume_strada" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="strada" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="nr_strada" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="bloc" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="scara" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="apartament" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="etaj" form="unqualified" nillable="true" type="ns0:string15"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Discount">
+                <xs:sequence>
+                    <xs:element name="DiscountID" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="DiscountName" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="Description" form="unqualified" nillable="true" type="ns0:string2000"/>
+                    <xs:element name="DiscountStartDate" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="DiscountEndDate" form="unqualified" nillable="true" type="xs:date"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="DiscountOferta">
+                <xs:sequence>
+                    <xs:element name="id" form="unqualified" nillable="true" type="ns0:string32"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="DiscountResponse">
+                <xs:sequence>
+                    <xs:element name="status" form="unqualified" type="ns0:string15"/>
+                    <xs:element name="message" form="unqualified" nillable="true" type="ns0:string2000"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Discounts">
+                <xs:sequence>
+                    <xs:element name="Discount" form="unqualified" type="ns0:Discount" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="DiscountsOferta">
+                <xs:sequence>
+                    <xs:element name="Discount" form="unqualified" type="ns0:DiscountOferta" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Distribuitor">
+                <xs:sequence>
+                    <xs:element name="id" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="denumire" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="cui" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="mail" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="ee" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="gaz" form="unqualified" nillable="true" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Distribuitori">
+                <xs:sequence>
+                    <xs:element name="Distribuitor" form="unqualified" type="ns0:Distribuitor" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Furnizor">
+                <xs:sequence>
+                    <xs:element name="id" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="denumire" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="cui" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="mail" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="ee" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="gaz" form="unqualified" nillable="true" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Furnizori">
+                <xs:sequence>
+                    <xs:element name="Furnizor" form="unqualified" type="ns0:Furnizor" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="GDPR">
+                <xs:sequence>
+                    <xs:element name="acord_mk" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="acord_part" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="acord_profil" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="canal_email" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="email" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="canal_sms" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="sms" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="canal_telefon" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="telefon" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="canal_posta" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="localitate" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="tip_artera" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="nume_strada" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="strada" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="nr_strada" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="bloc" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="scara" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="apartament" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="etaj" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="note_info" form="unqualified" nillable="true" type="ns0:string500" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="anexa2" form="unqualified" nillable="true" type="ns0:string500" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="GamaServiciu">
+                <xs:sequence>
+                    <xs:element name="serviciu" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="cod" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="denumire" form="unqualified" nillable="true" type="ns0:string64"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="GameServicii">
+                <xs:sequence>
+                    <xs:element name="GamaServiciu" form="unqualified" type="ns0:GamaServiciu" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="GetPlace">
+                <xs:sequence>
+                    <xs:element name="Places" form="unqualified" type="ns0:Place" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="GetVouchers">
+                <xs:sequence>
+                    <xs:element name="Vouchers" form="unqualified" type="ns0:Voucher" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Interlocutor">
+                <xs:sequence>
+                    <xs:element name="nume" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="pree" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="rol" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="mobil" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="telefon" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="fax" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="email" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="mobile_validat" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="email_validat" form="unqualified" nillable="true" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Judet">
+                <xs:sequence>
+                    <xs:element name="denumire" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="cod" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="prefix_tel" form="unqualified" nillable="true" type="ns0:string15"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Judete">
+                <xs:sequence>
+                    <xs:element name="Judet" form="unqualified" type="ns0:Judet" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Kam">
+                <xs:sequence>
+                    <xs:element name="kam" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="nume" form="unqualified" nillable="true" type="ns0:string64"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Kami">
+                <xs:sequence>
+                    <xs:element name="Kam" form="unqualified" type="ns0:Kam" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="LeadDocument">
+                <xs:sequence>
+                    <xs:element name="doc" form="unqualified" type="xs:base64Binary"/>
+                    <xs:element name="nume_doc" form="unqualified" type="ns0:string500"/>
+                    <xs:element name="tip_doc" form="unqualified" type="ns0:string500"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Loc">
+                <xs:sequence>
+                    <xs:element name="nlc" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="connection_cer_number" form="unqualified" nillable="true" type="ns0:string64" minOccurs="0"/>
+                    <xs:element name="cer_issuing_date" form="unqualified" nillable="true" type="xs:date" minOccurs="0"/>
+                    <xs:element name="eneltel" form="unqualified" nillable="true" type="ns0:number9"/>
+                    <xs:element name="denumire_loc" form="unqualified" nillable="true" type="ns0:string500"/>
+                    <xs:element name="localitate" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="tip_artera" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="nume_strada" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="strada" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="nr_strada" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="bloc" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="scara" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="apartament" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="etaj" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="cod_caen" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="nr_atr" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="data_atr" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="nivel_tensiune" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="pressure" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="presureLevel" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="putere" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="categorie_gaz" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="distribuitor" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="valabil_act_spatiu" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="necesar_pif" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="cod_pod" form="unqualified" nillable="true" type="ns0:string32"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Localitate">
+                <xs:sequence>
+                    <xs:element name="id" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="judet" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="denumire" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="urban" form="unqualified" nillable="true" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Localitati">
+                <xs:sequence>
+                    <xs:element name="Localitate" form="unqualified" type="ns0:Localitate" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Locuri">
+                <xs:sequence>
+                    <xs:element name="Loc" form="unqualified" type="ns0:Loc" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ModTransmitere">
+                <xs:sequence>
+                    <xs:element name="canal_sms" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="sms" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="canal_email" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="email" form="unqualified" nillable="true" type="ns0:string64"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="NLC">
+                <xs:sequence>
+                    <xs:element name="enelLocationId" form="unqualified" nillable="true" type="ns0:number10" minOccurs="0"/>
+                    <xs:element name="districtId" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                    <xs:element name="cityId" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                    <xs:element name="streetTypeId" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                    <xs:element name="streetId" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                    <xs:element name="streetNo" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                    <xs:element name="building" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                    <xs:element name="entrance" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                    <xs:element name="floor" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                    <xs:element name="apartment" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                    <xs:element name="codeENELTEL" form="unqualified" nillable="true" type="ns0:number9" minOccurs="0"/>
+                    <xs:element name="distributorId" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                    <xs:element name="supplyerId" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                    <xs:element name="noOfSupplies" form="unqualified" nillable="true" type="ns0:number10" minOccurs="0"/>
+                    <xs:element name="gasconsumptionCategoryId" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                    <xs:element name="energyVoltageLevel" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                    <xs:element name="status" form="unqualified" nillable="true" type="ns0:string64" minOccurs="0"/>
+                    <xs:element name="piata" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                    <xs:element name="cnp_cui" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                    <xs:element name="caen" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                    <xs:element name="denumire_lc" form="unqualified" nillable="true" type="ns0:string1000" minOccurs="0"/>
+                    <xs:element name="valabilitate" form="unqualified" nillable="true" type="xs:date" minOccurs="0"/>
+                    <xs:element name="nr_atr" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                    <xs:element name="data_atr" form="unqualified" nillable="true" type="xs:date" minOccurs="0"/>
+                    <xs:element name="cod_pod" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                    <xs:element name="pressure" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="presureLevel" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="prosumer" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                    <xs:element name="prosumer_power" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="NLC_LEAD">
+                <xs:sequence>
+                    <xs:element name="nlc_cod_pod" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                    <xs:element name="nlc_localitate" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                    <xs:element name="nlc_tip_artera" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                    <xs:element name="nlc_nume_strada" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                    <xs:element name="nlc_strada" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                    <xs:element name="nlc_nr_strada" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                    <xs:element name="nlc_bloc" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                    <xs:element name="nlc_scara" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                    <xs:element name="nlc_apartament" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                    <xs:element name="nlc_etaj" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="NLC_LEAD_TYPE">
+                <xs:sequence>
+                    <xs:element name="NLC" form="unqualified" type="ns0:NLC_LEAD" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Negociere">
+                <xs:sequence>
+                    <xs:element name="furn_24" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="verde" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="scadenta" form="unqualified" nillable="true" type="ns0:number2"/>
+                    <xs:element name="pret_ea" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="pret_eaz" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="pret_eano" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="pret_eanw" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="pret_gaz" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="pret_tr_gaz" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Oferta">
+                <xs:sequence>
+                    <xs:element name="id_fsd" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="generic_dossier_id" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="serviciu" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="sw_titular" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="sw_furnizor" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="furnizare" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="id_varianta_pret" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="furnizor" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="tip_contract" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="data_accept" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="valabil_de_la" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="valabil_furnizare" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="tip_canal" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="canal" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="kam" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="cu_avans" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="ritmfact_cod" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="nume_agent" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="marca_agent" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="prosumer" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                    <xs:element name="prosumer_power" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                    <xs:element name="consumptionConventions" form="unqualified" nillable="true" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="OfertaServiciu">
+                <xs:sequence>
+                    <xs:element name="serviciu" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="gama" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="tip" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="seg" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="site" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="cod" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="combo" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="denumire" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="de_la" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="la" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="pret" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="pret_ea" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="pret_eaz" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="pret_eanw" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="pret_eano" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="pret_gaz" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="pret_tr_gaz" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="abonament" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="descriere_prod" form="unqualified" nillable="true" type="ns0:string1000"/>
+                    <xs:element name="descriere_prod_l" form="unqualified" nillable="true" type="ns0:string2000"/>
+                    <xs:element name="denumire_pachet" form="unqualified" nillable="true" type="ns0:string1000"/>
+                    <xs:element name="descriere_pachet" form="unqualified" nillable="true" type="ns0:string1000"/>
+                    <xs:element name="descriere_pachet_l" form="unqualified" nillable="true" type="ns0:string2000"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="OferteServicii">
+                <xs:sequence>
+                    <xs:element name="OfertaServiciu" form="unqualified" type="ns0:OfertaServiciu" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Place">
+                <xs:sequence>
+                    <xs:element name="address_city_code" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="address_city_name" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="address_county" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="address_number" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="address_postcode" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="address_street" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="address_streetType" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="code" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="name" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="operatorId" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="type" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataElectricity_counterIndexDesc" form="unqualified" nillable="true" type="ns0:string4000"/>
+                    <xs:element name="technicalDataElectricity_counterSeries" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataElectricity_counterType" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataElectricity_date" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="technicalDataElectricity_documentType" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataElectricity_number" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataElectricity_smartMeter" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataElectricity_status" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataElectricity_type" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataElectricity_approvedConsumptionPower" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataElectricity_connectionType" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataElectricity_networkType" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataElectricity_voltageLevel" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataGas_counterIndexReadDate" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="technicalDataGas_counterIndexValue" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataGas_counterSeries" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataGas_counterType" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataGas_date" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="technicalDataGas_documentType" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataGas_number" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataGas_smartMeter" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataGas_status" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataGas_type" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataGas_category" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataGas_debit" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataGas_networkType" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="technicalDataGas_pressure" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="prosumer" form="unqualified" nillable="true" type="ns0:string128"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Reading">
+                <xs:sequence>
+                    <xs:element name="GAS" form="unqualified" nillable="true" type="ns0:decimal_31_14" minOccurs="0"/>
+                    <xs:element name="ELE_SINGLERATE" form="unqualified" nillable="true" type="ns0:decimal_31_14" minOccurs="0"/>
+                    <xs:element name="ELE_DAY" form="unqualified" nillable="true" type="ns0:decimal_31_14" minOccurs="0"/>
+                    <xs:element name="ELE_NIGHT" form="unqualified" nillable="true" type="ns0:decimal_31_14" minOccurs="0"/>
+                    <xs:element name="ELE_GOAL" form="unqualified" nillable="true" type="ns0:decimal_31_14" minOccurs="0"/>
+                    <xs:element name="ELE_INDUCTIVE" form="unqualified" nillable="true" type="ns0:decimal_31_14" minOccurs="0"/>
+                    <xs:element name="ELE_CAPACITIVE" form="unqualified" nillable="true" type="ns0:string30" minOccurs="0"/>
+                    <xs:element name="METER_NUMBER" form="unqualified" nillable="true" type="ns0:string30" minOccurs="0"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Readings">
+                <xs:sequence>
+                    <xs:element name="Reading" form="unqualified" type="ns0:Reading" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="SWFurnizor">
+                <xs:sequence>
+                    <xs:element name="furnizor" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="nr_contract" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="data_contract" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="sold" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="index_contor" form="unqualified" nillable="true" type="ns0:decimal_22_6"/>
+                    <xs:element name="serie_contor" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="data_reziliere" form="unqualified" nillable="true" type="xs:date"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="SWTitular">
+                <xs:sequence>
+                    <xs:element name="data_act_spatiu" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="nr_act_spatiu" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="nume_fost_proprietar" form="unqualified" nillable="true" type="ns0:string500"/>
+                    <xs:element name="declaratie_act_proprietar" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="ownership_role" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="ownership_role_desc" form="unqualified" nillable="true" type="ns0:string256"/>
+                    <xs:element name="ownership_role_start_date" form="unqualified" nillable="true" type="xs:date"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Segment">
+                <xs:sequence>
+                    <xs:element name="cod" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="denumire" form="unqualified" nillable="true" type="ns0:string32"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Segmente">
+                <xs:sequence>
+                    <xs:element name="Segment" form="unqualified" type="ns0:Segment" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Semnatura">
+                <xs:sequence>
+                    <xs:element name="client" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="functia" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="nume" form="unqualified" nillable="true" type="ns0:string128"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Semnaturi">
+                <xs:sequence>
+                    <xs:element name="Semnatura" form="unqualified" type="ns0:Semnatura" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Strada">
+                <xs:sequence>
+                    <xs:element name="id" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="localitate" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="tip_artera" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="denumire" form="unqualified" nillable="true" type="ns0:string32"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Strazi">
+                <xs:sequence>
+                    <xs:element name="Strada" form="unqualified" type="ns0:Strada" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Supplies">
+                <xs:sequence>
+                    <xs:element name="pod_code" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="status" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="record_type" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="piata" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="contractEndDate" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="produs" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="energie_activa" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="abonament" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="prosumer" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                    <xs:element name="prosumer_power" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TipCanal">
+                <xs:sequence>
+                    <xs:element name="id" form="unqualified" nillable="true" type="ns0:number10"/>
+                    <xs:element name="denumire" form="unqualified" nillable="true" type="ns0:string32"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TipServiciu">
+                <xs:sequence>
+                    <xs:element name="cod" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="denumire" form="unqualified" nillable="true" type="ns0:string64"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TipuriCanale">
+                <xs:sequence>
+                    <xs:element name="TipCanal" form="unqualified" type="ns0:TipCanal" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TipuriServicii">
+                <xs:sequence>
+                    <xs:element name="TipServiciu" form="unqualified" type="ns0:TipServiciu" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="VarConcurs">
+                <xs:sequence>
+                    <xs:element name="id" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="denumire" form="unqualified" nillable="true" type="ns0:string500"/>
+                    <xs:element name="descriere" form="unqualified" nillable="true" type="ns0:string4000"/>
+                    <xs:element name="de_la" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="la" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="regulament" form="unqualified" nillable="true" type="ns0:string4000"/>
+                    <xs:element name="segment" form="unqualified" nillable="true" type="ns0:string15"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="VarConcursuri">
+                <xs:sequence>
+                    <xs:element name="VarConcurs" form="unqualified" type="ns0:VarConcurs" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="VarPret">
+                <xs:sequence>
+                    <xs:element name="serviciu" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="gama" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="tip" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="seg" form="unqualified" nillable="true" type="ns0:string15"/>
+                    <xs:element name="site" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="cod" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="combo" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="denumire" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="de_la" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="pana_la" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="de_la_furn" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="pana_la_furn" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="pret_ea" form="unqualified" nillable="true" type="ns0:decimal_22_6" minOccurs="0"/>
+                    <xs:element name="pret_eaz" form="unqualified" nillable="true" type="ns0:decimal_22_6" minOccurs="0"/>
+                    <xs:element name="pret_eanw" form="unqualified" nillable="true" type="ns0:decimal_22_6" minOccurs="0"/>
+                    <xs:element name="pret_eano" form="unqualified" nillable="true" type="ns0:decimal_22_6" minOccurs="0"/>
+                    <xs:element name="pret_gaz" form="unqualified" nillable="true" type="ns0:decimal_22_6" minOccurs="0"/>
+                    <xs:element name="pret_tr_gaz" form="unqualified" nillable="true" type="ns0:decimal_22_6" minOccurs="0"/>
+                    <xs:element name="abonament" form="unqualified" nillable="true" type="ns0:decimal_22_6" minOccurs="0"/>
+                    <xs:element name="pret_ea_n" form="unqualified" nillable="true" type="ns0:decimal_22_6" minOccurs="0"/>
+                    <xs:element name="pret_eaz_n" form="unqualified" nillable="true" type="ns0:decimal_22_6" minOccurs="0"/>
+                    <xs:element name="pret_eanw_n" form="unqualified" nillable="true" type="ns0:decimal_22_6" minOccurs="0"/>
+                    <xs:element name="pret_eano_n" form="unqualified" nillable="true" type="ns0:decimal_22_6" minOccurs="0"/>
+                    <xs:element name="pret_gaz_n" form="unqualified" nillable="true" type="ns0:decimal_22_6" minOccurs="0"/>
+                    <xs:element name="pret_tr_gaz_n" form="unqualified" nillable="true" type="ns0:decimal_22_6" minOccurs="0"/>
+                    <xs:element name="abonament_n" form="unqualified" nillable="true" type="ns0:decimal_22_6" minOccurs="0"/>
+                    <xs:element name="cfe" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="verde" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="descriere_prod" form="unqualified" nillable="true" type="ns0:string1000"/>
+                    <xs:element name="descriere_prod_l" form="unqualified" nillable="true" type="ns0:string2000"/>
+                    <xs:element name="denumire_pachet" form="unqualified" nillable="true" type="ns0:string1000"/>
+                    <xs:element name="descriere_pachet" form="unqualified" nillable="true" type="ns0:string2000"/>
+                    <xs:element name="descriere_pachet_l" form="unqualified" nillable="true" type="ns0:string2000"/>
+                    <xs:element name="itemCode" form="unqualified" nillable="true" type="ns0:string32"/>
+                    <xs:element name="sessionId" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="proces" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="subproces" form="unqualified" nillable="true" type="ns0:string128"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="VarPreturi">
+                <xs:sequence>
+                    <xs:element name="VarPret" form="unqualified" type="ns0:VarPret" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Voucher">
+                <xs:sequence>
+                    <xs:element name="voucher_id" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="voucher_name" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="voucher_code" form="unqualified" nillable="true" type="ns0:string128"/>
+                    <xs:element name="voucher_startdate" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="voucher_enddate" form="unqualified" nillable="true" type="xs:date"/>
+                    <xs:element name="voucher_status" form="unqualified" nillable="true" type="ns0:string128"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="VoucherOffer">
+                <xs:sequence>
+                    <xs:element name="voucherId" form="unqualified" nillable="true" type="ns0:string64"/>
+                    <xs:element name="isFriend" form="unqualified" nillable="true" type="xs:boolean"/>
+                    <xs:element name="eneltelFriend" form="unqualified" nillable="true" type="ns0:string64"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="WSDocument">
+                <xs:sequence>
+                    <xs:element name="doc" form="unqualified" type="xs:base64Binary"/>
+                    <xs:element name="nume_doc" form="unqualified" type="ns0:string500"/>
+                    <xs:element name="tip_doc" form="unqualified" type="ns0:string500"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="WSDocuments">
+                <xs:sequence>
+                    <xs:element name="WSDocument" form="unqualified" type="ns0:WSDocument" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="WSResponse">
+                <xs:sequence>
+                    <xs:element name="status" form="unqualified" type="ns0:string15"/>
+                    <xs:element name="message" form="unqualified" nillable="true" type="ns0:string2000"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ZPFS_CITIRI">
+                <xs:sequence>
+                    <xs:element name="ID_CADRAN" form="unqualified" type="ns0:string15"/>
+                    <xs:element name="CADRAN" form="unqualified" type="ns0:string40"/>
+                    <xs:element name="NR_INTREGI" form="unqualified" type="ns0:number2"/>
+                    <xs:element name="DATA_CITIRE" form="unqualified" type="ns0:string8"/>
+                    <xs:element name="INDEX" form="unqualified" type="ns0:decimal_31_14"/>
+                    <xs:element name="TIP_CITIRE" form="unqualified" type="ns0:string80"/>
+                    <xs:element name="FACTURAT" form="unqualified" type="ns0:string2"/>
+                    <xs:element name="CANTITATE" form="unqualified" type="ns0:string20"/>
+                    <xs:element name="ID_PRESTATORI_IMAGES" form="unqualified" type="ns0:string20"/>
+                    <xs:element name="ID_DMS_PRESTATORI_IMAGES" form="unqualified" type="ns0:string80"/>
+                    <xs:element name="STARE_CITIRE" form="unqualified" type="ns0:string7"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ZPFS_MESAJE_OUT">
+                <xs:sequence>
+                    <xs:element name="COD" form="unqualified" type="ns0:string10"/>
+                    <xs:element name="MESAJ" form="unqualified" type="ns0:string256"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ZPFT_CITIRI">
+                <xs:sequence>
+                    <xs:element name="item" form="unqualified" type="ns0:ZPFS_CITIRI" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ZPFT_MESAJE_OUT">
+                <xs:sequence>
+                    <xs:element name="item" form="unqualified" type="ns0:ZPFS_MESAJE_OUT" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:simpleType name="date10">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="10"/>
+                    <xs:pattern value="\d\d\d\d-\d\d-\d\d"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="decimal_22_6">
+                <xs:restriction base="xs:decimal">
+                    <xs:totalDigits value="22"/>
+                    <xs:fractionDigits value="6"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="decimal_31_14">
+                <xs:restriction base="xs:decimal">
+                    <xs:totalDigits value="31"/>
+                    <xs:fractionDigits value="14"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="number10">
+                <xs:restriction base="xs:long">
+                    <xs:totalDigits value="10"/>
+                    <xs:fractionDigits value="0"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="number16">
+                <xs:restriction base="xs:long">
+                    <xs:totalDigits value="16"/>
+                    <xs:fractionDigits value="0"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="number2">
+                <xs:restriction base="xs:long">
+                    <xs:totalDigits value="2"/>
+                    <xs:fractionDigits value="0"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="number3">
+                <xs:restriction base="xs:long">
+                    <xs:totalDigits value="3"/>
+                    <xs:fractionDigits value="0"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="number8">
+                <xs:restriction base="xs:long">
+                    <xs:totalDigits value="8"/>
+                    <xs:fractionDigits value="0"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="number9">
+                <xs:restriction base="xs:long">
+                    <xs:totalDigits value="9"/>
+                    <xs:fractionDigits value="0"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string1">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="1"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string10">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="10"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string1000">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string1028">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="1028"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string128">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="128"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string15">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="15"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string2">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="2"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string20">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="20"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string2000">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string25">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="25"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string256">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="256"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string30">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="30"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string32">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="32"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string40">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="40"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string4000">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string5">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="5"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string50">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="50"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string500">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="500"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string6">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="6"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string64">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="64"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string7">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="7"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string8">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="8"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string80">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="80"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="string9">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="9"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:element name="AcceptRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="id" form="unqualified" type="ns0:string32"/>
+                        <xs:element name="accept" form="unqualified" type="ns0:string1"/>
+                        <xs:element name="canal_email" form="unqualified" nillable="true" type="xs:boolean"/>
+                        <xs:element name="canal_sms" form="unqualified" nillable="true" type="xs:boolean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="AcceptResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ConcursuriRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="id_var_pret" form="unqualified" type="ns0:string128"/>
+                        <xs:element name="canal" form="unqualified" nillable="true" type="ns0:string32"/>
+                        <xs:element name="segment" form="unqualified" nillable="true" type="ns0:string15"/>
+                        <xs:element name="serviciu" form="unqualified" nillable="true" type="ns0:string128"/>
+                        <xs:element name="ebill" form="unqualified" nillable="true" type="xs:boolean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ConcursuriResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                        <xs:element name="VarConcursuri" form="unqualified" nillable="true" type="ns0:VarConcursuri"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="DiscountRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="denumire" form="unqualified" nillable="true" type="ns0:string128"/>
+                        <xs:element name="tip" form="unqualified" nillable="true" type="ns0:string128"/>
+                        <xs:element name="seg" form="unqualified" nillable="true" type="ns0:string128"/>
+                        <xs:element name="canal" form="unqualified" nillable="true" type="ns0:string32"/>
+                        <xs:element name="judet" form="unqualified" nillable="true" type="ns0:string15"/>
+                        <xs:element name="cityId" form="unqualified" nillable="true" type="ns0:string32"/>
+                        <xs:element name="scadenta" form="unqualified" nillable="true" type="ns0:number3"/>
+                        <xs:element name="PenaltyAndGracePeriod" form="unqualified" nillable="true" type="ns0:number3"/>
+                        <xs:element name="POD" form="unqualified" nillable="true" type="ns0:string32"/>
+                        <xs:element name="CNP" form="unqualified" nillable="true" type="ns0:string15"/>
+                        <xs:element name="serviciu" form="unqualified" nillable="true" type="ns0:string15"/>
+                        <xs:element name="sw_titular" form="unqualified" nillable="true" type="xs:boolean"/>
+                        <xs:element name="sw_furnizor" form="unqualified" nillable="true" type="xs:boolean"/>
+                        <xs:element name="furnizare" form="unqualified" nillable="true" type="xs:boolean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="DiscountResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                        <xs:element name="Discounts" form="unqualified" nillable="true" type="ns0:Discounts"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="DocInRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="id" form="unqualified" type="ns0:string32"/>
+                        <xs:element name="WSDocuments" form="unqualified" nillable="true" type="ns0:WSDocuments"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="DocInResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="DocOutRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="id" form="unqualified" type="ns0:string32"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="DocOutResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                        <xs:element name="id_cros" form="unqualified" nillable="true" type="ns0:string32"/>
+                        <xs:element name="WSDocuments" form="unqualified" nillable="true" type="ns0:WSDocuments"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetAccountsWithPodsRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="requestType" form="unqualified" nillable="true" type="ns0:string128" minOccurs="0"/>
+                        <xs:element name="cnp_cui" form="unqualified" nillable="true" type="ns0:string128" minOccurs="0"/>
+                        <xs:element name="cod_client" form="unqualified" nillable="true" type="ns0:string128" minOccurs="0"/>
+                        <xs:element name="pod_code" form="unqualified" nillable="true" type="ns0:string128" minOccurs="0"/>
+                        <xs:element name="numar_telefon" form="unqualified" nillable="true" type="ns0:string128" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetAccountsWithPodsResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                        <xs:element name="Accounts" form="unqualified" type="ns0:Account" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetPlaceRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="type" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                        <xs:element name="code" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetPlaceResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                        <xs:element name="GetPlace" form="unqualified" nillable="true" type="ns0:GetPlace"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetVouchersRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="requestType" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                        <xs:element name="voucher_code" form="unqualified" nillable="true" type="ns0:string128" minOccurs="0"/>
+                        <xs:element name="eneltel" form="unqualified" nillable="true" type="ns0:number9" minOccurs="0"/>
+                        <xs:element name="isFriend" form="unqualified" nillable="true" type="xs:boolean" minOccurs="0"/>
+                        <xs:element name="ProductName" form="unqualified" nillable="true" type="ns0:string128" minOccurs="0"/>
+                        <xs:element name="ProductCode" form="unqualified" type="ns0:string128"/>
+                        <xs:element name="Segment" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                        <xs:element name="SellingChannel" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                        <xs:element name="Province" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                        <xs:element name="CityId" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                        <xs:element name="DueDate" form="unqualified" nillable="true" type="xs:date" minOccurs="0"/>
+                        <xs:element name="PenaltyAndGracePeriod" form="unqualified" nillable="true" type="ns0:string128" minOccurs="0"/>
+                        <xs:element name="POD" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                        <xs:element name="CNP" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                        <xs:element name="ReferenceDate" form="unqualified" nillable="true" type="xs:date"/>
+                        <xs:element name="CommodityType" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                        <xs:element name="sw_titular" form="unqualified" nillable="true" type="xs:boolean" minOccurs="0"/>
+                        <xs:element name="sw_furnizor" form="unqualified" nillable="true" type="xs:boolean" minOccurs="0"/>
+                        <xs:element name="furnizare" form="unqualified" nillable="true" type="xs:boolean" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetVouchersResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                        <xs:element name="GetVouchers" form="unqualified" nillable="true" type="ns0:GetVouchers"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="InfoClientRequest">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="CNP" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                        <xs:element name="CUI" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="InfoClientResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                        <xs:element name="Clienti" form="unqualified" type="ns0:Clienti"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="InfoNLCRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="NLC" form="unqualified" type="ns0:string32"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="InfoNLCResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                        <xs:element name="NLC" form="unqualified" type="ns0:NLC"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="LeadRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="id_fsd" form="unqualified" nillable="true" type="ns0:string128"/>
+                        <xs:element name="step_id" form="unqualified" nillable="true" type="ns0:string32"/>
+                        <xs:element name="generic_dossier_id" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                        <xs:element name="page_url" form="unqualified" nillable="true" type="ns0:string500" minOccurs="0"/>
+                        <xs:element name="serviciu" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                        <xs:element name="denumire_produs" form="unqualified" nillable="true" type="ns0:string500" minOccurs="0"/>
+                        <xs:element name="cod_oferta" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                        <xs:element name="judet" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                        <xs:element name="email" form="unqualified" nillable="true" type="ns0:string64" minOccurs="0"/>
+                        <xs:element name="telefon" form="unqualified" nillable="true" type="ns0:string64" minOccurs="0"/>
+                        <xs:element name="is_titular" form="unqualified" nillable="true" type="xs:boolean" minOccurs="0"/>
+                        <xs:element name="furnizare" form="unqualified" nillable="true" type="xs:boolean" minOccurs="0"/>
+                        <xs:element name="id_furnizor" form="unqualified" nillable="true" type="ns0:string64" minOccurs="0"/>
+                        <xs:element name="CNP" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                        <xs:element name="CUI" form="unqualified" nillable="true" type="ns0:string15" minOccurs="0"/>
+                        <xs:element name="nume" form="unqualified" nillable="true" type="ns0:string64" minOccurs="0"/>
+                        <xs:element name="prenume" form="unqualified" nillable="true" type="ns0:string64" minOccurs="0"/>
+                        <xs:element name="doc_ci" form="unqualified" nillable="true" type="ns0:LeadDocument" minOccurs="0"/>
+                        <xs:element name="doc_cui" form="unqualified" nillable="true" type="ns0:LeadDocument" minOccurs="0"/>
+                        <xs:element name="doc_factura" form="unqualified" nillable="true" type="ns0:LeadDocument" minOccurs="0"/>
+                        <xs:element name="NLC" form="unqualified" nillable="true" type="ns0:NLC_LEAD" minOccurs="0"/>
+                        <xs:element name="reminder_code" form="unqualified" nillable="true" type="ns0:string64" minOccurs="0"/>
+                        <xs:element name="reminder_description" form="unqualified" nillable="true" type="ns0:string256" minOccurs="0"/>
+                        <xs:element name="dossier_close" form="unqualified" nillable="true" type="xs:boolean" minOccurs="0"/>
+                        <xs:element name="feedback_body" form="unqualified" nillable="true" type="ns0:string2000" minOccurs="0"/>
+                        <xs:element name="nume_companie" form="unqualified" nillable="true" type="ns0:string128" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="LeadResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                        <xs:element name="generic_dossier_id" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                        <xs:element name="generic_dossier_name" form="unqualified" nillable="true" type="ns0:string32" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="NomGeograficeRequest">
+                <xs:complexType/>
+            </xs:element>
+            <xs:element name="NomGeograficeResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                        <xs:element name="Judete" form="unqualified" type="ns0:Judete"/>
+                        <xs:element name="Localitati" form="unqualified" type="ns0:Localitati"/>
+                        <xs:element name="Artere" form="unqualified" type="ns0:Artere"/>
+                        <xs:element name="Strazi" form="unqualified" type="ns0:Strazi"/>
+                        <xs:element name="CoduriPostale" form="unqualified" type="ns0:CoduriPostale"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="NomOperationaleRequest">
+                <xs:complexType/>
+            </xs:element>
+            <xs:element name="NomOperationaleResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                        <xs:element name="Distribuitori" form="unqualified" type="ns0:Distribuitori"/>
+                        <xs:element name="Furnizori" form="unqualified" type="ns0:Furnizori"/>
+                        <xs:element name="Banci" form="unqualified" type="ns0:Banci"/>
+                        <xs:element name="CoduriCAEN" form="unqualified" type="ns0:CoduriCAEN"/>
+                        <xs:element name="TipuriCanale" form="unqualified" type="ns0:TipuriCanale"/>
+                        <xs:element name="Canale" form="unqualified" type="ns0:Canale"/>
+                        <xs:element name="Kami" form="unqualified" type="ns0:Kami"/>
+                        <xs:element name="Segmente" form="unqualified" type="ns0:Segmente"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="NomServiciiRequest">
+                <xs:complexType/>
+            </xs:element>
+            <xs:element name="NomServiciiResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                        <xs:element name="TipuriServicii" form="unqualified" type="ns0:TipuriServicii"/>
+                        <xs:element name="GameServicii" form="unqualified" type="ns0:GameServicii"/>
+                        <xs:element name="OferteServicii" form="unqualified" type="ns0:OferteServicii"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="OfertaRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Oferta" form="unqualified" type="ns0:Oferta"/>
+                        <xs:element name="Negociere" form="unqualified" type="ns0:Negociere"/>
+                        <xs:element name="ClientOferta" form="unqualified" type="ns0:ClientOferta"/>
+                        <xs:element name="Interlocutor" form="unqualified" type="ns0:Interlocutor"/>
+                        <xs:element name="Corespondenta" form="unqualified" type="ns0:Corespondenta"/>
+                        <xs:element name="Conturi" form="unqualified" type="ns0:Conturi"/>
+                        <xs:element name="Locuri" form="unqualified" type="ns0:Locuri"/>
+                        <xs:element name="ConsumuriLoc" form="unqualified" type="ns0:ConsumuriLoc"/>
+                        <xs:element name="Semnaturi" form="unqualified" type="ns0:Semnaturi"/>
+                        <xs:element name="CFEE" form="unqualified" type="ns0:CFEE"/>
+                        <xs:element name="GDPR" form="unqualified" type="ns0:GDPR"/>
+                        <xs:element name="SWFurnizor" form="unqualified" type="ns0:SWFurnizor"/>
+                        <xs:element name="SWTitular" form="unqualified" type="ns0:SWTitular"/>
+                        <xs:element name="ModTransmitere" form="unqualified" type="ns0:ModTransmitere"/>
+                        <xs:element name="Concursuri" form="unqualified" type="ns0:Concursuri"/>
+                        <xs:element name="DiscountsOferta" form="unqualified" type="ns0:DiscountsOferta"/>
+                        <xs:element name="Readings" form="unqualified" type="ns0:Reading"/>
+                        <xs:element name="VoucherOffer" form="unqualified" type="ns0:VoucherOffer"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="OfertaResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                        <xs:element name="dossierId" form="unqualified" nillable="true" type="ns0:string32"/>
+                        <xs:element name="opportunityId" form="unqualified" nillable="true" type="ns0:string32"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="PrevalidationCfeRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="email" form="unqualified" nillable="true" type="ns0:string1028"/>
+                        <xs:element name="phone" form="unqualified" nillable="true" type="ns0:string15"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="PrevalidationCfeResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="PrevalidationEmailCfeRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="email" form="unqualified" type="ns0:string1028"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="PrevalidationEmailCfeResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="PrintingRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="id" form="unqualified" type="ns0:string32"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="PrintingResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ProductsCartCheckoutRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="id_varianta_pret" form="unqualified" type="ns0:string64"/>
+                        <xs:element name="opportunityId" form="unqualified" type="ns0:string32"/>
+                        <xs:element name="itemCode" form="unqualified" type="ns0:string64"/>
+                        <xs:element name="sessionId" form="unqualified" nillable="true" type="ns0:string128"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ProductsCartCheckoutResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="SAPChkIdxRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="CADRAN" form="unqualified" type="ns0:string15"/>
+                        <xs:element name="CHECK_ALL" form="unqualified" type="ns0:string2" minOccurs="0"/>
+                        <xs:element name="INDEX" form="unqualified" type="ns0:decimal_22_6"/>
+                        <xs:element name="NUMAR_FACTURA" form="unqualified" type="ns0:string10" minOccurs="0"/>
+                        <xs:element name="POD" form="unqualified" type="ns0:string64"/>
+                        <xs:element name="SERIE_CONTOR" form="unqualified" type="ns0:string32"/>
+                        <xs:element name="SERIE_FACTURA" form="unqualified" type="ns0:string10" minOccurs="0"/>
+                        <xs:element name="SKIP_VALID_PER_AUTOC" form="unqualified" type="ns0:string10" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="SAPChkIdxResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="RETURN_CODE" form="unqualified" type="ns0:string2"/>
+                        <xs:element name="RETURN_DETAILS" form="unqualified" type="ns0:ZPFT_MESAJE_OUT"/>
+                        <xs:element name="RETURN_MESSAGE" form="unqualified" type="ns0:string256"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="SAPQueryIdxRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="END_DATE" form="unqualified" type="ns0:date10"/>
+                        <xs:element name="ENELID" form="unqualified" type="ns0:string9"/>
+                        <xs:element name="START_DATE" form="unqualified" type="ns0:date10"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="SAPQueryIdxResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="CANTITATE_KWH" form="unqualified" type="ns0:decimal_31_14"/>
+                        <xs:element name="CATEGORIE_CONSUMATOR" form="unqualified" type="ns0:string30"/>
+                        <xs:element name="CITIRI" form="unqualified" type="ns0:ZPFT_CITIRI"/>
+                        <xs:element name="CLIENT" form="unqualified" type="ns0:string80"/>
+                        <xs:element name="CONTRACT" form="unqualified" type="ns0:string20"/>
+                        <xs:element name="DATA_ULTIMA_FACTURA" form="unqualified" type="ns0:date10"/>
+                        <xs:element name="DATA_ULT_INDEX_FACTURAT" form="unqualified" type="ns0:date10"/>
+                        <xs:element name="ERROR_MESSAGE" form="unqualified" type="xs:string"/>
+                        <xs:element name="FRECVENTA_CITIRE" form="unqualified" type="ns0:string1"/>
+                        <xs:element name="MESSAGE" form="unqualified" type="ns0:string4000"/>
+                        <xs:element name="KWH_ESTIMAT" form="unqualified" type="ns0:decimal_31_14"/>
+                        <xs:element name="NR_FACTURI_ESTIMAT" form="unqualified" type="ns0:number8"/>
+                        <xs:element name="PERIOADA_CITIRE" form="unqualified" type="ns0:string5"/>
+                        <xs:element name="PERMITE_AUTOCITIRE" form="unqualified" type="ns0:string5"/>
+                        <xs:element name="PRIMA_LUNA_CITIRE" form="unqualified" type="ns0:string1"/>
+                        <xs:element name="RUTA" form="unqualified" type="ns0:string40"/>
+                        <xs:element name="SERIE_CONTOR" form="unqualified" type="ns0:string30"/>
+                        <xs:element name="SMART_METER" form="unqualified" type="ns0:string1"/>
+                        <xs:element name="STARE_ULTIMA_FACTURA" form="unqualified" type="ns0:string25"/>
+                        <xs:element name="TIP_CONTOR" form="unqualified" type="ns0:string50"/>
+                        <xs:element name="ULTIMUL_INDEX_FACTURAT" form="unqualified" type="ns0:decimal_31_14"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="VariantePretRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="canal" form="unqualified" nillable="true" type="ns0:string32"/>
+                        <xs:element name="segment" form="unqualified" nillable="true" type="ns0:string15"/>
+                        <xs:element name="serviciu" form="unqualified" nillable="true" type="ns0:string15"/>
+                        <xs:element name="judet" form="unqualified" nillable="true" type="ns0:string32"/>
+                        <xs:element name="furn24" form="unqualified" type="xs:boolean"/>
+                        <xs:element name="scadenta" form="unqualified" nillable="true" type="ns0:number3"/>
+                        <xs:element name="verde" form="unqualified" type="xs:boolean" minOccurs="0" maxOccurs="unbounded"/>
+                        <xs:element name="consum_anual_estimat" form="unqualified" nillable="true" type="ns0:number9"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="VariantePretResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="WSResponse" form="unqualified" type="ns0:WSResponse"/>
+                        <xs:element name="VarPreturi" form="unqualified" nillable="true" type="ns0:VarPreturi"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="applicationUserUuid" type="ns0:string500"/>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="Service">
+        <wsdl:port name="FSDEndpoint1" binding="tns:FSDEndpoint1Binding">
+            <soap:address location="http://erdvdsapp00003.ppcro.ppcgroup.local:20080/EESY2CRM"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="FSD">
+        <wsdl:operation name="Printing">
+            <wsdl:input message="tns:PrintingRequest"/>
+            <wsdl:output message="tns:PrintingResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="Accept">
+            <wsdl:input message="tns:AcceptRequest"/>
+            <wsdl:output message="tns:AcceptResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="PrevalidationEmailCfe">
+            <wsdl:input message="tns:PrevalidationEmailCfeRequest"/>
+            <wsdl:output message="tns:PrevalidationEmailCfeResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="NomServicii">
+            <wsdl:input message="tns:NomServiciiRequest"/>
+            <wsdl:output message="tns:NomServiciiResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="InfoClient">
+            <wsdl:input message="tns:InfoClientRequest"/>
+            <wsdl:output message="tns:InfoClientResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="DocOut">
+            <wsdl:input message="tns:DocOutRequest"/>
+            <wsdl:output message="tns:DocOutResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="Concursuri">
+            <wsdl:input message="tns:ConcursuriRequest"/>
+            <wsdl:output message="tns:ConcursuriResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetPlace">
+            <wsdl:input message="tns:GetPlaceRequest"/>
+            <wsdl:output message="tns:GetPlaceResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="SAPQueryIdx">
+            <wsdl:input message="tns:SAPQueryIdxRequest"/>
+            <wsdl:output message="tns:SAPQueryIdxResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="Oferta">
+            <wsdl:input message="tns:OfertaRequest"/>
+            <wsdl:output message="tns:OfertaResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="ProductsCartCheckout">
+            <wsdl:input message="tns:ProductsCartCheckoutRequest"/>
+            <wsdl:output message="tns:ProductsCartCheckoutResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="Discounts">
+            <wsdl:input message="tns:DiscountRequest"/>
+            <wsdl:output message="tns:DiscountResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="DocIn">
+            <wsdl:input message="tns:DocInRequest"/>
+            <wsdl:output message="tns:DocInResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="PrevalidationCfe">
+            <wsdl:input message="tns:PrevalidationCfeRequest"/>
+            <wsdl:output message="tns:PrevalidationCfeResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetAccountsWithPods">
+            <wsdl:input message="tns:GetAccountsWithPodsRequest"/>
+            <wsdl:output message="tns:GetAccountsWithPodsResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="NomGeografice">
+            <wsdl:input message="tns:NomGeograficeRequest"/>
+            <wsdl:output message="tns:NomGeograficeResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="VariantePret">
+            <wsdl:input message="tns:VariantePretRequest"/>
+            <wsdl:output message="tns:VariantePretResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetVouchers">
+            <wsdl:input message="tns:GetVouchersRequest"/>
+            <wsdl:output message="tns:GetVouchersResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="SAPChkIdx">
+            <wsdl:input message="tns:SAPChkIdxRequest"/>
+            <wsdl:output message="tns:SAPChkIdxResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="Lead">
+            <wsdl:input message="tns:LeadRequest"/>
+            <wsdl:output message="tns:LeadResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="InfoNLC">
+            <wsdl:input message="tns:InfoNLCRequest"/>
+            <wsdl:output message="tns:InfoNLCResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="NomOperationale">
+            <wsdl:input message="tns:NomOperationaleRequest"/>
+            <wsdl:output message="tns:NomOperationaleResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="FSDEndpoint1Binding" type="tns:FSD">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Printing">
+            <soap:operation style="document" soapAction="Printing" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="Accept">
+            <soap:operation style="document" soapAction="Accept" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+                <soap:header use="literal" message="tns:QName" part="applicationUserUuid"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="PrevalidationEmailCfe">
+            <soap:operation style="document" soapAction="PrevalidationEmailCfe" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+                <soap:header use="literal" message="tns:QName" part="applicationUserUuid"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="NomServicii">
+            <soap:operation style="document" soapAction="NomServicii" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+                <soap:header use="literal" message="tns:QName" part="applicationUserUuid"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="InfoClient">
+            <soap:operation style="document" soapAction="InfoClient" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+                <soap:header use="literal" message="tns:QName" part="applicationUserUuid"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="DocOut">
+            <soap:operation style="document" soapAction="DocOut" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+                <soap:header use="literal" message="tns:QName" part="applicationUserUuid"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="Concursuri">
+            <soap:operation style="document" soapAction="Concursuri" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+                <soap:header use="literal" message="tns:QName" part="applicationUserUuid"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetPlace">
+            <soap:operation style="document" soapAction="GetPlace" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SAPQueryIdx">
+            <soap:operation style="document" soapAction="SAPQueryIdx" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="Oferta">
+            <soap:operation style="document" soapAction="Oferta" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+                <soap:header use="literal" message="tns:QName" part="applicationUserUuid"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ProductsCartCheckout">
+            <soap:operation style="document" soapAction="ProductsCartCheckout" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="Discounts">
+            <soap:operation style="document" soapAction="Discounts" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="DocIn">
+            <soap:operation style="document" soapAction="DocIn" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+                <soap:header use="literal" message="tns:QName" part="applicationUserUuid"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="PrevalidationCfe">
+            <soap:operation style="document" soapAction="PrevalidationCfe" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+                <soap:header use="literal" message="tns:QName" part="applicationUserUuid"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetAccountsWithPods">
+            <soap:operation style="document" soapAction="GetAccountsWithPods" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="NomGeografice">
+            <soap:operation style="document" soapAction="NomGeografice" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+                <soap:header use="literal" message="tns:QName" part="applicationUserUuid"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="VariantePret">
+            <soap:operation style="document" soapAction="VariantePret" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+                <soap:header use="literal" message="tns:QName" part="applicationUserUuid"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetVouchers">
+            <soap:operation style="document" soapAction="GetVouchers" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SAPChkIdx">
+            <soap:operation style="document" soapAction="SAPChkIdx" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="Lead">
+            <soap:operation style="document" soapAction="Lead" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="InfoNLC">
+            <soap:operation style="document" soapAction="InfoNLC" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+                <soap:header use="literal" message="tns:QName" part="applicationUserUuid"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="NomOperationale">
+            <soap:operation style="document" soapAction="NomOperationale" soapActionRequired="true"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="parameter"/>
+                <soap:header use="literal" message="tns:QName" part="applicationUserUuid"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="parameter"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="PrintingRequest">
+        <wsdl:part name="parameter" element="ns0:PrintingRequest"/>
+    </wsdl:message>
+    <wsdl:message name="PrintingResponse">
+        <wsdl:part name="parameter" element="ns0:PrintingResponse"/>
+    </wsdl:message>
+    <wsdl:message name="QName">
+        <wsdl:part name="applicationUserUuid" element="ns0:applicationUserUuid"/>
+    </wsdl:message>
+    <wsdl:message name="AcceptRequest">
+        <wsdl:part name="parameter" element="ns0:AcceptRequest"/>
+    </wsdl:message>
+    <wsdl:message name="AcceptResponse">
+        <wsdl:part name="parameter" element="ns0:AcceptResponse"/>
+    </wsdl:message>
+    <wsdl:message name="PrevalidationEmailCfeRequest">
+        <wsdl:part name="parameter" element="ns0:PrevalidationEmailCfeRequest"/>
+    </wsdl:message>
+    <wsdl:message name="PrevalidationEmailCfeResponse">
+        <wsdl:part name="parameter" element="ns0:PrevalidationEmailCfeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="NomServiciiRequest">
+        <wsdl:part name="parameter" element="ns0:NomServiciiRequest"/>
+    </wsdl:message>
+    <wsdl:message name="NomServiciiResponse">
+        <wsdl:part name="parameter" element="ns0:NomServiciiResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InfoClientRequest">
+        <wsdl:part name="parameter" element="ns0:InfoClientRequest"/>
+    </wsdl:message>
+    <wsdl:message name="InfoClientResponse">
+        <wsdl:part name="parameter" element="ns0:InfoClientResponse"/>
+    </wsdl:message>
+    <wsdl:message name="DocOutRequest">
+        <wsdl:part name="parameter" element="ns0:DocOutRequest"/>
+    </wsdl:message>
+    <wsdl:message name="DocOutResponse">
+        <wsdl:part name="parameter" element="ns0:DocOutResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ConcursuriRequest">
+        <wsdl:part name="parameter" element="ns0:ConcursuriRequest"/>
+    </wsdl:message>
+    <wsdl:message name="ConcursuriResponse">
+        <wsdl:part name="parameter" element="ns0:ConcursuriResponse"/>
+    </wsdl:message>
+    <wsdl:message name="GetPlaceRequest">
+        <wsdl:part name="parameter" element="ns0:GetPlaceRequest"/>
+    </wsdl:message>
+    <wsdl:message name="GetPlaceResponse">
+        <wsdl:part name="parameter" element="ns0:GetPlaceResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SAPQueryIdxRequest">
+        <wsdl:part name="parameter" element="ns0:SAPQueryIdxRequest"/>
+    </wsdl:message>
+    <wsdl:message name="SAPQueryIdxResponse">
+        <wsdl:part name="parameter" element="ns0:SAPQueryIdxResponse"/>
+    </wsdl:message>
+    <wsdl:message name="OfertaRequest">
+        <wsdl:part name="parameter" element="ns0:OfertaRequest"/>
+    </wsdl:message>
+    <wsdl:message name="OfertaResponse">
+        <wsdl:part name="parameter" element="ns0:OfertaResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ProductsCartCheckoutRequest">
+        <wsdl:part name="parameter" element="ns0:ProductsCartCheckoutRequest"/>
+    </wsdl:message>
+    <wsdl:message name="ProductsCartCheckoutResponse">
+        <wsdl:part name="parameter" element="ns0:ProductsCartCheckoutResponse"/>
+    </wsdl:message>
+    <wsdl:message name="DiscountRequest">
+        <wsdl:part name="parameter" element="ns0:DiscountRequest"/>
+    </wsdl:message>
+    <wsdl:message name="DiscountResponse">
+        <wsdl:part name="parameter" element="ns0:DiscountResponse"/>
+    </wsdl:message>
+    <wsdl:message name="DocInRequest">
+        <wsdl:part name="parameter" element="ns0:DocInRequest"/>
+    </wsdl:message>
+    <wsdl:message name="DocInResponse">
+        <wsdl:part name="parameter" element="ns0:DocInResponse"/>
+    </wsdl:message>
+    <wsdl:message name="PrevalidationCfeRequest">
+        <wsdl:part name="parameter" element="ns0:PrevalidationCfeRequest"/>
+    </wsdl:message>
+    <wsdl:message name="PrevalidationCfeResponse">
+        <wsdl:part name="parameter" element="ns0:PrevalidationCfeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="GetAccountsWithPodsRequest">
+        <wsdl:part name="parameter" element="ns0:GetAccountsWithPodsRequest"/>
+    </wsdl:message>
+    <wsdl:message name="GetAccountsWithPodsResponse">
+        <wsdl:part name="parameter" element="ns0:GetAccountsWithPodsResponse"/>
+    </wsdl:message>
+    <wsdl:message name="NomGeograficeRequest">
+        <wsdl:part name="parameter" element="ns0:NomGeograficeRequest"/>
+    </wsdl:message>
+    <wsdl:message name="NomGeograficeResponse">
+        <wsdl:part name="parameter" element="ns0:NomGeograficeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="VariantePretRequest">
+        <wsdl:part name="parameter" element="ns0:VariantePretRequest"/>
+    </wsdl:message>
+    <wsdl:message name="VariantePretResponse">
+        <wsdl:part name="parameter" element="ns0:VariantePretResponse"/>
+    </wsdl:message>
+    <wsdl:message name="GetVouchersRequest">
+        <wsdl:part name="parameter" element="ns0:GetVouchersRequest"/>
+    </wsdl:message>
+    <wsdl:message name="GetVouchersResponse">
+        <wsdl:part name="parameter" element="ns0:GetVouchersResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SAPChkIdxRequest">
+        <wsdl:part name="parameter" element="ns0:SAPChkIdxRequest"/>
+    </wsdl:message>
+    <wsdl:message name="SAPChkIdxResponse">
+        <wsdl:part name="parameter" element="ns0:SAPChkIdxResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LeadRequest">
+        <wsdl:part name="parameter" element="ns0:LeadRequest"/>
+    </wsdl:message>
+    <wsdl:message name="LeadResponse">
+        <wsdl:part name="parameter" element="ns0:LeadResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InfoNLCRequest">
+        <wsdl:part name="parameter" element="ns0:InfoNLCRequest"/>
+    </wsdl:message>
+    <wsdl:message name="InfoNLCResponse">
+        <wsdl:part name="parameter" element="ns0:InfoNLCResponse"/>
+    </wsdl:message>
+    <wsdl:message name="NomOperationaleRequest">
+        <wsdl:part name="parameter" element="ns0:NomOperationaleRequest"/>
+    </wsdl:message>
+    <wsdl:message name="NomOperationaleResponse">
+        <wsdl:part name="parameter" element="ns0:NomOperationaleResponse"/>
+    </wsdl:message>
+</wsdl:definitions>

@@ -1,0 +1,233 @@
+.PlanDetailsOverlay {
+    width: 900px !important;
+    -webkit-font-smoothing: antialiased;
+
+    & ~ div {
+        background-color: #21232c !important;
+    }
+
+    .close-btn {
+        color: #fff;
+        font-size: 22px;
+        position: absolute;
+        top: 8px;
+        right: 15px;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    .container.top-header {
+        position: relative;
+        top: 0;
+        padding-top: 1.75rem;
+        padding-bottom: 2rem;
+        width: 100%;
+        //background: #0456fa;
+        max-width: 100%;
+        //background: linear-gradient(to bottom, #0555fa 20%, #2d98ed 75%);
+        flex-direction: row;
+        display: block;
+        align-self: flex-start;
+        align-items: center;
+        justify-content: flex-end;
+        z-index: 100;
+
+        .row.title-bar {
+            padding-left: 30px;
+            padding-right: 30px;
+            margin: 0 auto;
+            margin-top: 2rem;
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+
+    p.eyebrow {
+        margin-top: 68px;
+        margin-bottom: 15px;
+        color: rgba(255, 255, 255, 0.5);
+        letter-spacing: 2px;
+        line-height: 1.6;
+        font-size: 12px;
+        font-family: Georgia, serif;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    h1.superheader {
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+        padding-bottom: 25rem;
+        color: #ffffff;
+        font-weight: 300;
+    }
+
+    span.eyebrow {
+        color: #999999 !important;
+        font-size: 12px;
+        font-family: Georgia, serif;
+        letter-spacing: 0.1rem;
+        line-height: 1.8;
+        text-transform: uppercase;
+        font-weight: 700;
+        opacity: 0.4;
+        margin-bottom: 0.25rem;
+    }
+
+    .main-area.plan-overview {
+        position: relative;
+        margin-top: -21.5rem;
+        margin-bottom: 15px;
+        padding: 0;
+        box-shadow: 0 -6px 0 rgba(0, 0, 0, 0.2);
+        background: white;
+        z-index: 100;
+
+        .card-header {
+            display: flex;
+            margin-bottom: 0;
+            padding: 0;
+            border: 0;
+            background-color: rgba(0, 0, 0, 0.03);
+            border-bottom: 1px solid #ddd;
+            border-radius: 0;
+
+            .oferta-div {
+                background: white;
+                padding: 3rem 2rem;
+                border-right: 1px solid #ddd;
+                text-align: center;
+                flex: 1;
+
+                strong {
+                    display: block;
+                    margin-top: 0.1rem;
+                    margin-bottom: 4px;
+                    font-size: 70px;
+                    font-weight: 300;
+                    line-height: 1.25;
+                    letter-spacing: -0.075rem;
+                    color: #000;
+                }
+
+                span.unit {
+                    display: block;
+                    margin-top: 15px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #000;
+                }
+            }
+        }
+
+        .card-body {
+            padding: 2rem 2.25rem 2.45rem;
+            font-size: 14px;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .PlanDetailsOverlay {
+        width: calc(100% - 40px) !important;
+
+        .superheader {
+            font-size: 60px !important;
+        }
+
+        p.eyebrow {
+            margin-top: 68px !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .PlanDetailsOverlay {
+        .logo-header img {
+            height: 22px !important;
+        }
+
+        .top-header .row.title-bar {
+            padding: 0;
+
+            & > div {
+                padding: 0;
+            }
+        }
+
+        .superheader {
+            font-size: 40px !important;
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+
+        p.eyebrow {
+            margin-top: 30px !important;
+            font-size: 10px !important;
+        }
+
+        span.eyebrow {
+            margin-bottom: 0 !important;
+            font-size: 10px !important;
+        }
+
+        span.unit {
+            font-size: 16px !important;
+            letter-spacing: 0.32px;
+            line-height: 1;
+        }
+
+        .card-bar {
+            padding: 35px 20px;
+
+            .intro {
+                font-size: 15px !important;
+            }
+        }
+
+        .card-body {
+            font-size: 15px;
+        }
+
+        .header--immersive {
+            height: 380px !important;
+        }
+
+        .plan-overview {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            width: auto;
+            box-shadow: none !important;
+            margin-top: -129px !important;
+
+            .card-header {
+                flex-direction: unset;
+                flex-wrap: wrap;
+                border-bottom: none;
+
+                .oferta-div {
+                    border-right: none;
+                    flex: 1 0 41%;
+
+                    &:nth-child(2n + 1) {
+                        border-right: 1px solid #ddd;
+                    }
+
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+
+        .oferta-div strong {
+            font-size: 40px !important;
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+
+        .Button {
+            width: 100%;
+        }
+    }
+}

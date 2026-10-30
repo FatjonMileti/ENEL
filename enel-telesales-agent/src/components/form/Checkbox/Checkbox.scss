@@ -1,0 +1,78 @@
+$grey: rgba(0, 0, 0, 0.3);
+$black: rgba(0, 0, 0, 1);
+
+.Checkbox {
+    &.disabled {
+        &.black {
+            label {
+                color: $black;
+
+                .checkmark:after {
+                    border-color: $black;
+                }
+            }
+        }
+        label {
+            cursor: auto;
+            color: $grey;
+
+            .checkmark:after {
+                border-color: $grey;
+            }
+        }
+    }
+
+    &.display {
+        &.checked {
+            .checkmark:after {
+                display: block;
+            }
+        }
+    }
+
+    label {
+        display: block;
+        position: relative;
+        margin-top: 5px;
+        margin-bottom: 12px;
+        padding-left: 30px;
+        cursor: pointer;
+        font-size: 16px;
+        user-select: none;
+        color: #000;
+
+        input {
+            position: absolute;
+            height: 0;
+            width: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 4px;
+            left: 0;
+            height: 16px;
+            width: 16px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+
+            &:after {
+                content: '';
+                position: absolute;
+                display: none;
+                left: 4px;
+                top: 1px;
+                width: 6px;
+                height: 9px;
+                border: solid #000;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

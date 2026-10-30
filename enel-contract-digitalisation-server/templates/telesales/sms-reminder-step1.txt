@@ -1,0 +1,1 @@
+Semneaza si accepta accesand link-ul {{link}}.

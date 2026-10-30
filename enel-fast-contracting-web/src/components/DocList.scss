@@ -1,0 +1,61 @@
+.DocList {
+	text-align: left;
+		
+	.doc-title {
+		margin-bottom: 3px;
+	}
+
+	.doc-image {
+		display: inline-block;
+		margin-top: 1rem;
+		margin-right: 3rem;
+		position: relative;
+
+		img {
+			height: 20rem;
+			border: 2px solid rgba(0, 0, 0, 0.1);
+			cursor: pointer;
+		}
+
+		.page-title {
+			margin-top: 10px;
+		}
+
+		span.delete-button {
+			font-size: 1rem;
+			display: block;
+			width: 1.8rem;
+			height: 1.8rem;
+			text-align: center;
+			color: #fff;
+			background: #000000;
+			border-radius: 2rem;
+			border: 0.2rem solid #000000;
+			margin-bottom: 0.5rem;
+			line-height: 1.6rem;
+			position: absolute;
+			top: -0.6rem;
+			right: -0.6rem;
+			cursor: pointer;
+
+
+			svg {
+				display: block;
+			}
+
+			.close-x {
+				stroke: white;
+				fill: transparent;
+				stroke-linecap: round;
+				stroke-width: 5;
+			}
+		}
+	}
+}
+
+.container.main-area.doc-interaction .DocList p.doc-title {
+	font-size: 12px;
+	font-weight: 700;
+	color: #222;
+	opacity: .4;
+}

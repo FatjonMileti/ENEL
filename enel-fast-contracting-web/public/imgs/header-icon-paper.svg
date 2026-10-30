@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2.7px;
+      }
+    </style>
+  </defs>
+  <g id="header-icon-paper" transform="translate(-80 -150)">
+    <path id="paper" class="cls-1" d="M854.88,20.907,846.773,12.8H828V51.528h28.127V25.3h-12.5V17.493" transform="translate(-735.424 144.255)"/>
+    <rect id="Rectangle_447" data-name="Rectangle 447" class="cls-2" width="54" height="54" transform="translate(80 150)"/>
+  </g>
+</svg>

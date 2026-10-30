@@ -1,0 +1,26 @@
+.SessionList {
+    .content {
+        padding-bottom: 20rem;
+    }
+
+    .Checkbox {
+        label {
+            .checkmark {
+                top: -2px;
+            }
+        }
+    }
+
+    .wrapper-content {
+        width: 100%;
+
+        .page-title {
+            font-family: PingL-Regular;
+        }
+    }
+
+    .FormStatus {
+        margin-top: 30px;
+        margin-bottom: -10px;
+    }
+}

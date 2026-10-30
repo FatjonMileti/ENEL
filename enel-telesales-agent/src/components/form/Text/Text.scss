@@ -1,0 +1,182 @@
+$error: #ff2e00;
+$black: #111;
+$label: rgba(0, 0, 0, 0.3);
+$disabled: rgba(0, 0, 0, 0.6);
+
+form {
+    .Text {
+        position: relative;
+        margin-top: 15px;
+        margin-bottom: 14px;
+
+        &.disabled {
+            pointer-events: none;
+        }
+
+        &.display {
+            pointer-events: none;
+        }
+
+        &.highlight:not(.disabled):not(.has-error) {
+            input {
+                border-bottom: 1px solid $black !important;
+            }
+
+            label {
+                color: $black !important;
+            }
+
+            .bar:before {
+                background: $black;
+            }
+
+            & ~ i {
+                color: $black;
+            }
+        }
+
+        &.has-error {
+            input {
+                border-bottom: 1px solid $error !important;
+            }
+
+            label {
+                color: $error !important;
+            }
+
+            .bar:before {
+                background: $error;
+            }
+
+            & ~ i {
+                color: $error;
+            }
+        }
+
+        &.no-left-spacing {
+            label {
+                left: 0;
+            }
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px 10px 10px 0;
+            background: none;
+            color: #000;
+            font-size: 16px;
+            font-weight: 300;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:focus ~ label,
+            &:valid ~ label,
+            &.filled ~ label {
+                top: -12px;
+                font-size: 12px;
+            }
+
+            &:focus ~ label {
+                color: #111;
+            }
+
+            &:focus ~ .bar:before {
+                width: 100%;
+            }
+
+            &:disabled {
+                color: $disabled;
+            }
+        }
+
+        &.filled input ~ label {
+            top: -12px;
+            font-size: 12px;
+        }
+
+        input[type='password'] {
+            letter-spacing: 0.3em;
+        }
+
+        label {
+            position: absolute;
+            top: 5px;
+            left: 15px;
+            color: $label;
+            font-size: 16px;
+            font-weight: 300;
+            pointer-events: none;
+            transition: 300ms ease all;
+        }
+
+        .error-message {
+            margin-top: 2px;
+            display: block;
+            font-size: 12px;
+            color: $error;
+        }
+
+        .bar {
+            position: relative;
+            display: block;
+            width: 100%;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0%;
+                bottom: 0px;
+                width: 0;
+                height: 2px;
+                background: #111;
+                transition: 300ms ease all;
+            }
+        }
+    }
+
+    .MuiButtonBase-root.MuiIconButton-root {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        left: 0px;
+        background: white;
+        border-radius: 0%;
+    }
+
+    .MuiGrid-root.MuiGrid-container.MuiGrid-justify-xs-space-around {
+        position: absolute;
+        top: -12px;
+        opacity: 0%;
+    }
+
+    .MuiSvgIcon-root {
+        opacity: 0%;
+    }
+}
+
+.MuiPickersToolbar-toolbar {
+    background-color: #ff0f64 !important;
+}
+
+.MuiPickersClockPointer-pointer {
+    background-color: #ff0f64 !important;
+}
+
+.MuiPickersClockPointer-noPoint {
+    background-color: #ff0f64 !important;
+}
+
+.MuiPickersClockPointer-thumb {
+    border: 14px solid #ff0f64 !important;
+}
+
+.MuiPickersClock-pin {
+    background-color: #ff0f64 !important;
+}

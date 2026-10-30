@@ -1,0 +1,40 @@
+.Signature {
+    padding-bottom: 70px;
+
+    .canvas-container {
+        height: 400px;
+
+        canvas {
+            border: 2px solid #f1f1f1;
+        }
+    }
+
+    .signature-overlay {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+    }
+
+    .btn-overlay {
+        margin-top: 20px;
+    }
+
+    .btn-save {
+        position: absolute;
+        top: calc(100% - 25px);
+        left: 50%;
+        z-index: 10;
+        // transform: translate(-50%, -50%);
+    }
+
+    .btn-delete {
+        position: absolute;
+        top: 0;
+        right: 0px;
+        z-index: 10;
+        background-color: #111;
+    }
+}

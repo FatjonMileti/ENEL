@@ -1,0 +1,42 @@
+.PodBody {
+    height: 0;
+    overflow: hidden;
+
+    &.expanded {
+        height: auto;
+        overflow: visible;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+
+    .pod-display-wrapper {
+        margin-top: 1.8rem;
+        margin-bottom: 3rem;
+        background: #f6f6f6;
+        padding-bottom: 1rem;
+
+        .pod-value {
+            padding: 20px;
+            font-size: 1.4rem;
+            text-align: center;
+            font-weight: 300;
+            background-color: #f1f1f1;
+        }
+
+        .pod-address {
+            margin-top: 5px;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+    }
+
+    .CustomerDocsSelect {
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 20px;
+    }
+}

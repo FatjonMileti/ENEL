@@ -1,0 +1,34 @@
+.SearchPlace {
+    height: 100%;
+
+    .search-form {
+        text-align: center;
+    }
+
+    .loaderIndicator {
+        padding-top: 100px;
+    }
+    .circular {
+        .path {
+            stroke: black !important;
+        }
+    }
+
+    .data {
+        margin-top: 50px;
+        width: 100%;
+        .label {
+            font-weight: bold;
+            // text-align: center;
+        }
+
+        div {
+            margin-top: 5px;
+        }
+    }
+}
+
+.wrapper {
+    width: 99% !important;
+    overflow: unset !important;
+}

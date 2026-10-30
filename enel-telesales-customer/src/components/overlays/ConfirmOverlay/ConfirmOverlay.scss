@@ -1,0 +1,126 @@
+.ConfirmOverlay {
+    position: fixed;
+    top: 0;
+    height: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    z-index: 1000;
+    overflow: hidden;
+
+    .close {
+        margin-right: 0px;
+        float: right;
+        background-color: transparent;
+        outline: none;
+    }
+
+    label {
+        color: #fff;
+        text-decoration: underline;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &.no-fixed {
+        position: relative;
+    }
+
+    &.show {
+        height: 100%;
+    }
+
+    &.big {
+        overflow: scroll;
+
+        .content {
+            .title {
+                margin-top: 2rem;
+            }
+
+            .description {
+                width: 100%;
+                max-width: 90rem;
+                padding: 0 5rem;
+                text-align: left;
+            }
+
+            ul {
+                padding-left: 1.5rem;
+            }
+        }
+    }
+
+    &.no-logo {
+        .content .title {
+            margin-top: 5rem;
+        }
+    }
+
+    .logo {
+        img {
+            margin-top: 1.75rem;
+            margin-left: 2.5rem;
+            height: 40px;
+        }
+    }
+
+    .content {
+        margin-bottom: 4rem;
+        text-align: center;
+        color: #000;
+        //font-family: ;
+
+        .title {
+            margin-top: 12rem;
+            font-size: 40px;
+            letter-spacing: -1px;
+        }
+
+        .description,
+        .buttons {
+            margin-top: 1.5rem;
+            width: 38rem;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 15px;
+        }
+
+        .buttons {
+            margin-top: 4rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .ConfirmOverlay {
+        .content .title {
+            font-size: 30px !important;
+        }
+
+        .logo img {
+            height: 22px !important;
+            margin-top: 18px !important;
+            margin-left: 15px !important;
+        }
+
+        .content .description,
+        .content .buttons {
+            width: calc(100% - 40px) !important;
+            margin-left: 20px !important;
+            margin-right: 20px !important;
+        }
+
+        &.big .content .description {
+            padding: 0 1rem !important;
+        }
+
+        &.no-logo .content .title {
+            margin-top: 4rem !important;
+        }
+    }
+}

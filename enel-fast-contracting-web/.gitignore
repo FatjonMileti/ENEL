@@ -1,0 +1,27 @@
+# node
+node_modules
+yarn-error.log
+
+# App
+dist
+coverage
+
+# IDE
+.idea/
+.cache/
+
+*.code-workspace
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Misc
+.DS_STORE
+*.log
+package-lock.json
+
+docker-compose.yml
+dockerfile
+true

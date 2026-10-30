@@ -1,0 +1,198 @@
+.PlanOptions {
+	position: relative;
+	overflow: hidden;
+
+    .form-control {
+        border-radius: 4px;
+    }
+
+	.has-error .form-control {
+		border-color: rgba(255, 255, 255, .35) !important;
+
+		&:focus {
+			border-color: rgb(255, 255, 255) !important;
+		}
+	}
+    --ppc-blue-color: #163FE8;
+    --ppc-light-blue: #7DA7FF;
+    --ppc-black-color: #000;
+
+
+.blue-black {
+    --ppc-liniar-gradient-1: linear-gradient(0deg, var(--ppc-light-blue) -8%, var(--ppc-blue-color) 1%, var(--ppc-black-color) 7%);
+    --ppc-liniar-gradient-2: linear-gradient(0deg, var(--ppc-light-blue) -7%, var(--ppc-blue-color) 2%, var(--ppc-black-color) 13%);
+    --ppc-liniar-gradient-3: linear-gradient(0deg, var(--ppc-light-blue) -8%, var(--ppc-blue-color) 5%, var(--ppc-black-color) 20%);
+    --ppc-liniar-gradient-4: linear-gradient(0deg, var(--ppc-light-blue) -10%, var(--ppc-blue-color) 9%, var(--ppc-black-color) 27%);
+    --ppc-liniar-gradient-5: linear-gradient(0deg, var(--ppc-light-blue) -10%, var(--ppc-blue-color) 11%, var(--ppc-black-color) 34%);
+    --ppc-liniar-gradient-6: linear-gradient(0deg, var(--ppc-light-blue) -11%, var(--ppc-blue-color) 14%, var(--ppc-black-color) 41%);
+    --ppc-liniar-gradient-7: linear-gradient(180deg, var(--ppc-light-blue) -12%, var(--ppc-blue-color) 17%, var(--ppc-black-color) 48%);
+    --ppc-liniar-gradient-8: linear-gradient(180deg, var(--ppc-light-blue) -12%, var(--ppc-blue-color) 23%, var(--ppc-black-color) 55%);
+    --ppc-liniar-gradient-9: linear-gradient(180deg, var(--ppc-light-blue) -10%, var(--ppc-blue-color) 30%, var(--ppc-black-color) 62%);
+    --ppc-liniar-gradient-10: linear-gradient(180deg, var(--ppc-light-blue) -15%, var(--ppc-blue-color) 37%, var(--ppc-black-color) 68%);
+    --ppc-liniar-gradient-11: linear-gradient(180deg, var(--ppc-light-blue) -20%, var(--ppc-blue-color) 44%, var(--ppc-black-color) 74%);
+    --ppc-liniar-gradient-12: linear-gradient(180deg, var(--ppc-light-blue) -25%, var(--ppc-blue-color) 51%, var(--ppc-black-color) 83%);
+    --ppc-liniar-gradient-13: linear-gradient(180deg, var(--ppc-light-blue) -30%, var(--ppc-blue-color) 58%, var(--ppc-black-color) 90%);
+    --ppc-liniar-gradient-14: linear-gradient(180deg, var(--ppc-light-blue) -35%, var(--ppc-blue-color) 65%, var(--ppc-black-color) 97%);
+    --ppc-liniar-gradient-15: linear-gradient(180deg, var(--ppc-light-blue) -40%, var(--ppc-blue-color) 72%, var(--ppc-black-color) 104%);
+
+}
+
+
+.gradient-pink {
+    background: linear-gradient(39deg, var(--ppc-yellow-color) 23.84%, var(--ppc-orange-color) 69.85%, var(--ppc-pink-color) 120.59%);
+}
+
+.gradient-container {
+    position: absolute;
+}
+
+.gradient {
+    display: table-cell;
+    width: 24rem;
+    height: 100rem;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+
+
+.gradient1 {
+    background: var(--ppc-liniar-gradient-1);
+}
+
+.gradient2 {
+    background: var(--ppc-liniar-gradient-2);
+}
+
+.gradient3 {
+    background: var(--ppc-liniar-gradient-3);
+}
+
+.gradient4 {
+    background: var(--ppc-liniar-gradient-4);
+}
+
+.gradient5 {
+    background: var(--ppc-liniar-gradient-5);
+}
+
+.gradient6 {
+    background: var(--ppc-liniar-gradient-6);
+}
+
+
+
+@media screen and (max-height: 900px) and (max-width: 414px) {
+    .gradient {
+        height: 30rem;
+        width: 5rem;
+
+    }
+}
+
+@media screen and (max-width: 400px) and (max-height: 900px) {
+    .gradient {
+        width: 4rem;
+        height: 23rem;
+    }
+}
+
+@media screen and (max-width: 430px) and (max-height: 950px) {
+    .gradient {
+        width: 5rem;
+        height: 30rem;
+    }
+}
+
+@media screen and (max-width: 375px) and (max-height: 670px) {
+    .gradient {
+        width: 4rem;
+        height: 27rem;
+    }
+}
+
+
+/*For Big TV's (HD Screens)*/
+@media screen and (min-width: 1280px) {
+
+    .gradient {
+        width: 24rem;
+    }
+
+    .ppc-logo svg {
+        width: 96px;
+    }
+}
+
+/*For Projectors or Higher Resolution Screens (Full HD)*/
+@media screen and (min-width: 2294px) {
+
+    .gradient {
+        width: 33rem;
+    }
+}
+
+/*For 4K Displays (Ultra HD)*/
+@media screen and (min-width: 3840px) {
+    .gradient {
+        width: 40rem;
+    }
+
+}
+
+
+.uploaded i.icon-download {
+    padding-right: 5px;
+}
+
+.list-item_text-wrapper a {
+    color: var(--ppc-blue-color);
+}
+
+
+
+
+	.hero-form .btn-group > .btn {
+		font-size: 18px;
+    }
+
+    .email-input {
+        margin-top: 30px;
+        margin-bottom: 70px !important;
+    }
+
+
+	// .btn-primary {
+	//     background-color: #ffffff;
+	//     border-color: #ffffff;
+	//     color: #0555FA;
+	// }
+
+	// .btn-primary:hover {
+	//     background-color: transparent;
+	//     color: #ffffff;
+	//     border-color: #ffffff;
+	// }
+
+    .btn-outline-secondary {
+        border-color: transparent !important;
+        background-color: #ffffff;
+    }
+
+
+    .btn-outline-secondary:hover {
+        border-color: transparent !important;
+        background-color: black;
+    }
+
+	.btn-primary:not(:disabled):not(.disabled):active,
+	.btn-primary:not(:disabled):not(.disabled).active {
+	    background-color: rgba(255, 255, 255, 0.2);
+	    color: #ffffff;
+	    border-color: #ffffff;
+	}
+}

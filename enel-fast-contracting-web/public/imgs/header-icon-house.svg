@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2.7px;
+      }
+    </style>
+  </defs>
+  <g id="header-icon-house" transform="translate(-80 -150)">
+    <path id="house" class="cls-1" d="M629.494,40.476V29.932h-9.038V44.995h18.075V24.569h4.519V23.063l-6.025-5.031V9.506H631v3.013L624.976,8,606.9,23.063v1.506h4.519V44.995h4.519" transform="translate(-517.815 150.005)"/>
+    <rect id="Rectangle_446" data-name="Rectangle 446" class="cls-2" width="54" height="54" transform="translate(80 150)"/>
+  </g>
+</svg>

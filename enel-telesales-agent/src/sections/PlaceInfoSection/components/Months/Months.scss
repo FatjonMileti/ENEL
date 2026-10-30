@@ -1,0 +1,10 @@
+.Months {
+    &.monthly-usage {
+        overflow: hidden;
+        height: 0;
+
+        &.show {
+            height: 320px;
+        }
+    }
+}

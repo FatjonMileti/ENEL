@@ -1,0 +1,26 @@
+.MarketingOptions {
+	.checkbox-acord {
+		margin-bottom: 10px !important;
+	}
+
+	.marketing-address {
+		margin-left: 2rem;
+	}
+
+	.marketing-disclaimer {
+		display: block;
+		margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    .description-link {
+        color: var(--cobaltBlue);
+    }
+
+    span.error-symbol {
+
+        color: black;
+        border-radius: 2rem;
+        border: .2rem solid #000;
+    }
+}

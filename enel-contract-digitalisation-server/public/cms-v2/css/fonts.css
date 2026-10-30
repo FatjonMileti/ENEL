@@ -1,0 +1,28 @@
+﻿@font-face {
+	font-family: 'PingL-Regular';
+	src: url('../fonts/PingL-Regular.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PingL-Regular';
+	src: local('PingL-Regular'),
+		url('../fonts/PingL-Regular.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PingL-Bold';
+	src: url('../fonts/PingL-Bold.otf');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PingL-Bold';
+	src: local('PingL-Bold'),
+		url('../fonts/PingL-Bold.otf') format('opentype');
+
+	font-weight: bold;
+	font-style: normal;
+}

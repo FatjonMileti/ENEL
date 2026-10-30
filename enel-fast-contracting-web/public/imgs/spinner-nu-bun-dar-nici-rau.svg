@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 376.6 376.6" id="spinner-ext">
+  <style>
+         @keyframes rotatie {
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+  }
+
+
+        
+       #spinner-ext *{
+  animation-duration: 1s;animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0, 0, 1, 1);
+  }
+
+  #Layer_2{animation-name: rotatie;transform-origin: 50% 50%;transform-box: fill-box;transform: rotate(0deg);
+  }
+
+      
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-4);
+      }
+    </style>
+  <defs>
+    
+    <linearGradient id="linear-gradient" x1="358.07" y1="155.08" x2="220.07" y2="20.08" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.75"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="20.82" y1="223.53" x2="156.82" y2="357.53" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.25"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="154.04" y1="19.6" x2="19.04" y2="157.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="220.99" y1="357.85" x2="358.99" y2="219.85" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.25"/>
+      <stop offset="0.79" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <title>spinner</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_3" data-name="Layer 3">
+      <g>
+        <path class="cls-1" d="M188.3,0V50c76.26,0,138.3,62,138.3,138.3h50C376.6,84.47,292.13,0,188.3,0Z"/>
+        <path class="cls-2" d="M50,188.3H0C0,292.13,84.47,376.6,188.3,376.6v-50C112,326.6,50,264.56,50,188.3Z"/>
+        <path class="cls-3" d="M188.3,50V0C84.47,0,0,84.47,0,188.3H50C50,112,112,50,188.3,50Z"/>
+        <path class="cls-4" d="M188.3,326.6v50c103.83,0,188.3-84.47,188.3-188.3h-50C326.6,264.56,264.56,326.6,188.3,326.6Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

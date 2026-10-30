@@ -1,0 +1,438 @@
+/*!
+ * Copyright (c) 2014 Tamble, Inc.
+ * Licensed under MIT (https://github.com/tamble/jquery-ui-daterangepicker/raw/master/LICENSE.txt)
+ */
+
+.comiseo-daterangepicker-triggerbutton.ui-button {
+    text-align: left;
+    min-width: 18em;
+}
+
+.comiseo-daterangepicker {
+    position: absolute;
+    padding: 5px;
+}
+
+.comiseo-daterangepicker-mask {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /* required for IE */
+    background-color: #fff;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.comiseo-daterangepicker-presets,
+.comiseo-daterangepicker-calendar {
+    display: table-cell;
+    vertical-align: top;
+    height: 230px;
+}
+
+.comiseo-daterangepicker-right .comiseo-daterangepicker-presets {
+    padding: 2px 7px 7px 2px;
+}
+
+.comiseo-daterangepicker-left .comiseo-daterangepicker-presets {
+    padding: 2px 2px 7px 7px;
+}
+
+.ui-menu {
+    white-space: nowrap;
+}
+
+.comiseo-daterangepicker .ui-widget-content,
+.comiseo-daterangepicker .ui-datepicker .ui-state-highlight {
+    border-width: 0;
+}
+
+.comiseo-daterangepicker>.comiseo-daterangepicker-main.ui-widget-content {
+    border-bottom-width: 1px;
+}
+
+.comiseo-daterangepicker .ui-datepicker .ui-datepicker-today .ui-state-highlight {
+    border-width: 1px;
+}
+
+.comiseo-daterangepicker-right .comiseo-daterangepicker-calendar {
+    border-left-width: 1px;
+    padding-left: 5px;
+}
+
+.comiseo-daterangepicker-left .comiseo-daterangepicker-calendar {
+    border-right-width: 1px;
+    padding-right: 5px;
+}
+
+.comiseo-daterangepicker-right .comiseo-daterangepicker-buttonpanel {
+    float: left;
+}
+
+.comiseo-daterangepicker-left .comiseo-daterangepicker-buttonpanel {
+    float: right;
+}
+
+.comiseo-daterangepicker-buttonpanel>button {
+    margin-top: 6px;
+}
+
+.comiseo-daterangepicker-right .comiseo-daterangepicker-buttonpanel>button {
+    margin-right: 6px;
+}
+
+.comiseo-daterangepicker-left .comiseo-daterangepicker-buttonpanel>button {
+    margin-left: 6px;
+}
+
+/* themeable styles */
+
+.comiseo-daterangepicker-calendar .ui-state-highlight a.ui-state-default {
+    background: #b0c4de;
+    color: #fff;
+}
+
+/* header date time field */
+
+.trigger-calendar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    line-height: 6rem;
+    font-weight: 300;
+    font-family: PingL-Bold, sans-serif;
+    text-transform: uppercase;
+}
+
+.trigger-calendar #requestsFilterDatePicker {
+    display: none !important;
+    opacity: 0;
+}
+
+.trigger-calendar .comiseo-daterangepicker-triggerbutton {
+    width: 100%;
+    min-width: 21rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 0 0 3rem;
+    border: none;
+    border-radius: 0 !important;
+    outline: none;
+    color: rgba(255, 255, 255, 0.7);
+    background: transparent;
+    font-size: 1.1rem;
+    line-height: inherit;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.trigger-calendar .comiseo-daterangepicker-triggerbutton:hover,
+.trigger-calendar .comiseo-daterangepicker-triggerbutton:active,
+.trigger-calendar .comiseo-daterangepicker-triggerbutton:focus,
+.trigger-calendar.selected .comiseo-daterangepicker-triggerbutton {
+    color: #fff;
+}
+
+.trigger-calendar .comiseo-daterangepicker-triggerbutton span.ui-button-text {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0 0 0 0.9rem;
+    margin: 0;
+    line-height: 6rem;
+}
+
+.trigger-calendar .comiseo-daterangepicker-triggerbutton span.ui-icon {
+    display: none;
+}
+
+.comiseo-daterangepicker {
+    width: 100%;
+    height: 30rem;
+    padding: 2rem 5% 2rem 9%;
+    background: #292929 !important;
+    top: 6rem !important;
+    left: 0 !important;
+    border: none !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    border-radius: 0 !important;
+}
+
+.comiseo-daterangepicker .ui-widget {
+    font-size: 1.2rem !important;
+    font-family: PingL-Bold, sans-serif; !important;
+}
+
+.comiseo-daterangepicker-main {
+    width: 100%;
+    border: none !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    overflow: hidden;
+}
+
+.comiseo-daterangepicker-right .comiseo-daterangepicker-buttonpanel {
+    float: right;
+}
+
+.comiseo-daterangepicker-presets {
+    width: 15%;
+    margin: 0 5% 0 0 !important;
+    height: 22rem !important;
+    float: left;
+    padding: 2.5rem 0 0 !important;
+}
+
+.comiseo-daterangepicker-presets .ui-menu {
+    width: 100%;
+    border-radius: 0 !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.comiseo-daterangepicker-presets .ui-menu .ui-menu-item {
+    width: 100%;
+    height: 2.5rem !important;
+    padding: 0 !important;
+    list-style-image: none !important;
+    border: none !important;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7) !important;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.comiseo-daterangepicker-presets .ui-menu .ui-menu-item.ui-state-focus {
+    background: none !important;
+    border: none !important;
+    margin: 0 !important;
+}
+
+.comiseo-daterangepicker-presets .ui-menu .ui-menu-item a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 1.2rem !important;
+    line-height: 2.5rem;
+    color: rgba(255, 255, 255, 0.7) !important;
+    padding: 0 0.5rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.comiseo-daterangepicker-presets .ui-menu .ui-menu-item.ui-state-focus a {
+    color: #FF6447 !important;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.comiseo-daterangepicker-calendar {
+    width: 80% !important;
+    height: 22rem !important;
+    float: left;
+    border: none !important;
+    padding: 0 !important;
+    background: none !important;
+}
+
+.comiseo-daterangepicker-calendar .ui-datepicker-inline {
+    width: 100% !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+
+.comiseo-daterangepicker-calendar .ui-datepicker-multi-3 .ui-datepicker-group {
+    width: 30% !important;
+    margin-right: 5% !important;
+}
+
+.comiseo-daterangepicker-calendar .ui-datepicker-multi-3 .ui-datepicker-group.ui-datepicker-group-last {
+    margin-right: 0 !important;
+}
+
+.comiseo-daterangepicker-calendar .ui-datepicker-header {
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 0.5rem;
+}
+
+.ui-datepicker .ui-datepicker-title {
+    line-height: 2.5rem !important;
+    margin: 0 2.5rem !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-weight: normal !important;
+    font-family: PingL-Bold, sans-serif !important;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.ui-datepicker .ui-datepicker-title .ui-datepicker-month {
+    font-size: 1.4rem !important;
+}
+
+.ui-datepicker .ui-datepicker-title .ui-datepicker-year {
+    font-size: 0.9rem !important;
+    opacity: 0.7;
+}
+
+.ui-datepicker th {
+    padding: 0 0.5rem !important;
+    font-size: 1rem !important;
+    line-height: 2rem;
+    font-weight: normal !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    text-align: center !important;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.ui-datepicker td {
+    padding: 0 !important;
+    font-size: 1.2rem !important;
+    line-height: 2.5rem;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid #292929 !important;
+}
+
+.ui-datepicker td .ui-state-default {
+    padding: 0 0.5rem !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    background: none !important;
+    border: none !important;
+    text-align: center !important;
+}
+
+.ui-datepicker td span.ui-state-default {
+    opacity: 0.5;
+}
+
+.ui-datepicker td .ui-state-hover {
+    color: #FF6447 !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.comiseo-daterangepicker-calendar td.ui-state-highlight .ui-state-default,
+.comiseo-daterangepicker-calendar td.ui-datepicker-current-day .ui-state-active {
+    color: #fff !important;
+    background: none !important;
+}
+
+.comiseo-daterangepicker-calendar td.ui-state-highlight,
+.comiseo-daterangepicker-calendar td.ui-datepicker-current-day {
+    background: #FF6447;
+}
+
+.comiseo-daterangepicker-calendar .ui-datepicker-prev,
+.comiseo-daterangepicker-calendar .ui-datepicker-next {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    top: 0 !important;
+    left: 0 !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    font-size: 1.2rem;
+    font-weight: normal;
+    line-height: 2.5rem;
+    font-family: 'icons' !important;
+    text-align: center !important;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.ui-datepicker .ui-datepicker-prev:before {
+    content: "\e912";
+}
+
+.ui-datepicker .ui-datepicker-next:before {
+    content: "\e90f";
+}
+
+.comiseo-daterangepicker-calendar .ui-datepicker-next {
+    left: auto !important;
+    right: 0 !important;
+}
+
+.comiseo-daterangepicker-calendar .ui-datepicker-prev:hover,
+.comiseo-daterangepicker-calendar .ui-datepicker-next:hover {
+    color: #FF6447 !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.comiseo-daterangepicker-calendar .ui-datepicker-prev.ui-state-disabled,
+.comiseo-daterangepicker-calendar .ui-datepicker-next.ui-state-disabled {
+    display: none !important;
+}
+
+.comiseo-daterangepicker-calendar .ui-datepicker-prev .ui-icon,
+.comiseo-daterangepicker-calendar .ui-datepicker-next .ui-icon {
+    display: none !important;
+}
+
+.comiseo-daterangepicker-right .comiseo-daterangepicker-buttonpanel button.ui-button {
+    height: 3rem !important;
+    margin: 0 0.5rem 0 0 !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    opacity: 0.8;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 1rem !important;
+    font-size: 1.2rem !important;
+    line-height: inherit !important;
+    font-family: PingL-Bold, sans-serif !important;
+    font-weight: normal !important;
+}
+
+.comiseo-daterangepicker-right .comiseo-daterangepicker-buttonpanel button.ui-button.ui-priority-primary {
+    background: #FF6447 !important;
+    color: #fff !important;
+    font-family: PingL-Bold, sans-serif; !important;
+    margin-left: 0.5rem !important;
+}
+
+.comiseo-daterangepicker-right .comiseo-daterangepicker-buttonpanel button.ui-button:hover {
+    opacity: 1;
+}
+
+.ui-front {
+    z-index: 1010 !important;
+}
+
+.comiseo-daterangepicker-mask {
+    top: 6rem;
+}

@@ -1,0 +1,3 @@
+{   
+    "ignore": ["*.jsx", "/public/index.js", "/public/index.map", "public/cms/*.*"] 
+}

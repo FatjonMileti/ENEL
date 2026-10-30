@@ -1,0 +1,50 @@
+export default {
+    BeaconsForm: {
+        save: 'Save',
+        cancel: 'Cancel',
+        identification: 'Identification',
+        addLogo: 'On-site Placement',
+        screenName: 'Beacon Name',
+        details: 'Details',
+        name: 'Name',
+        locationDetails: 'Location Details',
+        location: 'Location',
+        area: 'Area',
+        technicalDetails: 'Technical Details',
+        resolution: 'Resolution',
+        playlist: 'Playlist',
+        preview: 'Preview',
+    },
+    BeaconsList: {
+        lastCheck: 'Last check',
+        lastReset: 'Last reset',
+        details: 'Details',
+        toggle: 'Stop/Start',
+        reset: 'Reset',
+        preview: 'Preview',
+        editContent: 'Edit content',
+        delete: 'Delete',
+        alerts: {
+            screenStart: 'Beacon has been started.',
+            screenStop: 'Beacon has been stopped.',
+            reset: 'Beacon has been reset.',
+        },
+        deleteModal: {
+            message: 'Do you want to delete {itemName}?',
+            delete: 'Delete',
+            cancel: 'Cancel',
+        },
+    },
+    BeaconsListPage: {
+        addBeacon: 'Add New Beacon',
+        title: 'Beacons',
+    },
+    BeaconsPage: {
+        all: 'All Beacons',
+        new: 'Add New Beacon',
+        edit: 'Edit Beacon',
+    },
+    BeaconNavbar: {
+        details: 'Details',
+    },
+};

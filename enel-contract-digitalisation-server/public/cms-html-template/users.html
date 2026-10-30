@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="ro" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <title>PPC | Users</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link type="text/css" href="css/icons.css" rel="stylesheet" />
+    <link type="text/css" href="css/swiper.min.css" rel="stylesheet" />
+    <link type="text/css" href="css/global.css" rel="stylesheet" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+
+    <div class="wrapper collapse-sidebar view-flex-sidebar">
+
+        <div class="sidebar">
+            <div class="menu-btn">
+                <i class="icon-wlc-menu"></i>
+                <i class="icon-wlc-arrow-back"></i>
+            </div>
+            <nav class="main-menu">
+                <a href="overview.html" title=""><i class="icon-wlc-monitor"></i><span>Overview</span></a>
+                <a href="statistics.html" title=""><i class="icon-wlc-funnel-performance"></i><span>Statistics</span></a>
+                <a href="ocr-counter-status.html" title=""><i class="icon-wlc-menu-icon-1"></i><span>OCR</span></a>
+                <a href="easy-door-to-door.html" title=""><i class="icon-wlc-menu-icon-2"></i><span>Easy door to door</span></a>
+                <a href="easy-officers.html" title=""><i class="icon-wlc-menu-icon-3"></i><span>Easy officers</span></a>
+                <a href="#" title=""><i class="icon-wlc-menu-icon-4"></i><span>Fast Contract</span></a>
+                <a href="alerts-and-reports.html" title=""><i class="icon-wlc-menu-icon-5"></i><span>Alerts &amp; Reports</span></a>
+                <div class="settings-link" title="">
+                    <i class="icon-wlc-settings"></i><span>Settings</span>
+                    <div class="settings-menu" title="">
+                        <a href="#" title=""><span>Settings 1</span></a>
+                        <a href="#" title=""><span>Settings 2</span></a>
+                        <a href="#" title=""><span>Settings 3</span></a>
+                    </div>
+                </div>
+                <a class="logout-link" href="#" title=""><i class="icon-wlc-exit"></i><span>Logout</span></a>
+            </nav><!-- end .mainMenu -->
+        </div><!-- end .sidebar -->
+
+        <div class="wrapper-content tpl-with-flex-sidebar tpl-users">
+
+            <div class="header-content">
+                <div class="header-content-logo"><img src="img/ppc_logo_white.png" alt="ppc" /></div>
+                <form class="search">
+                    <fieldset>
+                        <input type="text" name="" placeholder="Search Agent" />
+                        <button><i class="icon-wlc-search"></i></button>
+                    </fieldset>
+                </form>
+                <p class="hc-btn trigger-calendar"><i class="icon-wlc-calendar-2"></i>11.07.2016 - 17.07.2016</p>
+                <p class="hc-btn trigger-profile-menu"><span><img src="img/user.jpg" alt="" /></span></p> 
+            </div><!-- end header-content -->
+
+            <div class="content">
+
+                <div class="content-box">
+                    <div class="content-box-header">
+                        <h3>Users</h3>
+                    </div><!-- end content-box-header -->
+                    <div class="content-box-body">
+                        <div class="scrollbar">
+                            <div class="box add-users-box">
+                                <form class="form">
+                                    <fieldset>
+                                        <div class="form-row">
+                                            <p class="input-box-field">
+                                                <label>Nume</label>
+                                                <input type="text" name="">
+                                            </p>
+                                            <p class="input-box-field">
+                                                <label>Prenume</label>
+                                                <input type="text" name="">
+                                            </p>
+                                        </div>
+                                        <div class="form-row">
+                                            <p class="input-box-field">
+                                                <label>Email</label>
+                                                <input type="text" name="">
+                                            </p>
+                                            <p class="input-box-field">
+                                                <label>Telefon</label>
+                                                <input type="text" name="">
+                                            </p>
+                                        </div>
+                                        <div class="form-row">
+                                            <p class="input-box-field">
+                                                <label>Zona</label>
+                                                <input type="text" name="">
+                                            </p>
+                                            <p class="input-box-field">
+                                                <label>Judet</label>
+                                                <input type="text" name="">
+                                            </p>
+                                        </div>
+                                        <div class="form-row mar2b">
+                                            <p class="select-box-field">
+                                                <label>Tip</label>
+                                                <select>
+                                                    <option value="">Agent</option>
+                                                    <option value="">Office</option>
+                                                </select>
+                                            </p>
+                                            <p class="select-box-field">
+                                                <label>Companie</label>
+                                                <select>
+                                                    <option value="">Companie 1</option>
+                                                    <option value="">Companie 2</option>
+                                                    <option value="">Companie 3</option>
+                                                    <option value="">Companie 4</option>
+                                                    <option value="">Companie 5</option>
+                                                </select>
+                                            </p>
+                                        </div>
+                                        <div class="form-row mar1b">
+                                            <p class="rc-line">                                                
+                                                <input id="blocked-user" type="checkbox" name="" />
+                                                <label for="blocked-user">User blocat</label>
+                                            </p>
+                                            <p>
+                                                <a class="button white" href="#">Resetare parola</a>
+                                            </p>
+                                        </div>
+                                    </fieldset>
+                                    <div class="form-actions">
+                                        <a class="button blue" href="#">Save</a>
+                                    </div>
+                                </form>
+                            </div><!-- end box --> 
+                            <div class="box add-users-box">
+                                <div class="error-msg box-msg">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                </div>
+                                    <form class="form">
+                                        <fieldset>
+                                            <div class="form-row">
+                                                <p class="input-box-field error">
+                                                    <label>Nume</label>
+                                                    <input type="text" name="">
+                                                </p>
+                                                <p class="input-box-field error">
+                                                    <label>Prenume</label>
+                                                    <input type="text" name="">
+                                                </p>
+                                            </div>
+                                            <div class="form-row">
+                                                <p class="input-box-field">
+                                                    <label>Email</label>
+                                                    <input type="text" name="">
+                                                </p>
+                                                <p class="input-box-field">
+                                                    <label>Telefon</label>
+                                                    <input type="text" name="">
+                                                </p>
+                                            </div>
+                                            <div class="form-row">
+                                                <p class="input-box-field">
+                                                    <label>Zona</label>
+                                                    <input type="text" name="">
+                                                </p>
+                                                <p class="input-box-field">
+                                                    <label>Judet</label>
+                                                    <input type="text" name="">
+                                                </p>
+                                            </div>
+                                            <div class="form-row mar2b">
+                                                <p class="select-box-field">
+                                                    <label>Tip</label>
+                                                    <select>
+                                                        <option value="">Agent</option>
+                                                        <option value="">Office</option>
+                                                    </select>
+                                                </p>
+                                                <p class="select-box-field">
+                                                    <label>Companie</label>
+                                                    <select>
+                                                        <option value="">Companie 1</option>
+                                                        <option value="">Companie 2</option>
+                                                        <option value="">Companie 3</option>
+                                                        <option value="">Companie 4</option>
+                                                        <option value="">Companie 5</option>
+                                                    </select>
+                                                </p>
+                                            </div>
+                                            <div class="form-row mar1b">
+                                                <p class="rc-line">                                                
+                                                    <input id="blocked-user" type="checkbox" name="" />
+                                                    <label for="blocked-user">User blocat</label>
+                                                </p>
+                                                <p>
+                                                    <a class="button white" href="#">Resetare parola</a>
+                                                </p>
+                                            </div>
+                                        </fieldset>
+                                        <div class="form-actions">
+                                            <a class="button blue" href="#">Save</a>
+                                        </div>
+                                    </form>
+                                </div><!-- end box --> 
+                            <a class="button white" href="#"><i class="icon-wlc-plus"></i>Add more users</a>
+                        </div><!-- end scrollbar -->                        
+                    </div><!-- end content-box-body -->
+                </div><!-- end content-box -->
+
+            </div><!-- end content -->
+
+            <div class="flex-sidebar">
+                <div class="flex-sidebar-header">
+                    <h3>User Activity Overview</h3>
+                </div>
+                <div class="scrollbar">
+                    <div class="box">
+                        <p class="panel">
+                            <span>Status:</span>
+                            <strong><i class="icon-wlc-active active"></i>Active</strong>
+                        </p>
+                        <p class="panel">
+                            <span>Activation date:</span>
+                            <strong>Today, 8:33 PM</strong>
+                        </p>
+                        <p class="panel">
+                            <span>Last login:</span>
+                            <strong>Today, 8:33 PM</strong>
+                        </p>
+                        <p class="panel">
+                            <span>Last pasword change:</span>
+                            <strong>Today, 8:33 PM</strong>
+                        </p>
+                        <p class="panel">
+                            <span>Number of logins:</span>
+                            <strong>589</strong>
+                        </p>
+                    </div><!-- end box -->
+                   
+                </div><!-- end scrollbar -->
+                <span class="flex-sidebar-trigger"><i class="icon-wlc-arrow-prev"></i></span>
+            </div><!-- end flex-sidebar -->
+
+        </div><!-- end wrapper-content -->
+
+    </div><!-- end wrapper -->
+
+    <div class="portrait">
+        <div class="table">
+            <div class="table-cell">
+                <i class="icon-screen-rotation"></i>
+                <p>Please turn your device<br />to landscape</p>
+            </div>
+        </div>
+    </div><!-- end portrait -->
+
+</body>
+</html>

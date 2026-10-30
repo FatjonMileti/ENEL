@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="ro" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <title>PPC | Alerts and Reports</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link type="text/css" href="css/icons.css" rel="stylesheet" />
+    <link type="text/css" href="css/global.css" rel="stylesheet" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+
+    <div class="wrapper collapse-sidebar view-flex-sidebar">
+
+        <div class="sidebar">
+            <div class="menu-btn">
+                <i class="icon-wlc-menu"></i>
+                <i class="icon-wlc-arrow-back"></i>
+            </div>
+            <nav class="main-menu">
+                    <a href="overview.html" title=""><i class="icon-wlc-monitor"></i><span>Overview</span></a>
+                    <a href="statistics.html" title=""><i class="icon-wlc-funnel-performance"></i><span>Statistics</span></a>
+                    <a href="ocr-counter-status.html" title=""><i class="icon-wlc-menu-icon-1"></i><span>OCR</span></a>
+                    <a href="easy-door-to-door.html" title=""><i class="icon-wlc-menu-icon-2"></i><span>Easy door to door</span></a>
+                    <a href="easy-officers.html" title=""><i class="icon-wlc-menu-icon-3"></i><span>Easy officers</span></a>
+                    <a href="#" title=""><i class="icon-wlc-menu-icon-4"></i><span>Fast Contract</span></a>
+                    <a class="selected" href="alerts-and-reports.html" title=""><i class="icon-wlc-menu-icon-5"></i><span>Alerts &amp; Reports</span></a>
+                    <div class="settings-link" title="">
+                        <i class="icon-wlc-settings"></i><span>Settings</span>
+                        <div class="settings-menu" title="">
+                            <a href="#" title=""><span>Settings 1</span></a>
+                            <a href="#" title=""><span>Settings 2</span></a>
+                            <a href="#" title=""><span>Settings 3</span></a>
+                        </div>
+                    </div>
+                    <a class="logout-link" href="#" title=""><i class="icon-wlc-exit"></i><span>Logout</span></a>
+                </nav><!-- end .mainMenu -->
+
+        </div><!-- end .sidebar -->
+
+        <div class="wrapper-content tpl-with-flex-sidebar tpl-alerts-reports">
+
+            <div class="header-content">
+                <div class="header-content-logo"><img src="img/ppc_logo_white.png" alt="ppc" /></div>
+                <form class="search">
+                    <fieldset>
+                        <input type="text" name="" placeholder="Search Agent" />
+                        <button><i class="icon-wlc-search"></i></button>
+                    </fieldset>
+                </form>
+                <p class="hc-btn trigger-calendar"><i class="icon-wlc-calendar-2"></i>11.07.2016 - 17.07.2016</p>
+                <p class="hc-btn trigger-profile-menu"><span><img src="img/user.jpg" alt="" /></span></p> 
+            </div><!-- end header-content -->
+
+            <div class="content">
+
+                <div class="content-box">
+                    <div class="content-box-header">
+                        <h3>Alerts and Reports</h3>
+                    </div><!-- end content-box-header -->
+                    <div class="content-box-body alerts-list">
+                        <div class="scrollbar">
+                            <div class="box">
+                                <h3>OCR Monthly report and 500k mark notification</h3>
+                                <p>When the mark of 500k scans is reached, send an automatic notification to the following email addresses:</p>
+                                <div class="autocomplete-tags">
+                                    <span class="at-tag"><i class="icon-wlc-close"></i>email@email.com</span>
+                                    <span class="at-tag"><i class="icon-wlc-close"></i>email@email.com</span>
+                                    <input class="at-input" type="text" value="" placeholder="Enter email address">
+                                </div><!-- end autocomplete-tags -->
+                                <button class="button blue">Set Notification</button>
+                            </div><!-- end box -->
+                            <div class="box">
+                                <h3>PPC Easy Door to Door</h3>
+                                <p>Send security alerts to the following email addresses:</p>
+                                <div class="autocomplete-tags">
+                                    <input class="at-input" type="text" value="" placeholder="Enter email address">
+                                </div><!-- end autocomplete-tags -->
+                                <button class="button blue">Set Notification</button>
+                            </div><!-- end box -->
+                            <div class="box">
+                                <h3>PPC Easy Offices</h3>
+                                <p>Send security alerts to the following email addresses:</p>
+                                <div class="autocomplete-tags">
+                                    <span class="at-tag"><i class="icon-wlc-close"></i>email@email.com</span>
+                                    <input class="at-input" type="text" value="" placeholder="Enter email address">
+                                </div><!-- end autocomplete-tags -->
+                                <button class="button blue">Set Notification</button>
+                            </div><!-- end box -->
+                            <div class="box">
+                                <h3>PPC Fast Contract</h3>
+                                <p>Send security alerts to the following email addresses:</p>
+                                <div class="autocomplete-tags">
+                                    <span class="at-tag"><i class="icon-wlc-close"></i>email@email.com</span>
+                                    <input class="at-input" type="text" value="" placeholder="Enter email address">
+                                </div><!-- end autocomplete-tags -->
+                                <button class="button blue">Set Notification</button>
+                            </div><!-- end box -->
+                        </div>
+                    </div><!-- end content-box-body -->
+                </div><!-- end content-box -->
+
+            </div><!-- end content -->
+
+            <div class="flex-sidebar">
+                <div class="flex-sidebar-header">
+                    <h3>Alert History</h3>
+                    <a class="link-btn" href="#" title=""><i class="icon-wlc-download-arrow"></i>Download Full Report</a>
+                </div>
+                <div class="scrollbar">
+                    <ul class="sidebar-list">
+                        <li>
+                            <div class="sl-header">
+                                <h3>2018.05.22 - 14:21:20 UTC</h3>
+                            </div> <!-- end list-header -->
+                            <div class="sl-body">
+                                <p>Alert details Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed </p>
+                                <div class="sl-actions">
+                                    <a class="button grey" href="#" title=""><i class="icon-wlc-download-arrow"></i>Download Report</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sl-header">
+                                <h3>2018.05.22 - 14:21:20 UTC</h3>
+                            </div> <!-- end list-header -->
+                            <div class="sl-body">
+                                <p>Alert details Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed </p>
+                                <div class="sl-actions">
+                                    <a class="button grey" href="#" title=""><i class="icon-wlc-download-arrow"></i>Download Report</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sl-header">
+                                <h3>2018.05.22 - 14:21:20 UTC</h3>
+                            </div> <!-- end list-header -->
+                            <div class="sl-body">
+                                <p>Alert details Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed </p>
+                                <div class="sl-actions">
+                                    <a class="button grey" href="#" title=""><i class="icon-wlc-download-arrow"></i>Download Report</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sl-header">
+                                <h3>2018.05.22 - 14:21:20 UTC</h3>
+                            </div> <!-- end list-header -->
+                            <div class="sl-body">
+                                <p>Alert details Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed </p>
+                                <div class="sl-actions">
+                                    <a class="button grey" href="#" title=""><i class="icon-wlc-download-arrow"></i>Download Report</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sl-header">
+                                <h3>2018.05.22 - 14:21:20 UTC</h3>
+                            </div> <!-- end list-header -->
+                            <div class="sl-body">
+                                <p>Alert details Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed </p>
+                                <div class="sl-actions">
+                                    <a class="button grey" href="#" title=""><i class="icon-wlc-download-arrow"></i>Download Report</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sl-header">
+                                <h3>2018.05.22 - 14:21:20 UTC</h3>
+                            </div> <!-- end list-header -->
+                            <div class="sl-body">
+                                <p>Alert details Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed </p>
+                                <div class="sl-actions">
+                                    <a class="button grey" href="#" title=""><i class="icon-wlc-download-arrow"></i>Download Report</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sl-header">
+                                <h3>2018.05.22 - 14:21:20 UTC</h3>
+                            </div> <!-- end list-header -->
+                            <div class="sl-body">
+                                <p>Alert details Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed </p>
+                                <div class="sl-actions">
+                                    <a class="button grey" href="#" title=""><i class="icon-wlc-download-arrow"></i>Download Report</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sl-header">
+                                <h3>2018.05.22 - 14:21:20 UTC</h3>
+                            </div> <!-- end list-header -->
+                            <div class="sl-body">
+                                <p>Alert details Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed </p>
+                                <div class="sl-actions">
+                                    <a class="button grey" href="#" title=""><i class="icon-wlc-download-arrow"></i>Download Report</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sl-header">
+                                <h3>2018.05.22 - 14:21:20 UTC</h3>
+                            </div> <!-- end list-header -->
+                            <div class="sl-body">
+                                <p>Alert details Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed </p>
+                                <div class="sl-actions">
+                                    <a class="button grey" href="#" title=""><i class="icon-wlc-download-arrow"></i>Download Report</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sl-header">
+                                <h3>2018.05.22 - 14:21:20 UTC</h3>
+                            </div> <!-- end list-header -->
+                            <div class="sl-body">
+                                <p>Alert details Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed </p>
+                                <div class="sl-actions">
+                                    <a class="button grey" href="#" title=""><i class="icon-wlc-download-arrow"></i>Download Report</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div><!-- end scrollbar -->
+                <span class="flex-sidebar-trigger"><i class="icon-wlc-arrow-prev"></i></span>
+            </div><!-- end flex-sidebar -->
+
+        </div><!-- end wrapper-content -->
+
+    </div><!-- end wrapper -->
+
+    <div class="portrait">
+        <div class="table">
+            <div class="table-cell">
+                <i class="icon-screen-rotation"></i>
+                <p>Please turn your device<br />to landscape</p>
+            </div>
+        </div>
+    </div><!-- end portrait -->
+
+</body>
+</html>

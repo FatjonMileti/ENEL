@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>PPC – Contractul de furnizare este gata</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{{absoluteUrl}}/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{{absoluteUrl}}/style.css" rel="stylesheet" type="text/css">
+    <link href="{{absoluteUrl}}/responsive.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="{{absoluteUrl}}/favicon.png" />
+    <script nonce="{{nonce}}">
+        window.adobeDataLayer = window.adobeDataLayer || []
+    </script>
+    <script nonce="{{nonce}}" src="{{absoluteUrl}}/assets/js/adobe-client-data-layer.min.js" async defer></script>
+    <script src="https://cdn.userway.org/widget.js" data-account="TU15V20Nza"></script>
+    <style nonce="{{nonce}}">
+        #divError,
+        #divAgree,
+        #divAgreeElectonicInvoice,
+        #divSending {
+            display: none;
+        }
+
+        .close-button {
+            float: right !important;
+            background-color: transparent;
+            border: none;
+            outline: none !important;
+        }
+
+        .ignore-button {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body class="bg-white contracts-ready">
+    <header class="top-header" data-pgc="header" data-pgc-no-update>
+        <img class="logo-big" src="{{absoluteUrl}}/imgs/ppc_logo_white.png" />
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-12">
+                    {{#if showagree}}
+                    <h1>Acceptarea ofertei și semnarea contractului</h1>
+                    {{else}}
+                    <h1>A fost incheiat contractul de furnizare</h1>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container main-area">
+        <div class="row">
+            <div class="col-12">
+                {{#if showagree}}
+                <p class="intro spaced-bottom-md">Ne bucurăm că ai ales PPC!<br/>
+                Mai ai doar un pas: acceptarea contractului prin bifarea căsuței de Accept de mai jos.
+                Contractul, anexele și restul documentelor cu privire la furnizare sunt gata pentru a fi descărcate și salvate.
+                După ce vom primi acceptul tău, documentele vor fi disponibile pe acest link timp de 15 zile de la data emiterii lor.</p>
+                {{/if}}
+                <div class="card-set"> {{isEE}}
+                    {{#each documents}}
+                    <div class="card card-doc">
+                        {{#if isEE}}
+                        <a href="{{url}}" class="link-color card-body card--document document--elec">
+                            {{else}}
+                            <a href="{{url}}" class="card-body card--document document--gaz">
+                                {{/if}}
+                                <div class="card--left">
+                                    <span class="eyebrow-document">Document <span class="delimiter">|</span> {{timestamp}}</span>
+                                    <h4 class="card-title link-color">{{label}}</h4>
+                                </div>
+                                <div class="card--right hide-mobile">
+                                    <span class="filetype">PDF ({{size}})</span>
+                                    <span class="btn btn-outline-black">Descarcă</span>
+                                </div>
+                            </a>
+                    </div>
+                    {{/each}}
+                </div>
+                <dic class="list-footer">
+                    <a href="{{downloadAllUrl}}" class="btn btn-outline-black">Descarcă toate documentele</a>
+                </dic>
+                {{#if showagree}}
+                <div class="row spaced-top-lg btnContainer agreement">
+                    <div class="mb-3 col-12 left" data-pgc="enel.checkbox.w-input" data-pgc-no-update>
+                        <div class="custom-control custom-checkbox ">
+                            <input type="checkbox" class="custom-control-input chkAgree" id="formCustomCheckbox116">
+                            <label class="custom-control-label" for="formCustomCheckbox116">Am citit și sunt de acord cu încheierea contractului de furnizare</label>
+                        </div>
+                    </div>
+                    {{#if isMobile }}
+                        {{#if isNotPostalAddress }}
+                            <div class="mb-3 col-12 left"  id="divAcceptElectronicInvoice" data-pgc="enel.checkbox.w-input" data-pgc-no-update>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input chkAgreeElectonicInvoice" id="formCustomCheckbox117">
+                                    <label class="custom-control-label" for="formCustomCheckbox117">Am citit si sunt de acord cu modalitatea de transmitere a facturii electronice prin {{invoiceSendWay}} {{invoiceContact}} (<a target="_blank" href="https://www.ppcenergy.ro/wp-content/uploads/activare-factura-electronica.pdf">Termeni si conditii privind transmiterea corespondentei si facturii PPC</a>)</label>
+                                </div>
+                            </div>
+                        {{/if}}
+                    {{/if}}
+                </div>
+
+                <div id="divAgree" class="alert alert-danger">
+                    Va rugam sa bifati ca sunteti de acord cu incheierea contractului!
+                </div>
+
+                <div id="divAgreeElectonicInvoice" class="alert alert-warning">
+                    <div class="row"><div class="col-12"><button class="close-button" id="closeButton" onclick="">x</button></div></div>
+                    <div class="row"><div class="col-12">
+                        Grija pentru mediu este o preocupare pentru noi. Mai putine facturi printate, mai mult aer curat pentru noi toti. Factura electronica este un serviciu 100% gratuit si iti ofera mai multa flexibilitate. Fii alaturi de noi, prin acceptarea transmiterii facturii in format electronic. Exprima-ti acordul prin bifa de mai jos.
+                    </div></div>
+                   <div class="row"><div class="col-6 ignore-button"><button class="btn btn-secondary" id="ignore-electronic-invoice">Ignora</button></div> <div class="col-6"><button class="btn btn-primary" id="accept-electronic-invoice">Accepta</button></div></div>
+                </div>
+                <div id="divError" class="alert alert-danger">
+                    A aparut o eroare. Va rugam incercati mai tarziu!
+                </div>
+                <div id="divSending" class="alert alert-info">
+                    Se trimite cererea ...
+                </div>
+                <div class="text-center spaced-top-md btnContainer action-btns" id="accept-buttons">
+                    <div class="text-center spaced-top-md">
+                        <button type="submit" class="btnCancel btn btn-underline-primary">Nu sunt de acord
+                        </button>
+                        <button type="submit" class="btnAccept btn btn-primary">Sunt de acord
+                        </button>
+                    </div>
+                </div>
+                {{/if}}
+                <p class="small spaced-top-lg center disclaimer">
+                    <span class="disclaimer-star">*</span>
+                    În cazul în care contractul de furnizare a energiei electrice/gazelor naturale nu este finalizat, prin acceptarea
+                    tuturor documentelor contractuale (bifând căsuța
+                    <em>Am citit și sunt de acord cu încheierea contractului de furnizare</em>), documentele procesate în vederea
+                    ofertării și contractării vor fi șterse din sistemul informatic PPC în termen de 90 de zile.
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2026 PPC Energy Services Co S.A. – Toate drepturile rezervate</p>
+    </footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{absoluteUrl}}/assets/js/jquery.min.js" nonce="{{nonce}}"></script> {{!--
+    <script src="{{absoluteUrl}}/assets/js/popper.js"></script> --}}
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{{absoluteUrl}}/assets/js/ie10-viewport-bug-workaround.js" nonce="{{nonce}}"></script>
+    <script nonce="{{nonce}}">
+        $(function () {
+            let activateUrl = '{{{activateUrl}}}';
+            let isMobileVar = eval('{{{isMobile}}}');
+            let isWebApp = eval('{{{isWebApp}}}');
+            let invoiceSendWayVar = '{{{invoiceSendWay}}}';
+            let btnAccept = $('.btnAccept');
+            let btnCancel = $('.btnCancel');
+            let chkAgree = $('.chkAgree');
+            let chkAgreeElectonicInvoice = $('.chkAgreeElectonicInvoice');
+            let btnContainer = $('.btnContainer');
+            let divError = $('#divError');
+            let divAgree = $('#divAgree');
+            let ignoreElectronicInvoice = $('#ignore-electronic-invoice');
+            let acceptElectronicInvoice = $('#accept-electronic-invoice');
+            let divAgreeElectonicInvoice = $('#divAgreeElectonicInvoice');
+            let acceptButtons = $('#accept-buttons');
+            let divAcceptElectronicInvoice = $('#divAcceptElectronicInvoice');
+            let closeButton = $('#closeButton');
+            let divSending = $('#divSending');
+            let adobeAnalyticsEvent12a = JSON.parse(`{{{adobeAnalyticsEvent12a}}}`);
+            let adobeAnalyticsEvent12b = JSON.parse(`{{{adobeAnalyticsEvent12b}}}`);
+
+            const subscriptionFormStep12a = event => {
+                window.adobeDataLayer.push(event);
+            }
+
+            subscriptionFormStep12a(adobeAnalyticsEvent12a);
+
+            const subscriptionFormStep12b = event => {
+                window.adobeDataLayer.push(event);
+            }
+
+            const appectElectronicInvoice = event => {
+
+            }
+
+
+
+
+            chkAgree.on('click', function () {
+                divAgree.hide();
+                chkAgree.prop('checked', this.checked);
+            });
+
+
+            if(isMobileVar && invoiceSendWayVar !== 'POSTA' ){
+                chkAgreeElectonicInvoice.on('click', function () {
+                    divAgreeElectonicInvoice.hide();
+                    divAgreeElectonicInvoice.prop('checked', this.checked);
+                    invoiceSendWayVar = null;
+                });
+
+                acceptElectronicInvoice.on('click', function () {
+                    chkAgreeElectonicInvoice.click();
+                    acceptButtons.show();
+                });
+
+
+                ignoreElectronicInvoice.on('click', function () {
+                    divAgreeElectonicInvoice.hide();
+                    divAcceptElectronicInvoice.hide();
+                    invoiceSendWayVar = 'POSTA';
+                    acceptButtons.show();
+                });
+
+
+                closeButton.on('click', function () {
+                    divAgreeElectonicInvoice.hide();
+                    invoiceSendWayVar = 'POSTA';
+                    acceptButtons.show();
+                });
+            }
+
+            var inProgress = false;
+            btnAccept.click(function (e) {
+                if (!chkAgree.prop('checked')) {
+                    divAgree.show();
+                    return;
+                }
+                if(isMobileVar && invoiceSendWayVar !== 'POSTA'){
+                    if (!chkAgreeElectonicInvoice.prop('checked')) {
+                        divAgreeElectonicInvoice.show();
+                        acceptButtons.hide();
+                        return;
+                    }
+                } else if(!isWebApp) {
+                    activateUrl += '&canalComunication=POSTA';
+                }
+                e.preventDefault();
+                if (inProgress) return;
+
+                inProgress = true;
+                divSending.show();
+                btnContainer.hide();
+                subscriptionFormStep12b(adobeAnalyticsEvent12b);
+                $.ajax({
+                    method: 'POST',
+                    url: activateUrl
+                }).done(function () {
+                    divSending.hide();
+                    window.location = 'https://www.ppcenergy.ro/confirmare/contract-rapid-confirmare-contract/';
+                }).fail(function () {
+                    divSending.hide();
+                    divError.show();
+                });
+            });
+            btnCancel.click(function (e) {
+                e.preventDefault();
+                if (inProgress) return;
+
+                divAgree.hide();
+                inProgress = true;
+                divSending.show();
+                btnContainer.hide();
+                $.ajax({
+                    method: 'DELETE',
+                    url: activateUrl
+                }).done(function () {
+                    divSending.hide();
+                    window.location = 'https://www.ppcenergy.ro/';
+                }).fail(function () {
+                    divSending.hide();
+                    divError.show();
+                });
+            })
+        });
+    </script>
+</body>
+
+</html>

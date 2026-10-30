@@ -1,0 +1,12 @@
+$warning: var(--ppcOrange);
+$background: rgba(255, 100, 71, 0.1);
+
+.FormWarning {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid $warning;
+    color: $warning;
+    font-weight: 500;
+    background-color: $background;
+    border-radius: 2px;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="overlay-incadrare" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.45;}
+	.st1{fill:#41B9E6;}
+</style>
+<path id="masca-cutout" class="st0" d="M0,0v1080h1920V0H0z M341,1020l-80-796l1122-80l132,767L341,1020z"/>
+<circle id="handle-stanga-jos" class="st1" cx="341" cy="1020" r="18"/>
+<circle id="handle-dreapta-jos" class="st1" cx="1515" cy="911" r="18"/>
+<circle id="handle-dreapta-sus" class="st1" cx="1383" cy="144" r="18"/>
+<circle id="handle-stanga-sus" class="st1" cx="261" cy="224" r="18"/>
+</svg>

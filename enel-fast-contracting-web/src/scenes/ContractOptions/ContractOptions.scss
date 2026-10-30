@@ -1,0 +1,31 @@
+.ContractOptions {
+    .show-more {
+        margin-top: 32px;
+        height: 55px;
+    }
+
+    .monthly-usage {
+        overflow: hidden;
+        height: 0;
+
+        &.show {
+            height: 500px;
+        }
+    }
+
+    span.error-symbol {
+
+        color: black;
+        border-radius: 2rem;
+        border: .2rem solid #000;
+    }
+    
+    .ConfirmOverlay {
+        .content {
+            margin:auto;
+            .buttons {
+                margin-left: unset;
+            }
+        }
+    }
+}

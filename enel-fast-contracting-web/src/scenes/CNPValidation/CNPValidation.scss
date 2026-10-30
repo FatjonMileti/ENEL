@@ -1,0 +1,23 @@
+.CNPValidation {
+	.row.recaptcha {
+		margin-left: 0;
+		margin-bottom: 2rem;
+	}
+
+	.hero-container {
+		padding-top: 0;
+	}
+    span.error-symbol {
+        font-size: 1.2rem;
+        display: block;
+        width: 1.9rem;
+        height: 1.8rem;
+        text-align: center;
+        color: black;
+        border-radius: 2rem;
+        font-weight: bold;
+        border: .2rem solid black;
+        margin-bottom: .5rem;
+        line-height: 1.35rem;
+    }
+}

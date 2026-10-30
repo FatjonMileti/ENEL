@@ -1,0 +1,47 @@
+export default {
+    ScreenForm: {
+        save: 'Save',
+        cancel: 'Cancel',
+        identification: 'Identification',
+        addLogo: 'On-site Placement',
+        screenName: 'Screen Name',
+        details: 'Details',
+        name: 'Name',
+        locationDetails: 'Location Details',
+        location: 'Location',
+        area: 'Area',
+        technicalDetails: 'Technical Details',
+        resolution: 'Resolution',
+        playlist: 'Playlist',
+        preview: 'Preview',
+    },
+    ScreenList: {
+        lastCheck: 'Last check',
+        lastReset: 'Last reset',
+        details: 'Details',
+        toggle: 'Stop/Start',
+        reset: 'Reset',
+        preview: 'Preview',
+        editContent: 'Edit content',
+        preview: 'Preview',
+        delete: 'Delete',
+        alerts: {
+            screenStart: 'Screen has been started.',
+            screenStop: 'Screen has been stopped.',
+            reset: 'Screen has been reset.',
+        },
+        deleteModal: {
+            message: 'Do you want to delete {itemName}?',
+            delete: 'Delete',
+            cancel: 'Cancel',
+        },
+    },
+    ScreensPage: {
+        new: 'Add New Screen',
+        all: 'All Screens',
+        edit: 'Edit Screen',
+    },
+    ScreenNavbar: {
+        details: 'Details',
+    },
+}

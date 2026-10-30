@@ -1,0 +1,12 @@
+$status: var(--ppcBlue);
+$background: rgba(83, 167, 255, 0.1);
+
+.FormStatus {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid $status;
+    color: $status;
+    font-weight: 500;
+    background-color: $background;
+    border-radius: 2px;
+}

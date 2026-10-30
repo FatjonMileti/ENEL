@@ -1,0 +1,61 @@
+export default {
+    AreaList: {
+        details: 'Details',
+        delete: 'Delete',
+        deleteModal: {
+            message: 'Do you want to delete {itemName}?',
+            delete: 'Delete',
+            cancel: 'Cancel',
+        },
+    },
+    AreaForm: {
+        save: 'Save',
+        cancel: 'Cancel',
+        details: 'Details',
+        name: 'Name',
+        email: 'Email',
+        phone: 'Phone',
+        accountManager: 'Location manager',
+        technicalManager: 'Technical contact',
+    },
+    LocationForm: {
+        save: 'Save',
+        cancel: 'Cancel',
+        details: 'Details',
+        name: 'Name',
+        email: 'Email',
+        phone: 'Phone',
+        lat: 'Latitude',
+        long: 'Longitude',
+        radius: 'Radius',
+        accountManager: 'Location manager',
+        technicalManager: 'Technical contact',
+    },
+    BusinessLocationsList: {
+        lastCheck: 'Last check',
+        lastReset: 'Last reset',
+        details: 'Details',
+        toggle: 'Stop/Start',
+        reset: 'Reset',
+        preview: 'Preview',
+        editContent: 'Edit content',
+        delete: 'Delete',
+        deleteModal: {
+            message: 'Do you want to delete {itemName}?',
+            delete: 'Delete',
+            cancel: 'Cancel',
+        },
+    },
+    BusinessLocationsListPage: {
+        addLocation: 'Add New Location',
+        title: 'Locations',
+    },
+    BusinessLocationsPage: {
+        new: 'Add New Location',
+        all: 'All Locations',
+        edit: 'Edit Location',
+    },
+    LocationNavbar: {
+        details: 'Details',
+    },
+};

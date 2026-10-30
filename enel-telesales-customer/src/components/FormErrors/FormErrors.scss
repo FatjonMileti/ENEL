@@ -1,0 +1,66 @@
+.FormErrors {
+    & > div {
+        padding: 0;
+    }
+
+    .general-errors {
+        background: rgba(0, 0, 0, 0.05);
+        padding: 1.8rem 2.5rem;
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+
+        span.error-symbol {
+            font-size: 1.2rem;
+            display: block;
+            width: 1.9rem;
+            height: 1.8rem;
+            text-align: center;
+            color: #fff;
+            background: #ff0f64;
+            border-radius: 2rem;
+            font-weight: bold;
+            border: 0.2rem solid #fff;
+            margin-bottom: 0.5rem;
+            line-height: 1.35rem;
+        }
+
+        h4 {
+            font-weight: bold;
+            font-size: 13px;
+            color: #000;
+            margin-top: 12px;
+            margin-bottom: 12px !important;
+            text-transform: none;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.container.form-error {
+    max-width: 1310px;
+    margin: 50px auto;
+    padding: 0;
+}
+
+@media only screen and (max-width: 992px) {
+    .container.form-error {
+        width: calc(100% - 60px);
+        margin: 30px !important;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .container.form-error {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}

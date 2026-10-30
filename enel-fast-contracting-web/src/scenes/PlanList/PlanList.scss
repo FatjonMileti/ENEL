@@ -1,0 +1,112 @@
+.PlanList {
+	&.show {
+		.card-set-wrapper {
+			opacity: 1;
+		}
+	}
+    .text-size {
+        font-size:2.075rem;
+    }
+
+	.disclaimer {
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+
+	.card-serv {
+		position: relative;
+		transition: all .1s linear;
+
+		&:hover {
+			box-shadow: 0 0 20px 2px rgba(0,0,0,0.17);
+			transform: scale(1.075);
+			z-index: 1;
+		}
+
+		&.cards-3 {
+			.card-body {
+				min-height: 390px;
+			}
+		}
+
+		&.cards-4 {
+			.card-body {
+				min-height: 490px;
+			}
+		}
+	}
+
+	.card-set-wrapper {
+		opacity: 0;
+	}
+
+	.set-gaz {
+		.oferta-div {
+			background-color: #ff5a0f;
+		}
+	}
+
+	.set-combo {
+		.oferta-div {
+			background-color: #4285F4;
+		}
+	}
+
+	.card-title {
+		margin-top: 18px;
+		margin-bottom: 18px;
+	}
+
+	.card-header {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 200px;
+		flex-direction: column;
+	}
+
+	.card-body {
+		padding: 50px;
+
+		.btn {
+			width: 50%;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.oferta-div {
+		position: relative;
+		border-right: none;
+		border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+		.price-wrapper {
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		span {
+			font-weight: 300;
+			font-size: 14px;
+			letter-spacing: .3px;
+			line-height: 1.46667;
+		}
+	}
+
+	h1.header {
+		margin-bottom: 20px;
+		font-size: 50px;
+	}
+
+	.eyebrow {
+		font-size: 12px;
+	    letter-spacing: 1.8px;
+	    line-height: 1.33333;
+	}
+}

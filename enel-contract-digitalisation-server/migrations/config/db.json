@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "codiown",
+    "password": "jithn:40",
+    "database": "codi",
+    "host": "erdvdsrds00006.ppcro.ppcgroup.local",
+    "port": 5432,
+    "dialect": "postgres",
+    "schema": "SF_test"
+  },
+  "test": {
+    "username": "codiown",
+    "password": "jithn:40",
+    "database": "codi",
+    "host": "pcozbs.db.enel",
+    "port": 5432,
+    "dialect": "postgres",
+    "schema": "SF_test"
+  },
+  "production": {
+    "username": "codiown",
+    "password": "fsjeu-95",
+    "database": "codi",
+    "host": "pcozbe.db.enel",
+    "port": 5432,
+    "dialect": "postgres",
+    "schema": "production"
+  }
+}

@@ -1,0 +1,12 @@
+$success: var(--ppcGreen);
+$background: rgba(1, 183, 71, 0.1);
+
+.FormSuccess {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid $success;
+    color: $success;
+    font-weight: 500;
+    background-color: $background;
+    border-radius: 2px;
+}

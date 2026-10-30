@@ -1,0 +1,65 @@
+{
+    "host": "localhost",
+    "protocol": "http",
+    "port": "PORT",
+    "public": "../public/",
+    "paginate": {
+        "default": 100,
+        "max": 10000000
+    },
+    "postgres": "PG_CONNECTION_STRING",
+    "sqlLogging": false,
+    "schema": "PG_SCHEMA",
+    "authentication": {
+        "service": "users",
+        "secret": "72054964474f9152452879a173fbe9fbc8b7270d882b2fc29ae5ae79385d478daba19fe85717d64ef44e7c7905bebcb5a3ca0d00b147225bdec8224e0508dccd4651d67f412b124b356c4b5ab414380d598484aaf497fe223a690ffacaede0a5cf4de788917e2edd53753dafd1444b65293479a093660c4d0e4e5b50d179a87abe13149f6146955275ff36471b8cf29f5803156aaa584b17a844aaf7e54b4f3cbfb74630bb1dc820909f110f903071dd1affabdd5bbcad64fc70cc4a425327e7889fa84e5dd418fdf1fd4ff0281f77c346ebc785168ffced4002cec0c780639646acd17fafda52d253f18b87774682253a4b10bf5269ad5599e58d2eee49948b",
+        "strategies": [
+            "local",
+            "client"
+        ],
+        "path": "/authentication",
+        "local": {
+            "name": "local",
+            "usernameField": "marca",
+            "passwordField": "password",
+            "service": "users",
+            "entity": "users"
+        },
+        "client": {
+            "name": "devices",
+            "usernameField": "clientid",
+            "passwordField": "clientsecret",
+            "service": "devices",
+            "entity": "devices"
+        },
+        "jwt": {
+            "header": {
+                "typ": "access"
+            },
+            "audience": "https://www.ppcenergy.ro",
+            "subject": "anonymous",
+            "issuer": "feathers",
+            "algorithm": "HS256",
+            "expiresIn": "1d"
+        }
+    },
+    "mailing": {
+        "smtp": "SMTP_SERVER",
+        "from": "MAIL_FROM",
+        "offer": "MAIL_FROM_OFFER"
+    },
+    "smsFolderPath": "SMS_PATH",
+    "absoluteUrl": "ABSOLUTE_URL",
+    "absoluteClientUrl": "ABSOLUTE_CLIENT_URL",
+    "offerExpiresInDays": 90,
+    "passRules": {
+        "minimumLength": 8,
+        "minimumScore": 5,
+        "initialDaysToChange": 3,
+        "expiryDays": 90,
+        "maxDaysInactivityPeriod": 180,
+        "latestPasswords": 4,
+        "maxOfAttempts": 10,
+        "inactivityMinutes": 5
+    }
+}

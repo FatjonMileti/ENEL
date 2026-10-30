@@ -1,0 +1,153 @@
+.DocList {
+    position: relative;
+    text-align: left;
+
+    &.loading {
+        pointer-events: none;
+
+        .doc-image {
+            opacity: 0.1;
+        }
+    }
+
+    .Loader {
+        .path {
+            stroke: var(--cobaltBlue);
+        }
+    }
+
+    .doc-title {
+        margin-top: -12px;
+        margin-bottom: 3px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        color: #404040;
+    }
+
+    .doc-image {
+        display: inline-block;
+        margin-top: 0.7rem;
+        margin-right: 2.5rem;
+        position: relative;
+
+        &.doc-add {
+            .page-title {
+                opacity: 0;
+            }
+        }
+
+        img,
+        .img-wrapper {
+            height: 12rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .img-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 8.5rem;
+            vertical-align: middle;
+            text-align: center;
+
+            &:hover {
+                background-color: #fcfcfc;
+
+                i {
+                    background-color: var(--cobaltBlue);
+                }
+            }
+
+            i {
+                display: block;
+                position: absolute;
+                left: 50%;
+                width: 3rem;
+                height: 3rem;
+                padding: 0 11px;
+                background-color: #cecece;
+                border-radius: 50%;
+                color: #fff;
+                line-height: 3rem;
+                font-size: 1.8rem;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+
+                &.add {
+                    top: 25%;
+                }
+
+                &.camera {
+                    top: 75%;
+                }
+            }
+        }
+
+        .page-title {
+            margin-top: 10px;
+        }
+
+        span.delete-button {
+            font-size: 1rem;
+            display: block;
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            color: #fff;
+            background: #000000;
+            border-radius: 50%;
+            padding: 3px;
+            line-height: 18px;
+            position: absolute;
+            top: -0.6rem;
+            right: -0.6rem;
+            cursor: pointer;
+
+            svg {
+                display: block;
+            }
+
+            .close-x {
+                stroke: white;
+                fill: transparent;
+                stroke-linecap: round;
+                stroke-width: 5;
+            }
+        }
+    }
+
+    .input-upload {
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+        width: 1px;
+        height: 1px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .DocList {
+        .doc-image {
+            .img-wrapper {
+                i {
+                    width: 4rem;
+                    height: 4rem;
+                    line-height: 4rem;
+                    font-size: 2rem;
+                }
+            }
+
+            span.delete-button {
+                top: -9px;
+                right: -9px;
+                width: 25px;
+                height: 25px;
+            }
+
+            .add {
+                top: 50% !important;
+            }
+        }
+    }
+}

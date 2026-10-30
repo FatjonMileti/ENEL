@@ -1,0 +1,102 @@
+.GeneratedDocList {
+    .card-set {
+        position: relative;
+        margin-bottom: 160px;
+
+        .btn-download-all {
+            position: absolute;
+            right: 0;
+            bottom: -85px;
+        }
+    }
+
+    .card {
+        position: relative;
+        margin-bottom: 18px;
+        padding-bottom: 3px;
+        border-bottom: 1px solid #ddd;
+        background-color: transparent;
+        font-family: sans-serif;
+
+        .card-title {
+            margin-bottom: 5px;
+            font-size: 16px;
+
+            span.separator {
+                font-size: 16px;
+                font-weight: 400;
+                margin-right: 9px;
+            }
+        }
+
+        .card-text {
+            margin-bottom: 18px;
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--cobaltBlue);
+        }
+
+        .doc-type {
+            position: absolute;
+            top: 17px;
+            right: 178px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        a:hover .card-text {
+            text-decoration: underline;
+        }
+
+        .Button {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    .combo-tabs {
+        margin-bottom: 70px;
+        text-align: center;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        .combo-tab {
+            opacity: 0.5;
+            cursor: pointer;
+
+            &.active {
+                opacity: 1;
+                color: #ff0f64;
+            }
+        }
+
+        .separator {
+            margin: 0 10px;
+        }
+    }
+
+    @media only screen and (max-width: 576px) {
+        .card {
+            margin-bottom: 12px !important;
+            padding-bottom: 0 !important;
+
+            .card-text {
+                margin-bottom: 8px !important;
+            }
+        }
+
+        .card-set {
+            margin-bottom: 135px !important;
+
+            .btn-download-all {
+                right: unset;
+                left: 50%;
+                padding-left: 0;
+                padding-right: 0;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}

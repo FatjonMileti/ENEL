@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2.7px;
+      }
+    </style>
+  </defs>
+  <g id="header-icon-id" transform="translate(-80 -150)">
+    <path id="person" class="cls-1" d="M228.468,24.619h0a11.682,11.682,0,0,1-.84-4.314c0-5.588,3.88-10.1,8.657-10.1s8.657,4.517,8.657,10.1a10.687,10.687,0,0,1-3.416,8.02,7.629,7.629,0,0,1-10.481,0A17.333,17.333,0,0,0,219,44.828h34.6a17.308,17.308,0,0,0-7.962-14.563" transform="translate(-129.5 149.3)"/>
+    <rect id="Rectangle_445" data-name="Rectangle 445" class="cls-2" width="54" height="54" transform="translate(80 150)"/>
+  </g>
+</svg>

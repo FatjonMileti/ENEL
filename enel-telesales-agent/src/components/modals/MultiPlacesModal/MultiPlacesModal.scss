@@ -1,0 +1,32 @@
+.MultiPlacesModal {
+    width: 700px !important;
+
+    & ~ div {
+        background-color: #21232c !important;
+    }
+
+    .row {
+        margin: 0;
+    }
+    .close-modal-button-aligment {
+        text-align: right;
+    }
+    .close-modal {
+        outline: none;
+        border: none !important;
+        text-align: right;
+        font-size: 20px;
+        background-color: transparent !important;
+    }
+
+    .modal-overlay {
+        padding: 3rem 5rem 4rem 5rem;
+        text-align: center;
+
+        .title {
+            margin-bottom: 1rem;
+            font-size: 2.4rem;
+            color: rgb(0, 0, 0);
+        }
+    }
+}

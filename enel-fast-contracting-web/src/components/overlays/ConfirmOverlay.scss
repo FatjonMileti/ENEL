@@ -1,0 +1,116 @@
+.ConfirmOverlay {
+    position: fixed;
+    top: 0;
+    height: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    overflow: hidden;
+
+    label {
+        color: #000;
+        text-decoration: underline;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &.no-fixed {
+        position: relative;
+    }
+
+    &.show {
+        height: 100%;
+    }
+
+    &.big {
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+
+        .content {
+            margin-bottom: 4rem;
+
+            .title {
+                margin-top: 2rem;
+            }
+
+            .description {
+                width: 100%;
+                max-width: 55rem;
+                padding: 0 5rem;
+                text-align: left;
+                max-height: 450px;
+                overflow-y: auto;
+            }
+
+            ul {
+                padding-left: 1.5rem;
+            }
+        }
+    }
+
+    &.no-logo {
+        .content .title {
+            margin-top: 5rem;
+            padding-left: 5rem;
+        }
+        .content .buttons {
+            padding-left: 5rem;
+        }
+    }
+
+    .logo {
+        img {
+            margin-top: 1.75rem;
+            margin-left: 2.5rem;
+            height: 40px;
+        }
+    }
+
+    .content {
+        color: #000;
+        max-width: 72%;
+        margin-left: 10rem;
+        .title {
+            margin-top: 12rem;
+            font-size: 40px;
+            letter-spacing: -1px;
+        }
+
+        .description {
+            margin-top: 1.5rem;
+            width: 38rem;
+            font-size: 15px;
+        }
+
+        .buttons {
+            margin-top: 4rem;
+            display: grid;
+            max-width: 55rem;
+            margin-right: auto;
+            gap: 10px;
+
+            .continua-button {
+                background-color: black;
+                color: #fff;
+                border-color: #000;
+
+                &:hover {
+                    background-color: white;
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    .input {
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 1;
+        padding: 14px;
+        border: 2px solid rgba(0, 0, 0, 0.15);
+    }
+}

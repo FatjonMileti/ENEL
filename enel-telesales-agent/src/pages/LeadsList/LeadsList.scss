@@ -1,0 +1,85 @@
+.LeadsList {
+    position: relative;
+
+    .Checkbox {
+        label {
+            .checkmark {
+                top: -2px;
+            }
+        }
+    }
+
+    .wrapper-content {
+        width: 100%;
+        padding: 13px 19px;
+        transition: width 0.5s;
+
+        &.main {
+            width: calc(100% - 350px);
+            overflow-x: scroll;
+            transition: width 0.3s;
+        }
+
+        .ion-md-arrow-dropleft-circle,
+        .ion-md-arrow-dropright-circle {
+            position: absolute;
+            top: 35px;
+            right: 6px;
+            font-size: 40px;
+            z-index: 1;
+            color: rgb(98, 98, 98);
+            transition: transform 0.2s;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1, 1.1);
+                transition: transform 0.2s;
+            }
+        }
+
+        &.reminder-sidebar {
+            position: fixed;
+            opacity: 0;
+            right: -15px;
+            width: 380px;
+            top: 6rem;
+            bottom: 0;
+            overflow-y: scroll;
+            transition: opacity 0.8s;
+            padding-left: 20px;
+
+            .content {
+                overflow: visible;
+            }
+
+            &.expanded {
+                opacity: 1;
+                transition: opacity 0.8s;
+            }
+        }
+    }
+
+    .import-error-icon {
+        display: inline-block;
+        padding-right: 10px;
+        color: #e61400;
+        cursor: pointer;
+        transform: translate(0px, 1px) scale(1.25);
+    }
+
+    .FormStatus {
+        margin-top: 3rem;
+    }
+
+    .content {
+        padding-bottom: 200px;
+        overflow-x: scroll;
+    }
+
+    .table td {
+        min-width: 133px;
+    }
+
+    .table td:last-child {
+        min-width: 150px;
+    }
+}

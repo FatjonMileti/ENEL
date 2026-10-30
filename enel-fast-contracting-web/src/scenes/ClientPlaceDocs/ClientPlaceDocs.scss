@@ -1,0 +1,68 @@
+.ClientPlaceDocs {
+	.main-area.doc-options {
+		padding-bottom: 0;
+        margin-left: inherit;
+	}
+
+
+    span.error-symbol {
+
+        color: black;
+        border-radius: 2rem;
+        border: .2rem solid #000;
+    }
+    
+	.main-area.doc-interaction {
+		padding: 0 !important;
+	}
+
+    .btn {
+        text-transform: unset;
+    }
+
+	.validity-checkbox-group {
+		padding-left: 0;
+		margin-top: 30px;
+		margin-bottom: 10px;
+
+		label {
+			&.control-label {
+				margin-bottom: 20px;
+			}
+
+			&.custom-control-label {
+				font-size: 18px;
+				font-weight: 300;
+				margin-top: 1px;
+				padding-left: 30px;
+			}
+		}
+
+		.row .mb-3 {
+			margin-bottom: 10px !important;
+		}
+ 	}
+
+ 	.validity-date {
+	 	.mb-3 {
+			padding-left: 0;
+			padding-right: 0;
+		}
+ 	}
+
+ 	.offset-top {
+ 		margin-top: 60px;
+        display: grid;
+        gap: 15px;
+ 	}
+
+ 	.FormErrors {
+ 		.col-md-12 {
+ 			padding: 0;
+ 		}
+	}
+
+	.ConfirmOverlay .content .title {
+		font-size: 26px;
+	}
+}

@@ -1,0 +1,485 @@
+#app {
+    padding: 0;
+    margin: 0;
+}
+
+.full {
+    width: 100%;
+    height: 100%;
+}
+
+.tpl-easy-door-to-door .table-ul.contracts-list ul {
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.tpl-easy-door-to-door .table-ul.query-report-list ul {
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.tpl-fast-contract .table-ul.contracts-list ul {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.tpl-fast-contract .table-ul.query-report-list ul {
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.view-more-options-list .more-options-list.single-option {
+    height: 4.3rem;
+}
+
+.trigger-profile-menu span {
+    line-height: 3.6rem;
+    background: #2B56F9;
+    text-align: center;
+}
+
+.view-settings-menu .main-menu .settings-link {
+    height: 14.2rem;
+}
+
+.view-settings-menu .settings-menu {
+    height: 8rem;
+}
+
+.tpl-easy-door-to-door .box,
+.tpl-fast-contract .box,
+.tpl-agent-profile .box {
+    overflow: visible;
+}
+
+.profile-box.view-more-options-list.items-3 .more-options-list {
+    height: auto;
+    width: 13rem;
+}
+
+/* MAIN FILTERS */
+
+.search {
+    width: 33%;
+    height: 100%;
+    float: left;
+}
+
+.trigger-calendar {
+    width: 33%;
+}
+
+.hc-btn.trigger-filters {
+    width: 33%;
+}
+
+.mainfilters {
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    padding: 0 2rem;
+    background: #292929;
+    z-index: 9000;
+    color: rgba(255, 255, 255, 0.7);
+    overflow: hidden;
+    -moz-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+}
+
+.transition-3s-in-out {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.mainfilters.opened {
+    max-height: 500px;
+    height: auto;
+    padding: 2rem;
+}
+
+.mainfilters.visible {
+    overflow: visible;
+}
+
+/* .visible {
+    display: block !important;
+} */
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.mainfilters .w50s {
+    width: 50%;
+    padding: 0 0.5rem;
+    height: 100%;
+}
+
+.w50s {
+    width: 48%;
+}
+
+.mainfilters h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+}
+
+.mainfilters h3 i {
+    margin-right: 0.5rem;
+}
+
+.mainfilters form .form-group {
+    margin-bottom: 1.2rem;
+    height: auto !important;
+    overflow: visible !important;
+}
+
+.form-group {
+    position: relative;
+    width: 100%;
+    height: auto !important;
+    min-height: 3.8rem !important;
+    margin: 0 auto 0.7rem;
+    overflow: hidden;
+    border: none !important;
+}
+
+.mainfilters form .form-group>div {
+    width: calc(100% - 16rem);
+    margin-left: 16rem;
+}
+
+.autocomplete {
+    position: relative;
+    cursor: text;
+    font-size: 10px;
+    background: #333;
+}
+
+.autocomplete .content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.autocomplete .inputContainer {
+    width: auto;
+    margin: .4em;
+    flex: 1;
+    min-width: 12%;
+    z-index: 1000;
+}
+
+.autocomplete .inputContainer input {
+    width: 100%;
+    border: 0;
+    padding: 0 0 0 0.2rem !important;
+    font-size: 1.2em;
+    outline: none;
+    background-color: transparent;
+    appearance: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0.7) !important;
+    height: 2rem;
+}
+
+.mainfilters form .form-group select {
+    width: calc(100% - 16rem);
+    margin-left: 16rem;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 1.2rem;
+    background: #333;
+    height: 2.8rem;
+    padding: 0 1rem;
+    border: none !important;
+    cursor: pointer;
+}
+
+.mainfilters form .form-group label.control-label {
+    top: 0.3rem !important;
+    left: 2rem !important;
+    width: 100%;
+    font-weight: 300;
+    font-size: 1.2rem !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.form-group .control-label {
+    position: absolute;
+    top: 0.3rem;
+    color: #666;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.mainfilters .btn-panel {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: right;
+}
+
+.mainfilters .btn-panel button {
+    height: 3rem !important;
+    margin: 0 0.5rem 0 0 !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    opacity: 0.8;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 1rem !important;
+    font-size: 1.2rem !important;
+    line-height: inherit !important;
+    font-family: "Open Sans", Arial, sans-serif !important;
+    font-weight: normal !important;
+    outline: none;
+}
+
+.mainfilters .btn-panel button:hover {
+    opacity: 1;
+}
+
+.mainfilters .btn-panel button.ui-priority-primary {
+    background: #e66414 !important;
+    color: #fff !important;
+    font-family: "Open Sans", Arial, sans-serif !important;
+    margin-left: 0.5rem !important;
+}
+
+.form-group select.form-control {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+}
+
+.form-group .form-control {
+    position: relative;
+    height: 3.8rem;
+    padding-top: 0.5rem;
+    padding-left: 0rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: none !important;
+    opacity: 1;
+    z-index: 10;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-group .form-control:focus+.control-label {
+    color: #e66414;
+}
+
+.mainfilters form .form-group:after {
+    top: 0;
+    z-index: 100;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-group.select:after {
+    width: 2.5rem;
+    height: 3rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    content: '\e90a';
+    font-size: 0.7rem;
+    line-height: 3rem;
+    text-align: center;
+    font-family: icons;
+    color: #e66414;
+    -ms-transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    -moz-transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    -webkit-transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+form select:disabled {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+/* USER */
+
+.user-tabs a:nth-of-type(2n) {
+    margin-right: 6.5rem;
+}
+
+.tpl-user .content-box-body .scrollbar {
+    position: absolute;
+    /* top: 5rem; */
+}
+
+.tpl-agent-profile .content-box-body-slider.swiper-container-horizontal {
+    padding-top: 0 !important;
+}
+
+.form input,
+.form label {
+    z-index: 10
+}
+
+.table-ul.invoice-examples ul {
+    padding-right: 5rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.table-ul.security-logs ul {
+    padding-right: 5rem;
+    grid-template-columns: 20% 20% 1fr;
+}
+
+.table-ul.security-errors ul {
+    padding-right: 5rem;
+    grid-template-columns: 20% 1fr;
+}
+
+/* TABLE HEADER */
+
+.table-ul>li.table-ul-header li>i {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/* AGENTS Reset password POPUP */
+
+.tpl-agent-profile .close-button-overlay { width:4rem; height:4rem; position:absolute; top:0; right:0; display:block; z-index: 1000; border-radius:0.3rem; font-size:1.4rem; line-height:4rem; text-align:center; color:rgba(0,0,0,0.3); cursor:pointer; -webkit-transition: color 0.3s ease-in-out, background 0.3s ease-in-out; -moz-transition: color 0.3s ease-in-out, background 0.3s ease-in-out; -o-transition: color 0.3s ease-in-out, background 0.3s ease-in-out; -ms-transition: color 0.3s ease-in-out, background 0.3s ease-in-out; transition: color 0.3s ease-in-out, background 0.3s ease-in-out; }
+.tpl-agent-profile .overlay-header .close-button-overlay { top:0.4rem; right:0.3rem; }
+.tpl-agent-profile .close-button-overlay { top:0; right:0; }
+
+.modal .close-button-overlay { width:4rem; height:4rem; position:absolute; top:0; right:0; display:block; z-index: 1000; border-radius:0.3rem; font-size:1.4rem; line-height:4rem; text-align:center; color:rgba(0,0,0,0.3); cursor:pointer; -webkit-transition: color 0.3s ease-in-out, background 0.3s ease-in-out; -moz-transition: color 0.3s ease-in-out, background 0.3s ease-in-out; -o-transition: color 0.3s ease-in-out, background 0.3s ease-in-out; -ms-transition: color 0.3s ease-in-out, background 0.3s ease-in-out; transition: color 0.3s ease-in-out, background 0.3s ease-in-out; }
+.modal .overlay-header .close-button-overlay { top:0.4rem; right:0.3rem; }
+
+.AppLog ul.table-ul ul {
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.AppLog .app-log-details {
+    grid-column-start: 3;
+    grid-column-end: 7;
+}
+
+.AppLog .table-ul-header .app-log-details {
+    text-align: center;
+}
+
+.InvoiceExamples .box {
+    overflow: visible;
+}
+
+.InvoiceExamples .more-options-list {
+    width: auto;
+}
+
+.InvoiceExamples .view-more-options-list .more-options-list {
+    height: 7.6rem;
+}
+
+.ImageHandler.box {
+    margin-top: 20px;
+    padding: 0;
+    background: transparent;
+    overflow: visible;
+}
+
+.ImageHandler .add-file-button {
+    display: none;
+}
+
+.ImageHandler .invoice-wrapper {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: 250px;
+    margin-top: 5px;
+    margin-right: 10px;
+    overflow: visible;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.ImageHandler .invoice-wrapper.disabled {
+    opacity: 0.3;
+}
+
+.ImageHandler .invoice-wrapper.invoice-add {
+    width: 176px;
+    background-color: #fff;
+    border: 1px dashed #d1d1d1;
+    cursor: pointer;
+}
+
+.ImageHandler .invoice-wrapper.invoice-add:hover {
+    background-color: transparent;
+}
+
+.ImageHandler .invoice-wrapper.invoice-add.disabled {
+    background-color: #fff;
+    opacity: .3;
+    cursor: auto;
+}
+
+.ImageHandler .invoice-wrapper:hover .btn-delete {
+    display: block;
+}
+
+.ImageHandler .invoice-add span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 45px;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.ImageHandler .invoice-image {
+    position: relative;
+    width: auto;
+    height: 250px;
+    border: 1px solid #d1d1d1;
+}
+
+.ImageHandler .btn-delete {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 7px;
+    background-color: #111111;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 8px;
+    border: 1px solid #f1f1f1;
+    transform: translate3d(40%, -45%, 0);
+    cursor: pointer;
+}

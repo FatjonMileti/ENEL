@@ -1,0 +1,9 @@
+$error: var(--ppcRed);
+
+.FormErrors {
+    margin: 15px 0;
+    padding: 15px;
+    color: $error;
+    font-weight: 500;
+    border-radius: 2px;
+}

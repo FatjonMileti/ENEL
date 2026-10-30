@@ -1,0 +1,18 @@
+.SearchBar {
+    .search {
+        position: fixed;
+        top: 0;
+        left: 17rem;
+        width: calc(48% - 27rem);
+        height: 6rem;
+
+        input {
+            padding-left: 3.2rem;
+        }
+
+        button {
+            top: 1.6rem;
+            left: 1rem;
+        }
+    }
+}

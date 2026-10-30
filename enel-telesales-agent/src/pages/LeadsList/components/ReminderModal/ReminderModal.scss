@@ -1,0 +1,73 @@
+.ReminderModal {
+    width: 1000px !important;
+
+    & ~ div {
+        background-color: #21232c !important;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    .modal-overlay {
+        padding: 3rem 5rem 4rem 5rem;
+        text-align: center;
+        min-height: 550px;
+
+        .title {
+            margin-bottom: 1rem;
+            font-size: 2.4rem;
+        }
+
+        .data-panel {
+            width: 100%;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            text-align: left;
+            font-size: 16px;
+            overflow-y: visible;
+
+            .column {
+                padding: 1 rem;
+                vertical-align: center;
+            }
+        }
+
+        .notes-wrapper {
+            max-height: 265px;
+            overflow-y: scroll;
+        }
+
+        .Text {
+            &:first-child {
+                margin-top: 50px;
+            }
+        }
+
+        .note {
+            position: relative;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem 2rem;
+            background: #f1f1f1;
+            border-radius: 15px;
+
+            .agent {
+                font-size: 13px;
+                font-weight: 500;
+            }
+
+            .created {
+                position: absolute;
+                top: 1.5rem;
+                right: 2rem;
+                font-size: 13px;
+                opacity: 0.7;
+            }
+
+            .value {
+                margin-top: 0.5rem;
+                font-size: 14px;
+            }
+        }
+    }
+}

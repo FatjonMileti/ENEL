@@ -1,0 +1,51 @@
+.ClientInfoSection {
+    .ci-wrapper {
+        min-height: 30rem;
+        text-align: center;
+        background: #fcfcfc;
+        padding: 30px;
+        border: 1px dashed rgba(0, 0, 0, 0.1);
+
+        .document-label {
+            font-size: 20px;
+            line-height: calc(30rem - 70px);
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 27rem;
+            cursor: pointer;
+        }
+        i.delete-btn {
+            position: absolute;
+            top: -10px;
+            right: 5px;
+            background-color: #111;
+            color: #fff;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            font-size: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+
+    .docs-wrapper {
+        img {
+            max-width: 12rem;
+            max-height: 20rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            margin-right: 2rem;
+            cursor: pointer;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .contact-info-radio label:first-child {
+        margin-bottom: 35px;
+    }
+}

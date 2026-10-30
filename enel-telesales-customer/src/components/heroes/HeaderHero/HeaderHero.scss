@@ -1,0 +1,119 @@
+.FixedBg {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 105px;
+    text-align: center;
+    color: #fff;
+    z-index: 500;
+
+    .small-title {
+        height: 0;
+        font-size: 26px;
+        font-weight: 300;
+        letter-spacing: 0.6px;
+        line-height: 105px;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity 0.2s linear;
+        will-change: opacity;
+
+        &.show {
+            height: auto;
+            opacity: 1;
+        }
+    }
+}
+
+.HeaderHeroLogo {
+    img {
+        position: fixed;
+        z-index: 550;
+        height: 70px;
+        margin-left: 30px;
+        margin-top: 22px;
+    }
+}
+
+.HeaderHero {
+    position: relative;
+    width: 100%;
+    z-index: 510;
+    color: #fff;
+
+    padding-top: 500px;
+    transform: translateY(-500px);
+    margin-bottom: -500px;
+
+    span.icon-menu {
+        position: fixed;
+        top: 32px;
+        right: 30px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 22px;
+    }
+
+    .content {
+        position: relative;
+        text-align: center;
+        color: #ffffff;
+        z-index: 10;
+        height: 100%;
+
+        .title {
+            margin: 0 0 6px 0;
+            padding: 120px 0 127px 0;
+            font-size: 60px;
+            font-weight: 300;
+            letter-spacing: -1px;
+        }
+
+        .description {
+            margin-top: 2.5rem;
+            width: 48rem;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .HeaderHero .content .title {
+        width: 60%;
+        margin: 0 auto;
+        font-size: 50px !important;
+    }
+
+    .HeaderHeroLogo img {
+        position: absolute !important;
+    }
+
+    .FixedBg {
+        height: 60px !important;
+
+        .small-title {
+            line-height: 60px !important;
+            font-size: 12px !important;
+            text-transform: uppercase !important;
+            font-weight: 700 !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .HeaderHero {
+        .content .title {
+            width: 70%;
+            font-size: 30px !important;
+            padding: 110px 0 87px 0 !important;
+        }
+    }
+
+    .HeaderHeroLogo img {
+        height: 22px !important;
+        margin-top: 18px !important;
+        margin-left: 15px !important;
+    }
+}

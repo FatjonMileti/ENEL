@@ -1,0 +1,21 @@
+.MainFilters {
+    .apply-filter {
+        position: fixed;
+        top: 0;
+        right: 10rem;
+        width: 26%;
+        height: 6rem;
+    }
+
+    .mainfilters {
+        .clearfix {
+            padding-top: 2rem;
+        }
+
+        .btn-panel button.Button {
+            min-width: unset;
+            padding: 0 2rem !important;
+            text-transform: none;
+        }
+    }
+}

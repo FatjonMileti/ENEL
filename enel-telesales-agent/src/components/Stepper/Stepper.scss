@@ -1,0 +1,40 @@
+.Stepper {
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+
+    .step-value {
+        position: relative;
+        width: 5.5rem;
+        height: 5.5rem;
+        margin-bottom: 2rem;
+        background-color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 3.5rem;
+        font-size: 1.5rem;
+        z-index: 10;
+        border: 1rem solid #f1f1f1;
+        font-weight: 400;
+        cursor: pointer;
+
+        &.active {
+            background-color: #4285f4;
+            color: #fff;
+        }
+
+        &.disabled {
+            background-color: #ddd;
+            color: #fff;
+        }
+    }
+
+    .vertical-line {
+        position: absolute;
+        width: 1px;
+        top: 5px;
+        bottom: 5px;
+        left: calc(50% - 1px);
+        display: block;
+        background: #dedede;
+    }
+}

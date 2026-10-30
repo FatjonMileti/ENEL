@@ -1,0 +1,60 @@
+.Select {
+    margin-bottom: 14px;
+
+    .react-autosuggest__container {
+        position: relative;
+
+        .icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            line-height: 35px;
+            font-size: 15px;
+        }
+
+        input:read-only {
+            cursor: pointer;
+        }
+
+        input:disabled {
+            cursor: auto;
+        }
+    }
+
+    .react-autosuggest__suggestions-container {
+        position: relative;
+        margin-top: -14px;
+        z-index: 100;
+
+        .react-autosuggest__suggestions-list {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            max-height: 300px;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-top: none;
+            overflow: scroll;
+
+            .react-autosuggest__suggestion {
+                padding: 10px 15px;
+                font-size: 14px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #efefef;
+                }
+            }
+
+            .react-autosuggest__suggestion--highlighted {
+                background-color: #efefef;
+            }
+        }
+    }
+
+    .Text {
+        label {
+            left: 0;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.ItemOptions {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+
+    &.view-more-options-list {
+        i.trigger-edit-row {
+            border-color: #0555fa !important;
+            color: #fff !important;
+            box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.1);
+            background: #0555fa !important;
+        }
+    }
+
+    .square-btn-light {
+        transform: translateY(-50%);
+    }
+
+    .more-options-list {
+        position: absolute;
+        right: -30px;
+        top: 20px;
+    }
+}

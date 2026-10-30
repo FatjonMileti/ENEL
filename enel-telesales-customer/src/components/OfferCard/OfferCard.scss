@@ -1,0 +1,292 @@
+.OfferCard {
+    margin-bottom: 24px;
+    max-width: 800px;
+    font-family: 'PingL', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #111;
+    text-align: left;
+    background-color: #fff;
+    letter-spacing: 0.36px;
+    transition: all 0.1s linear;
+
+    .card {
+        display: flex;
+        position: relative;
+        margin-bottom: 2rem;
+        flex-direction: column;
+        background-clip: border-box;
+        box-sizing: border-box;
+        font-size: 12px;
+    }
+
+    .card-serv {
+        display: block;
+        position: relative;
+        border: none;
+
+        &.cards-3 {
+            .card-body {
+                min-height: 390px;
+            }
+        }
+
+        &.cards-4 {
+            .card-body {
+                min-height: 490px;
+            }
+        }
+    }
+
+    .card-set-wrapper {
+        opacity: 0;
+    }
+
+    .set-gaz {
+        .oferta-div {
+            background-color: #ff5a0f;
+        }
+    }
+
+    .set-combo {
+        .oferta-div {
+            background-color: #ff0f64;
+        }
+    }
+
+    .card-title {
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+
+    .card-header {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 200px;
+        padding: 0;
+        flex-direction: column;
+        z-index: 1;
+    }
+
+    .card-body {
+        position: relative;
+        padding: 50px 50px 50px 250px;
+        flex: 1 1 auto;
+
+        p {
+            display: block;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 13.8px;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+    }
+
+    .oferta-div {
+        position: relative;
+        padding: 16px;
+        text-align: center;
+        flex: 1;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+
+        &:last-child {
+            border-bottom: unset;
+        }
+
+        .price-wrapper {
+            display: block;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            box-sizing: border-box;
+        }
+
+        span,
+        strong {
+            display: block;
+            color: white;
+        }
+
+        span {
+            font-weight: 300;
+            font-size: 14px;
+            letter-spacing: 0.3px;
+            line-height: 1.46667;
+        }
+
+        strong {
+            font-weight: 300;
+            font-size: 30px;
+            line-height: 1.25;
+            margin-top: 6px;
+            margin-bottom: 4px;
+        }
+    }
+
+    .oferta-div.ee {
+        background-color: var(--cobaltBlue);
+    }
+
+    .oferta-div.gaz {
+        background-color: var(--ppcOrange);
+    }
+
+    .oferta-div.combo {
+        background-color: var(--ppcRed);
+    }
+
+    h1.header {
+        margin-bottom: 20px;
+        font-size: 50px;
+    }
+
+    span.eyebrow.georgia {
+        color: #222;
+        font-family: Georgia, serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.8px;
+        line-height: 1.8;
+        opacity: 0.4;
+    }
+
+    h4.card-title {
+        font-size: 28.8px;
+        font-weight: 300;
+        text-align: left;
+    }
+
+    .btn-wrapper {
+        margin-top: 2.5rem;
+        text-align: left;
+
+        .Button {
+            width: 50%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .OfferCard {
+        margin-bottom: 0;
+
+        .card-header {
+            position: relative !important;
+            flex-direction: row !important;
+            width: 100% !important;
+        }
+
+        .card-body {
+            padding: 2rem 2.25rem 2.45rem !important;
+        }
+
+        .card-serv {
+            .oferta-div {
+                border-bottom: none;
+            }
+
+            &.cards-3 {
+                .card-body {
+                    min-height: unset !important;
+                }
+            }
+
+            &.cards-4 {
+                .card-header {
+                    display: flex;
+                    flex-direction: unset;
+                    flex-wrap: wrap;
+                    border-bottom: none;
+
+                    .oferta-div {
+                        flex: 1 0 50%;
+
+                        &:first-child,
+                        &:nth-child(2) {
+                            border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+                        }
+
+                        &:nth-child(2) {
+                            border-right: none !important;
+                        }
+                    }
+                }
+
+                .card-body {
+                    min-height: unset !important;
+                }
+            }
+        }
+
+        .oferta-div {
+            border-right: 2px solid rgba(255, 255, 255, 0.4) !important;
+
+            &:last-child {
+                border-right: none !important;
+            }
+        }
+
+        .btn-wrapper {
+            .Button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .OfferCard {
+        .card-header {
+            .oferta-div {
+                strong {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .card-body {
+            padding: 20px !important;
+
+            .btn {
+                margin-bottom: 0;
+            }
+
+            .card-text {
+                font-size: 15px !important;
+            }
+
+            .card-title {
+                margin-top: 12px;
+                margin-bottom: 6px !important;
+                font-size: 2.4rem;
+            }
+        }
+
+        .card-set-wrapper {
+            padding: 0px;
+        }
+
+        .card-serv {
+            &:hover {
+                transform: scale(1) !important;
+                box-shadow: none !important;
+            }
+        }
+
+        .disclaimer {
+            padding: 0 15px;
+        }
+
+        .eyebrow {
+            font-size: 10px !important;
+        }
+    }
+}

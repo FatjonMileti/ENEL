@@ -1,0 +1,15 @@
+.AgentSignatureSection {
+    .btn-wrapper {
+        display: none;
+        position: relative;
+        margin-top: -51px;
+    }
+
+    .canvas-container canvas {
+        border: 1px dashed rgba(0, 0, 0, 0.2);
+    }
+
+    .section-content {
+        position: relative;
+    }
+}

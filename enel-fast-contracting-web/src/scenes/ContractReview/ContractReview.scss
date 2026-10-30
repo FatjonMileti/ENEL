@@ -1,0 +1,117 @@
+.ContractReview {
+	.card-body {
+		padding: 0;
+
+		&:hover {
+			padding: 0;
+		}
+	}
+
+
+    span.error-symbol {
+
+        color: black;
+        border-radius: 2rem;
+        border: .2rem solid #000;
+    }
+
+	.spaced-top {
+		margin-top: 60px;
+	}
+
+    .buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+
+	.disclaimer {
+		position: relative;
+		padding-left: 15px;
+		padding-right: 5px;
+		font-size: 15px;
+
+		.disclaimer-star {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		p {
+			text-align: justify;
+		}
+	}
+
+	.agreement {
+		text-align: center;
+
+		.custom-checkbox {
+			display: inline-block;
+
+			.custom-control-label {
+				margin-top: 0;
+				margin-left: 2px;
+				font-size: 20px;
+				letter-spacing: .36px;
+			}
+		}
+	}
+
+	.card-set {
+		position: relative;
+		margin-bottom: 160px;
+
+		.btn-download-all {
+			position: absolute;
+			right: 0;
+			bottom: -85px;
+		}
+	}
+
+	.card {
+		position: relative;
+	    margin-bottom: 18px;
+	    padding-bottom: 3px;
+	    border-bottom: 1px solid #ddd;
+	    background-color: transparent;
+	    font-family: sans-serif;
+
+		.card-title {
+			margin-bottom: 5px;
+			font-size: 16px;
+
+			span.separator {
+				font-size: 16px;
+			    font-weight: 400;
+				margin-right: 9px;
+			}
+		}
+
+		.card-text {
+            width: 50%;
+			margin-bottom: 18px;
+			font-size: 18px;
+			font-weight: 400;
+			color: #4285F4;
+		}
+
+		.doc-type {
+			position: absolute;
+			top: 17px;
+			right: 178px;
+			color: #666;
+			font-size: 14px;
+		}
+
+		a:hover .card-text {
+			text-decoration: underline;
+		}
+
+		.btn {
+			position: absolute;
+		    right: 0;
+		    top: 0;
+		}
+	}
+}

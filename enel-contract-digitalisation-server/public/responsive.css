@@ -1,0 +1,124 @@
+@media only screen and (max-width: 576px) {
+    .hide-mobile {
+        display: none;
+    }
+
+    .contracts-ready header {
+        margin-bottom: 40px;
+    }
+
+    .contracts-ready img.logo-big {
+        height: 22px;
+        margin-top: 18px;
+        margin-left: 15px;
+    }
+
+    .contracts-ready h1 {
+        padding: 110px 0 87px 0;
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+
+    .container.main-area {
+        padding: 0 15px 15px 15px;
+    }
+
+    p.intro {
+        margin-bottom: 35px !important;
+        font-size: 15px;
+    }
+
+    .card-set {
+        padding: 0;
+    }
+
+    .card--left {
+        padding-bottom: 0;
+    }
+
+    .contracts-ready .card-body {
+        min-height: unset;
+    }
+
+    .contracts-ready h4.card-title {
+        margin-bottom: 6px;
+        line-height: 1.6;
+    }
+
+    .close-button {
+        float: right !important;
+
+    }
+    
+    .ignore-button { 
+        text-align: right;
+    }
+
+    .card.card-doc {
+        margin-bottom: 10px;
+        padding-bottom: 18px;
+    }
+
+    .contracts-ready .list-footer {
+        padding: 0;
+    }
+
+    .contracts-ready .list-footer .btn {
+        width: 100%;
+    }
+
+    .contracts-ready .custom-checkbox .custom-control-label {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .custom-control-label::before {
+        top: 8px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .custom-control-label::after {
+        top: 8px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .agreement {
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .custom-checkbox.custom-control {
+        padding-left: 2.5rem;
+    }
+
+    .action-btns {
+        margin-top: -15px;
+    }
+
+    p.disclaimer {
+        margin-top: 50px;
+        margin-left: 0;
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+
+    .terms {
+        margin-top: -10px;
+        padding: 0 15px 40px 15px;
+    }
+
+    .terms p {
+        margin-bottom: 23px;
+        font-size: 15px;
+        letter-spacing: .3px;
+        line-height: 1.73333;
+    }
+
+    .terms ul li {
+        font-size: 15px;
+        letter-spacing: .3px;
+        line-height: 1.73333;
+    }
+}

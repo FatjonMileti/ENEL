@@ -1,0 +1,78 @@
+.Reminder {
+    width: calc(100% - 10px);
+    margin-bottom: 20px;
+    box-shadow: -1px 5px 12px 0px #cccccc;
+
+    .reminder-header {
+        padding: 20px;
+        background: #d4d4d4;
+
+        .reminder-title {
+            font-weight: 700;
+        }
+    }
+    .reminder-content {
+        padding: 12px 20px 20px 20px;
+        background: #fff;
+
+        .action-type {
+            padding-bottom: 9px;
+            font-weight: 700;
+            color: #8e8e8e;
+            border-bottom: 1px solid rgba(125, 125, 125, 0.2);
+
+            .action-value {
+                color: #4d4d4d;
+            }
+        }
+
+        .details {
+            display: flex;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(125, 125, 125, 0.2);
+
+            .countdown {
+                border-right: 1px solid rgba(125, 125, 125, 0.2);
+                &.expired {
+                    color: #e61400;
+
+                    .countdown-label {
+                        color: #e61400;
+                    }
+                }
+                .countdown-label {
+                    color: #8e8e8e;
+                    font-weight: 700;
+                }
+                .countdown-value {
+                    margin-bottom: 4px;
+                    padding-right: 30px;
+                    font-size: 64px;
+                    font-weight: 600;
+                    line-height: 65px;
+                }
+            }
+            .info {
+                padding-left: 27px;
+                .info-label {
+                    font-weight: 700;
+                }
+                .info-value {
+                    margin-bottom: 12px;
+                    font-weight: 700;
+                    color: #8e8e8e;
+                    font-size: 12px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .actions {
+            padding-top: 20px;
+            text-align: right;
+        }
+    }
+}
